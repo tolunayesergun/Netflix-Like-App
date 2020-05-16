@@ -55,51 +55,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Kontroller.cs" />
-    <Compile Include="AnaSayfa.cs">
+    <Compile Include="Classes\anima-theme.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Classes\Kontroller.cs" />
+    <Compile Include="Forms\AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaSayfa.designer.cs">
+    <Compile Include="Forms\AnaSayfa.designer.cs">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Forms\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.designer.cs">
+    <Compile Include="Forms\Form2.designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Forms\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.designer.cs">
+    <Compile Include="Forms\Form3.designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giris.cs">
+    <Compile Include="Forms\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giris.Designer.cs">
+    <Compile Include="Forms\Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\AktifKullanici.cs" />
-    <Compile Include="Model\Kullanici.cs" />
-    <Compile Include="Model\KullaniciProgram.cs" />
+    <Compile Include="Classes\AktifKullanici.cs" />
+    <Compile Include="Models\Kullanici.cs" />
+    <Compile Include="Models\KullaniciProgram.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Model\Programlar.cs" />
-    <Compile Include="Model\ProgramTurleri.cs" />
+    <Compile Include="Models\Programlar.cs" />
+    <Compile Include="Models\ProgramTurleri.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\StorkModel.cs" />
-    <Compile Include="Model\sysdiagrams.cs" />
-    <Compile Include="Model\Turler.cs" />
-    <EmbeddedResource Include="AnaSayfa.resx">
+    <Compile Include="Models\StorkModel.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\Turler.cs" />
+    <EmbeddedResource Include="Forms\AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
+    <EmbeddedResource Include="Forms\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giris.resx">
+    <EmbeddedResource Include="Forms\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

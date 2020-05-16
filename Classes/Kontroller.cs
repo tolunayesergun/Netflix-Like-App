@@ -10,7 +10,7 @@ namespace StorkFlix
 {
     class Kontroller
     {
-        StorkModel db = new StorkModel();
+        readonly StorkModel db = new StorkModel();
 
         public int MailKullaniciAra(string mail)
         {

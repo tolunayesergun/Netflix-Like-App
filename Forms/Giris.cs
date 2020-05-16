@@ -33,15 +33,15 @@ namespace StorkFlix
             db.Kullanici.Add(kat);
             db.SaveChanges();
         }
-  
 
-        private void button2_Click(object sender, EventArgs e)
+   
+        private void BtnGiris_Click(object sender, EventArgs e)
         {
             Kontroller kontrol = new Kontroller();
             AktifKullanici Aktif = new AktifKullanici();
             AnaSayfa anasayfa = new AnaSayfa();
 
-            string txtMail = textBox5.Text, txtSifre = textBox6.Text;
+            string txtMail = textboxMail.Text, txtSifre = textboxPassword.Text;
             int kulId = kontrol.MailKullaniciAra(txtMail);
 
             if (kulId == -1) MessageBox.Show("Bu isimde kayıtlı bir mail adresi yok");
@@ -57,6 +57,11 @@ namespace StorkFlix
                 }
                 else MessageBox.Show("Şifre Yanlış");
             }
+        }
+
+        private void LabelKayitOl_Click(object sender, EventArgs e)
+        {
+            panelKayit.BringToFront();
         }
     }
 }
