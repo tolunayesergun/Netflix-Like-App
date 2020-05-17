@@ -38,7 +38,7 @@ namespace StorkFlix
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
+            openChildForm(new Diziler());
       
 
             hideSubMenu();
@@ -132,7 +132,7 @@ namespace StorkFlix
 
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new Diziler());
       
             hideSubMenu();
         }
@@ -166,7 +166,7 @@ namespace StorkFlix
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            label1.Text = AktifKullanici.kullaniciAdi;
+
         }
     }
 }

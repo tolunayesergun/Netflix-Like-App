@@ -14,10 +14,10 @@ namespace StorkFlix.Model
         public static string kullaniciSifre { get; set; }
         public static DateTime kullaniciDgn { get; set; }
 
-        public  void KullaniciSec(int id)
+        public  void KullaniciSec(string mail)
         {
             StorkModel db = new StorkModel();
-            var kullaniciBilgileri = db.Kullanici.Where(i => i.id == id).First();
+            var kullaniciBilgileri = db.Kullanici.Where(i => i.mail == mail).First();
 
             kullaniciId = kullaniciBilgileri.id;
             kullaniciAdi = kullaniciBilgileri.isim;
