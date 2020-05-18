@@ -15,7 +15,7 @@ namespace StorkFlix
 
         private static readonly StorkModel db = new StorkModel();
         private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.Where(i=>i.tip=="Dizi").ToList();
-        int SonrakiBuyukluk = 560;
+        int SonrakiBuyukluk = 680;
         int OncekiBuyukluk = 392;
         private void Button5_Click(object sender, EventArgs e)
         {
@@ -75,7 +75,7 @@ namespace StorkFlix
             if (panel1.Width > SonrakiBuyukluk )
             {
                 OncekiBuyukluk = SonrakiBuyukluk;
-                SonrakiBuyukluk += 168;
+                SonrakiBuyukluk += 170;
                 panel1.Controls.Clear();
                 ResimDiz();
                
@@ -83,13 +83,12 @@ namespace StorkFlix
             else if(panel1.Width < OncekiBuyukluk)
             {
                 SonrakiBuyukluk = OncekiBuyukluk;
-                OncekiBuyukluk -= 168;
+                OncekiBuyukluk -= 170;
                 panel1.Controls.Clear();
                 ResimDiz();
             }
 
         }
-       
 
     }
 }
