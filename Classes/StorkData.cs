@@ -3,14 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Collections.ObjectModel;
 
-namespace StorkFlix
+namespace StorkFlix.Classes
 {
-    class Sorgular
+    class StorkData
     {
-        readonly StorkModel db = new StorkModel();
+        
+        private static readonly StorkModel db = new StorkModel();
+        public static List<Programlar> DiziListesi { get; set; }
+        public static List<Turler> TurListesi { get; set; }
+
+        public void ListeDoldur()
+        {
+            DiziListesi = db.Programlar.Where(i => i.tip == "Dizi").ToList();
+        }
+
+        public void TurDoldur()
+        {
+            TurListesi = db.Turler.ToList();
+        }
+
 
         //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
         public int MailKullaniciAra(string mail, string sifre)
@@ -23,7 +35,7 @@ namespace StorkFlix
                 if (item.mail == mail)
                 {
                     mailkontrol = 2;
-                    if(item.sifre==sifre)
+                    if (item.sifre == sifre)
                     {
                         return 1;
                     }
@@ -33,9 +45,8 @@ namespace StorkFlix
             return mailkontrol;
         }
 
-
         //Kullanıcı ekleme sorgusunu gerçekleştiren metot
-        public void KullaniciEkle(string nme,string maill,string psw,DateTime dgtrh)
+        public void KullaniciEkle(string nme, string maill, string psw, DateTime dgtrh)
         {
             Kullanici kat = new Kullanici
             {
@@ -47,6 +58,5 @@ namespace StorkFlix
             db.Kullanici.Add(kat);
             db.SaveChanges();
         }
-
     }
 }

@@ -1,60 +1,53 @@
-﻿using StorkFlix.Model;
+﻿using StorkFlix.Classes;
+using StorkFlix.Model;
 using System;
 using System.IO;
 using System.Windows.Forms;
 
 namespace StorkFlix
 {
+
     public partial class Giris : Form
     {
         public Giris()
         {
             InitializeComponent();
         }
-
-        private readonly Sorgular sorgu = new Sorgular();
-
+        bool IslemVarmi = false;
+        readonly StorkData DataBaglan = new StorkData();
         private void BtnGiris_Click(object sender, EventArgs e)
         {
-
-            AktifKullanici Aktif = new AktifKullanici();
-            AnaSayfa anasayfa = new AnaSayfa();
-
-            string txtMail = textboxMail.Text, txtSifre = textboxPassword.Text;
-            int KullaniciKontrol = sorgu.MailKullaniciAra(txtMail, txtSifre);
-
-    
-
-            if (KullaniciKontrol == 0) MessageBox.Show("Bu isimde kayıtlı bir mail adresi yok");
-            else
+            if (IslemVarmi == false)
             {
-                if (KullaniciKontrol == 1)
-                {
-                    Aktif.KullaniciSec(txtMail);
-                    this.Hide();
-                    anasayfa.Show();
-                }
-                else MessageBox.Show("Şifre Yanlış");
+               
+                pictureBox2.Visible = true;
+                labelSifreHata.Visible = false;
+                labelMailHata.Visible = false;
+                IslemVarmi = true;
+                backgroundWorker1.RunWorkerAsync();
+ 
             }
+
+           
         }
 
-        private void BeniHatirla()
-        {
-            //StorkModel db = new StorkModel();
-
-     
-            //string stun;
-            //if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false);
-            //using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
-
-            //    while ((stun = dizin.ReadLine()) != null)
-            //    {
+        //private void BeniHatirla()
+        //{
+        //    StorkModel db = new StorkModel();
 
 
+        //    string stun;
+        //    if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false) ;
+        //    using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
 
-            //    }
+        //        while ((stun = dizin.ReadLine()) != null)
+        //        {
 
-        }
+
+
+        //        }
+
+        //}
 
 
         private void BtnKayitOl_Click(object sender, EventArgs e)
@@ -63,7 +56,7 @@ namespace StorkFlix
 
             DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumTarihi.Text);
 
-            sorgu.KullaniciEkle(nme, maill, psw, dgtrh);
+            DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
         }
 
         private void LabelKayitOl_Click(object sender, EventArgs e)
@@ -74,6 +67,38 @@ namespace StorkFlix
         private void LabelGirisYap_Click(object sender, EventArgs e)
         {
             panelGiris.BringToFront();
+        }
+
+
+        private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            DataBaglan.ListeDoldur();
+            DataBaglan.TurDoldur();
+        }
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            IslemVarmi = false;
+            pictureBox2.Visible = false;
+
+            AktifKullanici Aktif = new AktifKullanici();
+            AnaSayfa anasayfa = new AnaSayfa();
+
+            string txtMail = textboxMail.Text, txtSifre = textboxPassword.Text;
+            int KullaniciKontrol = DataBaglan.MailKullaniciAra(txtMail, txtSifre);
+
+         
+            if (KullaniciKontrol == 0) labelMailHata.Visible=true;
+            else
+            {
+                if (KullaniciKontrol == 1)
+                {
+                    Aktif.KullaniciSec(txtMail);
+                    this.Hide();
+                    anasayfa.Show();
+                }
+                else labelSifreHata.Visible=true;
+            }
         }
     }
 }

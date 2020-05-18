@@ -1,4 +1,4 @@
-﻿using StorkFlix.Model;
+﻿using StorkFlix.Classes;
 using System;
 using System.Windows.Forms;
 
@@ -11,7 +11,7 @@ namespace StorkFlix
             InitializeComponent();
             hideSubMenu();
         }
-
+        bool IslemVarmi=false;
         private void hideSubMenu()
         {
             panelMediaSubMenu.Visible = false;
@@ -38,27 +38,28 @@ namespace StorkFlix
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new Diziler());
-      
-
+            if(IslemVarmi==false)
+            { 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            pictureBox2.Visible = true;
+            IslemVarmi = true;
+            backgroundWorker1.RunWorkerAsync();         
             hideSubMenu();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-         
             hideSubMenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-     
             hideSubMenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-       
             hideSubMenu();
         }
 
@@ -73,26 +74,21 @@ namespace StorkFlix
 
         private void button8_Click(object sender, EventArgs e)
         {
-        
             hideSubMenu();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-      
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-       
             hideSubMenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             hideSubMenu();
         }
 
@@ -106,25 +102,21 @@ namespace StorkFlix
 
         private void button13_Click(object sender, EventArgs e)
         {
-
             hideSubMenu();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-       
             hideSubMenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            
             hideSubMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-        
             hideSubMenu();
         }
 
@@ -133,14 +125,12 @@ namespace StorkFlix
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
             openChildForm(new Diziler());
-      
+
             hideSubMenu();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-           
-        
             hideSubMenu();
         }
 
@@ -166,8 +156,20 @@ namespace StorkFlix
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-
         }
 
+        private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            StorkData listgetir = new StorkData();
+            listgetir.ListeDoldur();
+            listgetir.TurDoldur();
+        }
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            IslemVarmi = false;
+            pictureBox2.Visible = false;
+            openChildForm(new Diziler());
+        }
     }
 }

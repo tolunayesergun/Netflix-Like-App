@@ -56,8 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\anima-theme.cs" />
+    <Compile Include="Classes\StorkData.cs" />
+    <Compile Include="Classes\MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Classes\Sorgular.cs" />
     <Compile Include="Forms\AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>

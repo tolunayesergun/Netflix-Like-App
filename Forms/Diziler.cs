@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StorkFlix.Classes;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,8 +13,8 @@ namespace StorkFlix
             InitializeComponent();
         }
 
-        private static readonly StorkModel db = new StorkModel();
-        private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.Where(i => i.tip == "Dizi").ToList();
+  
+
         private int SonrakiBuyukluk = 680;
         private int OncekiBuyukluk = 392;
 
@@ -26,7 +27,7 @@ namespace StorkFlix
         {
             int x = 0, y = 0;
 
-            foreach (var item in diziler)
+            foreach (var item in StorkData.DiziListesi)
             {
                 var dosyaYolu = "_" + item.id.ToString();
                 object O = Properties.Resources.ResourceManager.GetObject(dosyaYolu);
@@ -71,17 +72,20 @@ namespace StorkFlix
 
         private void DataGridDoldur()
         {
-            var products = (from i in db.Turler
-                            select new { i.isim }).ToList();
+   
 
-            dataGridView1.DataSource = products;
+            dataGridView1.DataSource = StorkData.TurListesi;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
         }
 
         private void Diziler_Load(object sender, EventArgs e)
         {
-            DataGridDoldur();
+            
+            DataGridDoldur();        
             panel1.Controls.Clear();
             ResimDiz();
+         
         }
 
         private void Panel1_Resize(object sender, EventArgs e)
@@ -100,6 +104,19 @@ namespace StorkFlix
                 panel1.Controls.Clear();
                 ResimDiz();
             }
+          
+        }
+
+
+
+        private void DataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.ClearSelection();
+        }
+
+        private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
