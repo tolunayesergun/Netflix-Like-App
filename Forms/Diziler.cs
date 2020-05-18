@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -14,9 +13,10 @@ namespace StorkFlix
         }
 
         private static readonly StorkModel db = new StorkModel();
-        private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.Where(i=>i.tip=="Dizi").ToList();
-        int SonrakiBuyukluk = 680;
-        int OncekiBuyukluk = 392;
+        private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.Where(i => i.tip == "Dizi").ToList();
+        private int SonrakiBuyukluk = 680;
+        private int OncekiBuyukluk = 392;
+
         private void Button5_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,8 +35,12 @@ namespace StorkFlix
                 {
                     Image = (Image)O,
                     Size = new System.Drawing.Size(160, 240),
-                    SizeMode = PictureBoxSizeMode.StretchImage
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Name=item.isim
+       
                 };
+                lst.Click += new EventHandler(Image_Click);
+                lst.MouseHover += new EventHandler(Image_MouseHover);
 
                 if (x < (panel1.Size.Width - 168))
                 {
@@ -54,14 +58,25 @@ namespace StorkFlix
                 }
             }
         }
-        private void DataGridDoldur() 
+
+        private void Image_MouseHover(object sender, EventArgs e)
+        {
+            PictureBox Image = sender as PictureBox;
+            toolTip1.SetToolTip(Image, Image.Name.ToString());
+        }
+
+        private void Image_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void DataGridDoldur()
         {
             var products = (from i in db.Turler
                             select new { i.isim }).ToList();
 
             dataGridView1.DataSource = products;
-
         }
+
         private void Diziler_Load(object sender, EventArgs e)
         {
             DataGridDoldur();
@@ -71,24 +86,20 @@ namespace StorkFlix
 
         private void Panel1_Resize(object sender, EventArgs e)
         {
-
-            if (panel1.Width > SonrakiBuyukluk )
+            if (panel1.Width > SonrakiBuyukluk)
             {
                 OncekiBuyukluk = SonrakiBuyukluk;
                 SonrakiBuyukluk += 170;
                 panel1.Controls.Clear();
                 ResimDiz();
-               
             }
-            else if(panel1.Width < OncekiBuyukluk)
+            else if (panel1.Width < OncekiBuyukluk)
             {
                 SonrakiBuyukluk = OncekiBuyukluk;
                 OncekiBuyukluk -= 170;
                 panel1.Controls.Clear();
                 ResimDiz();
             }
-
         }
-
     }
 }
