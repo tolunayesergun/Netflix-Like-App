@@ -14,7 +14,7 @@ namespace StorkFlix
         }
 
         private static readonly StorkModel db = new StorkModel();
-        private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.ToList();
+        private readonly System.Collections.Generic.List<Programlar> diziler = db.Programlar.Where(i=>i.tip=="Dizi").ToList();
         int SonrakiBuyukluk = 560;
         int OncekiBuyukluk = 392;
         private void Button5_Click(object sender, EventArgs e)
@@ -54,9 +54,17 @@ namespace StorkFlix
                 }
             }
         }
+        private void DataGridDoldur() 
+        {
+            var products = (from i in db.Turler
+                            select new { i.isim }).ToList();
 
+            dataGridView1.DataSource = products;
+
+        }
         private void Diziler_Load(object sender, EventArgs e)
         {
+            DataGridDoldur();
             panel1.Controls.Clear();
             ResimDiz();
         }

@@ -1,5 +1,6 @@
 ﻿using StorkFlix.Model;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -15,11 +16,14 @@ namespace StorkFlix
 
         private void BtnGiris_Click(object sender, EventArgs e)
         {
+
             AktifKullanici Aktif = new AktifKullanici();
             AnaSayfa anasayfa = new AnaSayfa();
 
             string txtMail = textboxMail.Text, txtSifre = textboxPassword.Text;
             int KullaniciKontrol = sorgu.MailKullaniciAra(txtMail, txtSifre);
+
+    
 
             if (KullaniciKontrol == 0) MessageBox.Show("Bu isimde kayıtlı bir mail adresi yok");
             else
@@ -33,6 +37,25 @@ namespace StorkFlix
                 else MessageBox.Show("Şifre Yanlış");
             }
         }
+
+        private void BeniHatirla()
+        {
+            //StorkModel db = new StorkModel();
+
+     
+            //string stun;
+            //if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false);
+            //using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
+
+            //    while ((stun = dizin.ReadLine()) != null)
+            //    {
+
+
+
+            //    }
+
+        }
+
 
         private void BtnKayitOl_Click(object sender, EventArgs e)
         {

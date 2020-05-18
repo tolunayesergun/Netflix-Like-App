@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnYardim = new System.Windows.Forms.Button();
             this.panelPlaylistSubMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnHesabim = new System.Windows.Forms.Button();
             this.panelMediaSubMenu = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnIzle = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnYardim = new System.Windows.Forms.Button();
-            this.btnHesabim = new System.Windows.Forms.Button();
-            this.btnIzle = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
             this.panelMediaSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -71,6 +71,48 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(177, 600);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Silver;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(0, 555);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(177, 45);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = " Çıkış Yap";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnYardim
+            // 
+            this.btnYardim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYardim.FlatAppearance.BorderSize = 0;
+            this.btnYardim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnYardim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnYardim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYardim.ForeColor = System.Drawing.Color.Silver;
+            this.btnYardim.Image = ((System.Drawing.Image)(resources.GetObject("btnYardim.Image")));
+            this.btnYardim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYardim.Location = new System.Drawing.Point(0, 466);
+            this.btnYardim.Name = "btnYardim";
+            this.btnYardim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnYardim.Size = new System.Drawing.Size(177, 45);
+            this.btnYardim.TabIndex = 8;
+            this.btnYardim.Text = "  Yardım";
+            this.btnYardim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYardim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnYardim.UseVisualStyleBackColor = true;
+            this.btnYardim.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // panelPlaylistSubMenu
             // 
@@ -155,6 +197,27 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnHesabim
+            // 
+            this.btnHesabim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHesabim.FlatAppearance.BorderSize = 0;
+            this.btnHesabim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnHesabim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnHesabim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHesabim.ForeColor = System.Drawing.Color.Silver;
+            this.btnHesabim.Image = ((System.Drawing.Image)(resources.GetObject("btnHesabim.Image")));
+            this.btnHesabim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHesabim.Location = new System.Drawing.Point(0, 256);
+            this.btnHesabim.Name = "btnHesabim";
+            this.btnHesabim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnHesabim.Size = new System.Drawing.Size(177, 45);
+            this.btnHesabim.TabIndex = 3;
+            this.btnHesabim.Text = " Hesabım";
+            this.btnHesabim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHesabim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHesabim.UseVisualStyleBackColor = true;
+            this.btnHesabim.Click += new System.EventHandler(this.btnPlaylist_Click);
+            // 
             // panelMediaSubMenu
             // 
             this.panelMediaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -202,99 +265,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(177, 126);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panelChildForm.Controls.Add(this.pictureBox9);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(177, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(773, 600);
-            this.panelChildForm.TabIndex = 2;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(282, 187);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(226, 218);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox9.TabIndex = 2;
-            this.pictureBox9.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.Silver;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 555);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(177, 45);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Text = " Çıkış Yap";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnYardim
-            // 
-            this.btnYardim.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnYardim.FlatAppearance.BorderSize = 0;
-            this.btnYardim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnYardim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnYardim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYardim.ForeColor = System.Drawing.Color.Silver;
-            this.btnYardim.Image = ((System.Drawing.Image)(resources.GetObject("btnYardim.Image")));
-            this.btnYardim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnYardim.Location = new System.Drawing.Point(0, 466);
-            this.btnYardim.Name = "btnYardim";
-            this.btnYardim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnYardim.Size = new System.Drawing.Size(177, 45);
-            this.btnYardim.TabIndex = 8;
-            this.btnYardim.Text = "  Yardım";
-            this.btnYardim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnYardim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnYardim.UseVisualStyleBackColor = true;
-            this.btnYardim.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // btnHesabim
-            // 
-            this.btnHesabim.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHesabim.FlatAppearance.BorderSize = 0;
-            this.btnHesabim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnHesabim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnHesabim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHesabim.ForeColor = System.Drawing.Color.Silver;
-            this.btnHesabim.Image = ((System.Drawing.Image)(resources.GetObject("btnHesabim.Image")));
-            this.btnHesabim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHesabim.Location = new System.Drawing.Point(0, 256);
-            this.btnHesabim.Name = "btnHesabim";
-            this.btnHesabim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHesabim.Size = new System.Drawing.Size(177, 45);
-            this.btnHesabim.TabIndex = 3;
-            this.btnHesabim.Text = " Hesabım";
-            this.btnHesabim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHesabim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHesabim.UseVisualStyleBackColor = true;
-            this.btnHesabim.Click += new System.EventHandler(this.btnPlaylist_Click);
-            // 
             // btnIzle
             // 
             this.btnIzle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -316,6 +286,15 @@
             this.btnIzle.UseVisualStyleBackColor = true;
             this.btnIzle.Click += new System.EventHandler(this.btnMedia_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(177, 126);
+            this.panelLogo.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -325,6 +304,27 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panelChildForm.Controls.Add(this.pictureBox9);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(177, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(773, 600);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(282, 187);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(226, 218);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox9.TabIndex = 2;
+            this.pictureBox9.TabStop = false;
             // 
             // AnaSayfa
             // 
@@ -345,10 +345,10 @@
             this.panelPlaylistSubMenu.ResumeLayout(false);
             this.panelMediaSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
