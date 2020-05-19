@@ -170,12 +170,14 @@ namespace StorkFlix
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
+            this.Activate();
         }
 
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             StorkData listgetir = new StorkData();
             listgetir.ListeDoldur(Tur);
+            listgetir.TurDoldur();
         }
 
         private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)

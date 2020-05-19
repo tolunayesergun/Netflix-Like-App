@@ -44,7 +44,6 @@ namespace StorkFlix
         //        {
 
 
-
         //        }
 
         //}
@@ -98,6 +97,27 @@ namespace StorkFlix
                 }
                 else labelSifreHata.Visible=true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //StorkModel db = new StorkModel();
+
+
+            //string stun;
+            //if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false) ;
+            //using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
+
+            //    while ((stun = dizin.ReadLine()) != null)
+            //    {
+            //        Kullanici kat = new Kullanici
+            //        {
+                      
+            //        };
+            //        db.Kullanici.Add(kat);
+            //        db.SaveChanges();
+
+            //    }
         }
     }
 }

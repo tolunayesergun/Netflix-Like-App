@@ -13,15 +13,8 @@ namespace StorkFlix
             InitializeComponent();
         }
 
-  
-
         private int SonrakiBuyukluk = 680;
         private int OncekiBuyukluk = 392;
-
-        private void Button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void ResimDiz()
         {
@@ -117,6 +110,11 @@ namespace StorkFlix
         private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void BtnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

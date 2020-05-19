@@ -9,7 +9,7 @@ namespace StorkFlix.Classes
     class StorkData
     {
         
-        private static readonly StorkModel db = new StorkModel();
+        private  readonly StorkModel db = new StorkModel();
         public static List<Programlar> DiziListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
 

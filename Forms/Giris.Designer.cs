@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
             this.panelGiris = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.labelSifreHata = new System.Windows.Forms.Label();
             this.labelMailHata = new System.Windows.Forms.Label();
             this.labelKayitOl = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.btnGiris = new AnimaButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textboxMail = new AnimaTextBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panelKayit = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textboxKayitAd = new AnimaTextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelGiris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -64,8 +65,9 @@
             // panelGiris
             // 
             this.panelGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panelGiris.Controls.Add(this.pictureBox9);
+            this.panelGiris.Controls.Add(this.button1);
             this.panelGiris.Controls.Add(this.pictureBox2);
+            this.panelGiris.Controls.Add(this.pictureBox9);
             this.panelGiris.Controls.Add(this.labelSifreHata);
             this.panelGiris.Controls.Add(this.labelMailHata);
             this.panelGiris.Controls.Add(this.labelKayitOl);
@@ -90,6 +92,17 @@
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(79, 34);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(226, 218);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox9.TabIndex = 2;
+            this.pictureBox9.TabStop = false;
             // 
             // labelSifreHata
             // 
@@ -195,17 +208,6 @@
             this.textboxMail.Size = new System.Drawing.Size(226, 34);
             this.textboxMail.TabIndex = 1;
             this.textboxMail.UseSystemPasswordChar = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(79, 34);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(226, 218);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox9.TabIndex = 2;
-            this.pictureBox9.TabStop = false;
             // 
             // panelKayit
             // 
@@ -397,6 +399,16 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(297, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +459,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label labelMailHata;
         private System.Windows.Forms.Label labelSifreHata;
+        private System.Windows.Forms.Button button1;
     }
 }
 
