@@ -6,35 +6,31 @@ using System.Windows.Forms;
 
 namespace StorkFlix
 {
-
     public partial class Giris : Form
     {
         public Giris()
         {
             InitializeComponent();
         }
-        bool IslemVarmi = false;
-        readonly StorkData DataBaglan = new StorkData();
+
+        private bool IslemVarmi = false;
+        private readonly StorkData DataBaglan = new StorkData();
+
         private void BtnGiris_Click(object sender, EventArgs e)
         {
             if (IslemVarmi == false)
             {
-               
                 pictureBox2.Visible = true;
                 labelSifreHata.Visible = false;
                 labelMailHata.Visible = false;
                 IslemVarmi = true;
                 backgroundWorker1.RunWorkerAsync();
- 
             }
-
-           
         }
 
         //private void BeniHatirla()
         //{
         //    StorkModel db = new StorkModel();
-
 
         //    string stun;
         //    if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false) ;
@@ -42,12 +38,9 @@ namespace StorkFlix
 
         //        while ((stun = dizin.ReadLine()) != null)
         //        {
-
-
         //        }
 
         //}
-
 
         private void BtnKayitOl_Click(object sender, EventArgs e)
         {
@@ -68,7 +61,6 @@ namespace StorkFlix
             panelGiris.BringToFront();
         }
 
-
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             DataBaglan.TurDoldur();
@@ -85,8 +77,7 @@ namespace StorkFlix
             string txtMail = textboxMail.Text, txtSifre = textboxPassword.Text;
             int KullaniciKontrol = DataBaglan.MailKullaniciAra(txtMail, txtSifre);
 
-         
-            if (KullaniciKontrol == 0) labelMailHata.Visible=true;
+            if (KullaniciKontrol == 0) labelMailHata.Visible = true;
             else
             {
                 if (KullaniciKontrol == 1)
@@ -95,29 +86,9 @@ namespace StorkFlix
                     this.Hide();
                     anasayfa.Show();
                 }
-                else labelSifreHata.Visible=true;
+                else labelSifreHata.Visible = true;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //StorkModel db = new StorkModel();
-
-
-            //string stun;
-            //if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false) ;
-            //using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
-
-            //    while ((stun = dizin.ReadLine()) != null)
-            //    {
-            //        Kullanici kat = new Kullanici
-            //        {
-                      
-            //        };
-            //        db.Kullanici.Add(kat);
-            //        db.SaveChanges();
-
-            //    }
-        }
     }
 }
