@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace StorkFlix
 {
-    public partial class Diziler : Form
+    public partial class FormProgramlar : Form
     {
-        public Diziler()
+        public FormProgramlar()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace StorkFlix
                 lst.Click += new EventHandler(Image_Click);
                 lst.MouseHover += new EventHandler(Image_MouseHover);
 
-                if (x < (panel1.Size.Width - 168))
+                if (x < (panel1.Size.Width - 170))
                 {
                     lst.Location = new Point(x, y);
                     panel1.Controls.Add(lst);

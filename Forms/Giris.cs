@@ -72,7 +72,6 @@ namespace StorkFlix
 
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            DataBaglan.ListeDoldur();
             DataBaglan.TurDoldur();
         }
 

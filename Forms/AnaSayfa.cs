@@ -11,7 +11,10 @@ namespace StorkFlix
             InitializeComponent();
             hideSubMenu();
         }
-        bool IslemVarmi=false;
+
+        private bool IslemVarmi = false;
+        private int Tur = 0;
+
         private void hideSubMenu()
         {
             panelMediaSubMenu.Visible = false;
@@ -36,22 +39,33 @@ namespace StorkFlix
 
         #region MediaSubMenu
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDizi_Click(object sender, EventArgs e)
         {
-            if(IslemVarmi==false)
-            { 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            pictureBox2.Visible = true;
-            IslemVarmi = true;
-            backgroundWorker1.RunWorkerAsync();         
-            hideSubMenu();
+            if (IslemVarmi == false)
+            {
+                Tur = 1;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.Visible = true;
+                IslemVarmi = true;
+                backgroundWorker1.RunWorkerAsync();
+                hideSubMenu();
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnFilm_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            if (IslemVarmi == false)
+            {
+                Tur = 0;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.Visible = true;
+                IslemVarmi = true;
+                backgroundWorker1.RunWorkerAsync();
+                hideSubMenu();
+            }
         }
+
+   
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -124,7 +138,7 @@ namespace StorkFlix
 
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
-            openChildForm(new Diziler());
+            openChildForm(new FormProgramlar());
 
             hideSubMenu();
         }
@@ -161,15 +175,19 @@ namespace StorkFlix
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             StorkData listgetir = new StorkData();
-            listgetir.ListeDoldur();
-            listgetir.TurDoldur();
+            listgetir.ListeDoldur(Tur);
         }
 
         private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             IslemVarmi = false;
             pictureBox2.Visible = false;
-            openChildForm(new Diziler());
+            openChildForm(new FormProgramlar());
+        }
+
+        private void AnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

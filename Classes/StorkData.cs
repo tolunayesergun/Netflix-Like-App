@@ -13,9 +13,10 @@ namespace StorkFlix.Classes
         public static List<Programlar> DiziListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
 
-        public void ListeDoldur()
+        public void ListeDoldur(int Tur)
         {
-            DiziListesi = db.Programlar.Where(i => i.tip == "Dizi").ToList();
+            if(Tur==1)DiziListesi = db.Programlar.Where(i => i.tip == "Dizi").ToList();
+            else DiziListesi = db.Programlar.Where(i => i.tip == "Film").ToList();
         }
 
         public void TurDoldur()

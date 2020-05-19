@@ -39,8 +39,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.btnHesabim = new System.Windows.Forms.Button();
             this.panelMediaSubMenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFilm = new System.Windows.Forms.Button();
+            this.btnDizi = new System.Windows.Forms.Button();
             this.btnIzle = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -224,49 +224,49 @@
             // panelMediaSubMenu
             // 
             this.panelMediaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMediaSubMenu.Controls.Add(this.button3);
-            this.panelMediaSubMenu.Controls.Add(this.button2);
+            this.panelMediaSubMenu.Controls.Add(this.btnFilm);
+            this.panelMediaSubMenu.Controls.Add(this.btnDizi);
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 171);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
             this.panelMediaSubMenu.Size = new System.Drawing.Size(177, 85);
             this.panelMediaSubMenu.TabIndex = 2;
             // 
-            // button3
+            // btnFilm
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(177, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Film";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnFilm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFilm.FlatAppearance.BorderSize = 0;
+            this.btnFilm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnFilm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilm.ForeColor = System.Drawing.Color.Silver;
+            this.btnFilm.Location = new System.Drawing.Point(0, 40);
+            this.btnFilm.Name = "btnFilm";
+            this.btnFilm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFilm.Size = new System.Drawing.Size(177, 40);
+            this.btnFilm.TabIndex = 1;
+            this.btnFilm.Text = "Film";
+            this.btnFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilm.UseVisualStyleBackColor = true;
+            this.btnFilm.Click += new System.EventHandler(this.btnFilm_Click);
             // 
-            // button2
+            // btnDizi
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(177, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Dizi";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDizi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDizi.FlatAppearance.BorderSize = 0;
+            this.btnDizi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnDizi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnDizi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDizi.ForeColor = System.Drawing.Color.Silver;
+            this.btnDizi.Location = new System.Drawing.Point(0, 0);
+            this.btnDizi.Name = "btnDizi";
+            this.btnDizi.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDizi.Size = new System.Drawing.Size(177, 40);
+            this.btnDizi.TabIndex = 0;
+            this.btnDizi.Text = "Dizi";
+            this.btnDizi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDizi.UseVisualStyleBackColor = true;
+            this.btnDizi.Click += new System.EventHandler(this.btnDizi_Click);
             // 
             // btnIzle
             // 
@@ -360,6 +360,7 @@
             this.MinimumSize = new System.Drawing.Size(920, 600);
             this.Name = "AnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaSayfa_FormClosed);
             this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
@@ -378,8 +379,8 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelMediaSubMenu;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFilm;
+        private System.Windows.Forms.Button btnDizi;
         private System.Windows.Forms.Button btnIzle;
         private System.Windows.Forms.Button btnYardim;
         private System.Windows.Forms.Panel panelPlaylistSubMenu;
