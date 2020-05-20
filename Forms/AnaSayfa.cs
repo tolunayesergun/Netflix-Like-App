@@ -1,5 +1,6 @@
 ﻿using StorkFlix.Classes;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -19,8 +20,11 @@ namespace StorkFlix
             if (IslemVarmi == false)
             {
                 Tur = 1;
-                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+
+                pictureBox2.Enabled = true;
                 pictureBox2.Visible = true;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.BringToFront();
                 IslemVarmi = true;
                 backgroundWorker1.RunWorkerAsync();
             }
@@ -31,8 +35,10 @@ namespace StorkFlix
             if (IslemVarmi == false)
             {
                 Tur = 0;
-                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.Enabled = true;
                 pictureBox2.Visible = true;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.BringToFront();
                 IslemVarmi = true;
                 backgroundWorker1.RunWorkerAsync();
             }
@@ -66,8 +72,8 @@ namespace StorkFlix
 
         private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            IslemVarmi = false;
-            pictureBox2.Visible = false;
+            pictureBox2.Enabled = false;
+            IslemVarmi = false;   
             openChildForm(new FormProgramlar());
         }
 

@@ -1,7 +1,7 @@
 ﻿using StorkFlix.Classes;
 using System;
 using System.Drawing;
-using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -15,7 +15,6 @@ namespace StorkFlix
 
         private int SonrakiBuyukluk = 680;
         private int OncekiBuyukluk = 392;
-
         private void ResimDiz()
         {
             int x = 0, y = 0;
@@ -30,8 +29,7 @@ namespace StorkFlix
                     Image = (Image)O,
                     Size = new System.Drawing.Size(160, 240),
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Name=item.isim
-       
+                    Name = item.isim
                 };
                 lst.Click += new EventHandler(Image_Click);
                 lst.MouseHover += new EventHandler(Image_MouseHover);
@@ -65,8 +63,6 @@ namespace StorkFlix
 
         private void DataGridDoldur()
         {
-   
-
             dataGridView1.DataSource = StorkData.TurListesi;
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[2].Visible = false;
@@ -74,15 +70,17 @@ namespace StorkFlix
 
         private void Diziler_Load(object sender, EventArgs e)
         {
-            
-            DataGridDoldur();        
+            panel1.AutoScroll = false;
+            DataGridDoldur();
             panel1.Controls.Clear();
             ResimDiz();
-         
+            backgroundWorker1.RunWorkerAsync();
+
         }
 
         private void Panel1_Resize(object sender, EventArgs e)
         {
+ 
             if (panel1.Width > SonrakiBuyukluk)
             {
                 OncekiBuyukluk = SonrakiBuyukluk;
@@ -97,20 +95,27 @@ namespace StorkFlix
                 panel1.Controls.Clear();
                 ResimDiz();
             }
-          
         }
-
-
 
         private void DataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();
+            dataGridView1.RowTemplate.MinimumHeight = 35;
         }
 
         private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-
         }
 
+        private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            Thread.Sleep(100);
+        }
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            panel1.AutoScroll = true;
+
+        }
     }
 }

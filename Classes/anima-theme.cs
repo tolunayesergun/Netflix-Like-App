@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,7 +15,6 @@ internal static class Helpers
         return new Point((int)Rect.Width / 2 - (int)Size.Width / 2, (int)Rect.Height / 2 - (int)Size.Height / 2);
     }
 }
-
 
 public class AnimaTextBox : Control
 {
@@ -282,7 +280,6 @@ public class AnimaTextBox : Control
     }
 }
 
-
 public class AnimaCheckBox : CheckBox
 {
     private Graphics G;
@@ -424,7 +421,6 @@ public class AnimaCheckBox : CheckBox
         Block = false;
     }
 }
-
 
 public class AnimaButton : Button
 {
@@ -726,7 +722,6 @@ public class AnimaContextMenuStrip : ContextMenuStrip
         }
     }
 }
-
 
 public class AnimaTabControl : TabControl
 {
