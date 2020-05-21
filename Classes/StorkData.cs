@@ -24,7 +24,7 @@ namespace StorkFlix.Classes
             }
             else
             {
-                // Önce Linq sorgusu alınıp, sonra extension şekilde değiştiriliyor
+                // Önce Linq sorgusu alınıp, sonra extension şekilde liste değiştiriliyor
                 var sorgu = (from i in db.Programlar
                              join x in db.ProgramTurleri
                              on i.id equals x.programId
@@ -47,7 +47,7 @@ namespace StorkFlix.Classes
                                  auzunluk = gcs.Key.uzunluk
                              }).ToList();
 
-                var yeniListe = sorgu.ToList().Select(r => new Programlar
+                ProgramListesi = sorgu.ToList().Select(r => new Programlar
                 {
                     id = r.aid,
                     isim = r.aisim,
@@ -55,9 +55,13 @@ namespace StorkFlix.Classes
                     bolum = r.abolum,
                     uzunluk = r.auzunluk
                 }).ToList();
-
-                ProgramListesi = yeniListe;
             }
+        }
+
+        public void ProgramAra(string Kelime)
+        {
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru)
+                                          .Where(i => i.isim.StartsWith(Kelime)).ToList();
         }
 
         public void TurDoldur()

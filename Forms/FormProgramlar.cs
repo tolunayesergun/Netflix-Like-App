@@ -131,5 +131,19 @@ namespace StorkFlix
         {
             panel1.AutoScroll = true;
         }
+
+        private void TextboxMail_TextChanged(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+
+            Baglanti.ProgramAra(textboxMail.Text);
+            ResimDiz();
+
+            if (panel1.Controls.Count < 1)
+            {
+                label1.Text = "   Bu İsimde Bir " + StorkData.SeciliProgramTuru + " Yok";
+                label1.Visible = true;
+            }
+        }
     }
 }
