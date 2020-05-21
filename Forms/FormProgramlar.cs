@@ -13,17 +13,17 @@ namespace StorkFlix
         {
             InitializeComponent();
         }
+
         private readonly StorkData Baglanti = new StorkData();
         private int SonrakiBuyukluk = 680;
         private int OncekiBuyukluk = 392;
+
         private void ResimDiz()
         {
             panel1.Controls.Clear();
             int x = 0, y = 0;
             foreach (var item in StorkData.ProgramListesi)
             {
-    
-
                 var dosyaYolu = "_" + item.id.ToString();
                 object O = Properties.Resources.ResourceManager.GetObject(dosyaYolu);
 
@@ -64,25 +64,16 @@ namespace StorkFlix
         {
         }
 
-        private void DataGridDoldur()
-        {
-            dataGridView1.DataSource = StorkData.TurListesi;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-        }
-
         private void Diziler_Load(object sender, EventArgs e)
         {
             panel1.AutoScroll = false;
-            DataGridDoldur();        
+            DataGridDoldur();
             ResimDiz();
             backgroundWorker1.RunWorkerAsync();
-
         }
 
         private void Panel1_Resize(object sender, EventArgs e)
         {
- 
             if (panel1.Width > SonrakiBuyukluk)
             {
                 OncekiBuyukluk = SonrakiBuyukluk;
@@ -97,28 +88,35 @@ namespace StorkFlix
             }
         }
 
+        private void DataGridDoldur()
+        {
+            dataGridView1.DataSource = StorkData.TurListesi;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+        }
+
         private void DataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();
             dataGridView1.RowTemplate.MinimumHeight = 35;
         }
 
-        private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
+        private void DataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
             label1.Visible = false;
-            int?[] diziTurler=new int?[dataGridView1.SelectedRows.Count];
+            int?[] diziTurler = new int?[dataGridView1.SelectedRows.Count];
 
             for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
             {
-            diziTurler[i] = (dataGridView1.SelectedRows[i].Index + 1);
+                diziTurler[i] = (dataGridView1.SelectedRows[i].Index + 1);
             }
 
-            Baglanti.ListeFiltrele(diziTurler);      
+            Baglanti.ListeFiltrele(diziTurler);
             ResimDiz();
 
             if (panel1.Controls.Count < 1)
             {
-                if (diziTurler.Count() > 1) label1.Text = "   Bu Kategorilere Uygun "+StorkData.SeciliProgramTuru+" Yok";
+                if (diziTurler.Count() > 1) label1.Text = "   Bu Kategorilere Uygun " + StorkData.SeciliProgramTuru + " Yok";
                 else label1.Text = "   Bu Kategoriye Uygun " + StorkData.SeciliProgramTuru + " Yok";
                 label1.Visible = true;
             }
@@ -127,14 +125,11 @@ namespace StorkFlix
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             Thread.Sleep(100);
-          
         }
 
         private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             panel1.AutoScroll = true;
-
         }
-
     }
 }
