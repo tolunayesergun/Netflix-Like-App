@@ -67,11 +67,11 @@
     <Compile Include="Forms\AnaSayfa.designer.cs">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\FormHesabim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\FormHesabim.designer.cs">
+      <DependentUpon>FormHesabim.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProgramlar.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Forms\AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormHesabim.resx">
+      <DependentUpon>FormHesabim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormProgramlar.resx">
       <DependentUpon>FormProgramlar.cs</DependentUpon>

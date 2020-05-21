@@ -42,6 +42,12 @@ namespace StorkFlix
                 backgroundWorker1.RunWorkerAsync();
             }
         }
+
+        private void BtnHesabim_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormHesabim());
+        }
+
         private Form activeForm = null;
 
         private void openChildForm(Form childForm)
@@ -80,5 +86,7 @@ namespace StorkFlix
         {
             Application.Exit();
         }
+
+     
     }
 }
