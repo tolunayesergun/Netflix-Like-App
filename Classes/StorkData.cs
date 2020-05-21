@@ -1,29 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StorkFlix.Classes
 {
-    class StorkData
+    internal class StorkData
     {
-        
-        private  readonly StorkModel db = new StorkModel();
-        public static List<Programlar> DiziListesi { get; set; }
+        private readonly StorkModel db = new StorkModel();
+        public static List<Programlar> ProgramListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
+        public static string SeciliProgramTuru { get; set; }
 
-        public void ListeDoldur(int Tur)
+        public void ListeDoldur()
         {
-            if(Tur==1)DiziListesi = db.Programlar.Where(i => i.tip == "Dizi").ToList();
-            else DiziListesi = db.Programlar.Where(i => i.tip == "Film").ToList();
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).ToList();
+        }
+
+        public void ListeFiltrele(int?[] Filtreler)
+        {
+            if (Filtreler.Count() == 0)
+            {
+                ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).ToList();
+            }
+            else
+            {
+                // Önce Linq sorgusu alınıp, sonra extension şekilde değiştiriliyor
+                var sorgu = (from i in db.Programlar
+                             join x in db.ProgramTurleri
+                             on i.id equals x.programId
+                             where Filtreler.Contains(x.turId) && i.tip == SeciliProgramTuru
+                             group i by new
+                             {
+                                 i.id,
+                                 i.isim,
+                                 i.tip,
+                                 i.bolum,
+                                 i.uzunluk
+                             } into gcs
+                             where gcs.Count() == Filtreler.Count()
+                             select new
+                             {
+                                 aid = gcs.Key.id,
+                                 aisim = gcs.Key.isim,
+                                 atip = gcs.Key.tip,
+                                 abolum = gcs.Key.bolum,
+                                 auzunluk = gcs.Key.uzunluk
+                             }).ToList();
+
+                var yeniListe = sorgu.ToList().Select(r => new Programlar
+                {
+                    id = r.aid,
+                    isim = r.aisim,
+                    tip = r.atip,
+                    bolum = r.abolum,
+                    uzunluk = r.auzunluk
+                }).ToList();
+
+                ProgramListesi = yeniListe;
+            }
         }
 
         public void TurDoldur()
         {
             TurListesi = db.Turler.ToList();
         }
-
 
         //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
         public int MailKullaniciAra(string mail, string sifre)

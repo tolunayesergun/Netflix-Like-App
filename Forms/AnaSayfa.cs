@@ -13,14 +13,13 @@ namespace StorkFlix
         }
 
         private bool IslemVarmi = false;
-        private int Tur = 0;
+
 
         private void btnDizi_Click(object sender, EventArgs e)
         {
             if (IslemVarmi == false)
             {
-                Tur = 1;
-
+                StorkData.SeciliProgramTuru = "Dizi";
                 pictureBox2.Enabled = true;
                 pictureBox2.Visible = true;
                 this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -34,7 +33,7 @@ namespace StorkFlix
         {
             if (IslemVarmi == false)
             {
-                Tur = 0;
+                StorkData.SeciliProgramTuru = "Film";
                 pictureBox2.Enabled = true;
                 pictureBox2.Visible = true;
                 this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,13 +59,13 @@ namespace StorkFlix
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            this.Activate();
+            this.BringToFront();
         }
 
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             StorkData listgetir = new StorkData();
-            listgetir.ListeDoldur(Tur);
+            listgetir.ListeDoldur();
             listgetir.TurDoldur();
         }
 
