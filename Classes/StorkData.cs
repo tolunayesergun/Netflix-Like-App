@@ -9,7 +9,13 @@ namespace StorkFlix.Classes
         private readonly StorkModel db = new StorkModel();
         public static List<Programlar> ProgramListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
+        public static Programlar SecilenProgram { get; set; }
         public static string SeciliProgramTuru { get; set; }
+       
+        public void ProgramSec(int GelenId)
+        {
+             SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
+        }
 
         public void ListeDoldur()
         {

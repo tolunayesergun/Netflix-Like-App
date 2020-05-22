@@ -1,4 +1,5 @@
 ﻿using StorkFlix.Classes;
+using StorkFlix.Forms;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -32,7 +33,8 @@ namespace StorkFlix
                     Image = (Image)O,
                     Size = new System.Drawing.Size(160, 240),
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Name = item.isim
+                    Name = item.isim,
+                    Tag=item.id
                 };
                 lst.Click += new EventHandler(Image_Click);
                 lst.MouseHover += new EventHandler(Image_MouseHover);
@@ -62,6 +64,9 @@ namespace StorkFlix
 
         private void Image_Click(object sender, EventArgs e)
         {
+            PictureBox Image = sender as PictureBox;
+            Baglanti.ProgramSec(Convert.ToInt32(Image.Tag));
+            this.Close();
         }
 
         private void Diziler_Load(object sender, EventArgs e)

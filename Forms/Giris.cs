@@ -82,9 +82,9 @@ namespace StorkFlix
             {
                 if (KullaniciKontrol == 1)
                 {
-                    Aktif.KullaniciSec(txtMail);
-                    this.Hide();
+                    Aktif.KullaniciSec(txtMail);                  
                     anasayfa.Show();
+                    this.Hide();
                 }
                 else labelSifreHata.Visible = true;
             }

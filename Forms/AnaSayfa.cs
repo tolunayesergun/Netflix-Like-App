@@ -1,4 +1,5 @@
 ﻿using StorkFlix.Classes;
+using StorkFlix.Forms;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace StorkFlix
         private bool IslemVarmi = false;
 
 
-        private void btnDizi_Click(object sender, EventArgs e)
+        private void BtnDizi_Click(object sender, EventArgs e)
         {
             if (IslemVarmi == false)
             {
@@ -29,7 +30,7 @@ namespace StorkFlix
             }
         }
 
-        private void btnFilm_Click(object sender, EventArgs e)
+        private void BtnFilm_Click(object sender, EventArgs e)
         {
             if (IslemVarmi == false)
             {
@@ -45,22 +46,22 @@ namespace StorkFlix
 
         private void BtnHesabim_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormHesabim());
+            AltForumGetir(new FormHesabim());
         }
 
         private Form activeForm = null;
 
-        private void openChildForm(Form childForm)
+        public void AltForumGetir(Form altForum)
         {
             if (activeForm != null) activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            activeForm = altForum;
+            altForum.TopLevel = false;
+            altForum.FormBorderStyle = FormBorderStyle.None;
+            altForum.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(altForum);
+            panelChildForm.Tag = altForum;
+            altForum.BringToFront();
+            altForum.Show();
         }
 
         private void AnaSayfa_Load(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace StorkFlix
         {
             pictureBox2.Enabled = false;
             IslemVarmi = false;   
-            openChildForm(new FormProgramlar());
+            AltForumGetir(new FormProgramlar());
         }
 
         private void AnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
@@ -87,6 +88,11 @@ namespace StorkFlix
             Application.Exit();
         }
 
-     
+        private void PanelChildForm_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if(StorkData.SecilenProgram!=null)AltForumGetir(new FormEkran());
+        }
+
+
     }
 }

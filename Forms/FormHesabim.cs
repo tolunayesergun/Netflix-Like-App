@@ -24,5 +24,15 @@ namespace StorkFlix
             lblMail.Text = AktifKullanici.kullaniciMail;
             lblDate.Text = AktifKullanici.kullaniciDgn.ToString("MM-dd-yyyy");
         }
+
+        private void BtnSecimIptal_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void BtnSecimYap_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
     }
 }

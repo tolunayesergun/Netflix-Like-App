@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnHesabim = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFilm = new System.Windows.Forms.Button();
+            this.btnHesabim = new System.Windows.Forms.Button();
+            this.btnDizi = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChildForm
@@ -57,100 +57,7 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(904, 569);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.btnHesabim);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 76);
-            this.panel1.TabIndex = 3;
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(307, 6);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(80, 64);
-            this.button4.TabIndex = 5;
-            this.button4.Text = " Film";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btnFilm_Click);
-            // 
-            // btnHesabim
-            // 
-            this.btnHesabim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHesabim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHesabim.FlatAppearance.BorderSize = 0;
-            this.btnHesabim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnHesabim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnHesabim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHesabim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHesabim.ForeColor = System.Drawing.Color.Silver;
-            this.btnHesabim.Image = ((System.Drawing.Image)(resources.GetObject("btnHesabim.Image")));
-            this.btnHesabim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHesabim.Location = new System.Drawing.Point(775, 3);
-            this.btnHesabim.Name = "btnHesabim";
-            this.btnHesabim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHesabim.Size = new System.Drawing.Size(114, 70);
-            this.btnHesabim.TabIndex = 4;
-            this.btnHesabim.Text = " Hesabım";
-            this.btnHesabim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHesabim.UseVisualStyleBackColor = true;
-            this.btnHesabim.Click += new System.EventHandler(this.BtnHesabim_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(221, 6);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(80, 64);
-            this.button2.TabIndex = 2;
-            this.button2.Text = " Dizi";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnDizi_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelChildForm.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.PanelChildForm_ControlRemoved);
             // 
             // pictureBox2
             // 
@@ -175,6 +82,100 @@
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.btnFilm);
+            this.panel1.Controls.Add(this.btnHesabim);
+            this.panel1.Controls.Add(this.btnDizi);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(904, 76);
+            this.panel1.TabIndex = 3;
+            // 
+            // btnFilm
+            // 
+            this.btnFilm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFilm.FlatAppearance.BorderSize = 0;
+            this.btnFilm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnFilm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFilm.ForeColor = System.Drawing.Color.Silver;
+            this.btnFilm.Image = ((System.Drawing.Image)(resources.GetObject("btnFilm.Image")));
+            this.btnFilm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilm.Location = new System.Drawing.Point(307, 6);
+            this.btnFilm.Name = "btnFilm";
+            this.btnFilm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnFilm.Size = new System.Drawing.Size(80, 64);
+            this.btnFilm.TabIndex = 5;
+            this.btnFilm.Text = " Film";
+            this.btnFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFilm.UseVisualStyleBackColor = true;
+            this.btnFilm.Click += new System.EventHandler(this.BtnFilm_Click);
+            // 
+            // btnHesabim
+            // 
+            this.btnHesabim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHesabim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHesabim.FlatAppearance.BorderSize = 0;
+            this.btnHesabim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnHesabim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnHesabim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHesabim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHesabim.ForeColor = System.Drawing.Color.Silver;
+            this.btnHesabim.Image = ((System.Drawing.Image)(resources.GetObject("btnHesabim.Image")));
+            this.btnHesabim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHesabim.Location = new System.Drawing.Point(775, 3);
+            this.btnHesabim.Name = "btnHesabim";
+            this.btnHesabim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnHesabim.Size = new System.Drawing.Size(114, 70);
+            this.btnHesabim.TabIndex = 4;
+            this.btnHesabim.Text = " Hesabım";
+            this.btnHesabim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHesabim.UseVisualStyleBackColor = true;
+            this.btnHesabim.Click += new System.EventHandler(this.BtnHesabim_Click);
+            // 
+            // btnDizi
+            // 
+            this.btnDizi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDizi.FlatAppearance.BorderSize = 0;
+            this.btnDizi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnDizi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnDizi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDizi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDizi.ForeColor = System.Drawing.Color.Silver;
+            this.btnDizi.Image = ((System.Drawing.Image)(resources.GetObject("btnDizi.Image")));
+            this.btnDizi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDizi.Location = new System.Drawing.Point(221, 6);
+            this.btnDizi.Name = "btnDizi";
+            this.btnDizi.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnDizi.Size = new System.Drawing.Size(80, 64);
+            this.btnDizi.TabIndex = 2;
+            this.btnDizi.Text = " Dizi";
+            this.btnDizi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDizi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDizi.UseVisualStyleBackColor = true;
+            this.btnDizi.Click += new System.EventHandler(this.BtnDizi_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,10 +194,10 @@
             this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,8 +210,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHesabim;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDizi;
+        private System.Windows.Forms.Button btnFilm;
     }
 }
 
