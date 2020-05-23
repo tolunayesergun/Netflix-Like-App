@@ -90,5 +90,18 @@ namespace StorkFlix
             }
         }
 
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            pictureBox3.Visible = true;
+            textboxPassword.UseSystemPasswordChar = false;
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+            pictureBox3.Visible = false;
+            textboxPassword.UseSystemPasswordChar = true;
+        }
     }
 }
