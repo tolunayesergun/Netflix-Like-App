@@ -92,6 +92,11 @@
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\AktifKullanici.cs" />
+    <Compile Include="Migrations\202005231812037_FirstMigration.cs" />
+    <Compile Include="Migrations\202005231812037_FirstMigration.Designer.cs">
+      <DependentUpon>202005231812037_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\KullaniciProgram.cs" />
     <Compile Include="Program.cs" />
@@ -115,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005231812037_FirstMigration.resx">
+      <DependentUpon>202005231812037_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

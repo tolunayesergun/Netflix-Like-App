@@ -1,7 +1,6 @@
 ﻿using StorkFlix.Classes;
 using StorkFlix.Model;
 using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -27,20 +26,6 @@ namespace StorkFlix
                 backgroundWorker1.RunWorkerAsync();
             }
         }
-
-        //private void BeniHatirla()
-        //{
-        //    StorkModel db = new StorkModel();
-
-        //    string stun;
-        //    if ((File.Exists(Application.StartupPath + "\\Şehir Verileri.txt")) == false) ;
-        //    using (StreamReader dizin = new StreamReader(Application.StartupPath + "\\BeniHatirla.txt"))
-
-        //        while ((stun = dizin.ReadLine()) != null)
-        //        {
-        //        }
-
-        //}
 
         private void BtnKayitOl_Click(object sender, EventArgs e)
         {
@@ -82,7 +67,19 @@ namespace StorkFlix
             {
                 if (KullaniciKontrol == 1)
                 {
-                    Aktif.KullaniciSec(txtMail);                  
+                    if (chckBeniHatirla.Checked == true)
+                    {
+                        Properties.Settings.Default.KullaniciAdi = textboxMail.Text;
+                        Properties.Settings.Default.Sifre = textboxPassword.Text;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.KullaniciAdi = "";
+                        Properties.Settings.Default.Sifre = "";
+                        Properties.Settings.Default.Save();
+                    }
+                    Aktif.KullaniciSec(txtMail);
                     anasayfa.Show();
                     this.Hide();
                 }
@@ -94,14 +91,26 @@ namespace StorkFlix
         {
             pictureBox1.Visible = false;
             pictureBox3.Visible = true;
-            textboxPassword.UseSystemPasswordChar = false;
+
+            textboxPassword.UseSystemPasswordChar = true;
         }
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             pictureBox1.Visible = true;
             pictureBox3.Visible = false;
-            textboxPassword.UseSystemPasswordChar = true;
+            textboxPassword.UseSystemPasswordChar = false;
+        }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.KullaniciAdi != "")
+            {
+                textboxMail.Text = Properties.Settings.Default.KullaniciAdi;
+                textboxPassword.Text = Properties.Settings.Default.Sifre;
+                chckBeniHatirla.Checked = true;
+                btnGiris.TabIndex = 1;
+            }
         }
     }
 }
