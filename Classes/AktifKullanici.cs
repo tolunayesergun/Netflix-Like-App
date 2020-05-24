@@ -13,6 +13,7 @@ namespace StorkFlix.Model
         public static string kullaniciMail { get; set; }
         public static string kullaniciSifre { get; set; }
         public static DateTime kullaniciDgn { get; set; }
+        public static string kullaniciProfil { get; set; }
 
         public  void KullaniciSec(string mail)
         {
@@ -24,6 +25,7 @@ namespace StorkFlix.Model
             kullaniciMail = kullaniciBilgileri.mail;
             kullaniciSifre = kullaniciBilgileri.sifre;
             kullaniciDgn = kullaniciBilgileri.dogumTarihi;
+            kullaniciProfil = kullaniciBilgileri.profilFotorafi;
         }
     }
 }

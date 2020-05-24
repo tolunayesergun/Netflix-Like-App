@@ -28,6 +28,7 @@ namespace StorkFlix
         [StringLength(50)]
         public string sifre { get; set; }
 
+        [StringLength(50)]
         public string profilFotorafi { get; set; }
 
         public DateTime dogumTarihi { get; set; }

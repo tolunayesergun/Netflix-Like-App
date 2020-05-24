@@ -29,56 +29,79 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHesabim));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.profil8 = new System.Windows.Forms.PictureBox();
+            this.profil7 = new System.Windows.Forms.PictureBox();
+            this.profil6 = new System.Windows.Forms.PictureBox();
+            this.profil5 = new System.Windows.Forms.PictureBox();
+            this.profil4 = new System.Windows.Forms.PictureBox();
+            this.profil3 = new System.Windows.Forms.PictureBox();
+            this.profil2 = new System.Windows.Forms.PictureBox();
+            this.profil1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCikisYap = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblSifreDegis = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelSifreHata = new System.Windows.Forms.Label();
-            this.animaButton1 = new AnimaButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnsfreIptal = new AnimaButton();
+            this.lblYeniSifreTekrar = new AnimaTextBox();
+            this.LblYeniSifre = new AnimaTextBox();
+            this.lblEskiSifre = new AnimaTextBox();
+            this.sfreKydt = new AnimaButton();
+            this.btnIptal = new AnimaButton();
+            this.textboxDg = new AnimaTextBox();
+            this.textboxMail = new AnimaTextBox();
+            this.textboxKadi = new AnimaTextBox();
+            this.btnKaydet = new AnimaButton();
+            this.btnDegistir = new AnimaButton();
             this.btnSecimIptal = new AnimaButton();
             this.btnSecimYap = new AnimaButton();
             this.dataGridView1 = new StorkFlix.Classes.MyDataGridView();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,14 +121,14 @@
             // 
             this.panel4.Controls.Add(this.btnSecimIptal);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Controls.Add(this.pictureBox7);
-            this.panel4.Controls.Add(this.pictureBox8);
-            this.panel4.Controls.Add(this.pictureBox9);
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.profil8);
+            this.panel4.Controls.Add(this.profil7);
+            this.panel4.Controls.Add(this.profil6);
+            this.panel4.Controls.Add(this.profil5);
+            this.panel4.Controls.Add(this.profil4);
+            this.panel4.Controls.Add(this.profil3);
+            this.panel4.Controls.Add(this.profil2);
+            this.panel4.Controls.Add(this.profil1);
             this.panel4.Location = new System.Drawing.Point(3, 13);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(307, 208);
@@ -118,100 +141,108 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(4, 179);
+            this.label5.Location = new System.Drawing.Point(4, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 18);
             this.label5.TabIndex = 17;
             this.label5.Text = "Seçiminiz Bekleniyor..";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
+            // profil8
             // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(236, 81);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
+            this.profil8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil8.Image = ((System.Drawing.Image)(resources.GetObject("profil8.Image")));
+            this.profil8.Location = new System.Drawing.Point(236, 81);
+            this.profil8.Name = "profil8";
+            this.profil8.Size = new System.Drawing.Size(70, 70);
+            this.profil8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil8.TabIndex = 7;
+            this.profil8.TabStop = false;
+            this.profil8.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox7
+            // profil7
             // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(159, 81);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
+            this.profil7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil7.Image = ((System.Drawing.Image)(resources.GetObject("profil7.Image")));
+            this.profil7.Location = new System.Drawing.Point(159, 81);
+            this.profil7.Name = "profil7";
+            this.profil7.Size = new System.Drawing.Size(70, 70);
+            this.profil7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil7.TabIndex = 6;
+            this.profil7.TabStop = false;
+            this.profil7.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox8
+            // profil6
             // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(80, 81);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 5;
-            this.pictureBox8.TabStop = false;
+            this.profil6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil6.Image = ((System.Drawing.Image)(resources.GetObject("profil6.Image")));
+            this.profil6.Location = new System.Drawing.Point(80, 81);
+            this.profil6.Name = "profil6";
+            this.profil6.Size = new System.Drawing.Size(70, 70);
+            this.profil6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil6.TabIndex = 5;
+            this.profil6.TabStop = false;
+            this.profil6.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox9
+            // profil5
             // 
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(3, 81);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 4;
-            this.pictureBox9.TabStop = false;
+            this.profil5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil5.Image = ((System.Drawing.Image)(resources.GetObject("profil5.Image")));
+            this.profil5.Location = new System.Drawing.Point(3, 81);
+            this.profil5.Name = "profil5";
+            this.profil5.Size = new System.Drawing.Size(70, 70);
+            this.profil5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil5.TabIndex = 4;
+            this.profil5.TabStop = false;
+            this.profil5.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox5
+            // profil4
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(236, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
+            this.profil4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil4.Image = ((System.Drawing.Image)(resources.GetObject("profil4.Image")));
+            this.profil4.Location = new System.Drawing.Point(236, 3);
+            this.profil4.Name = "profil4";
+            this.profil4.Size = new System.Drawing.Size(70, 70);
+            this.profil4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil4.TabIndex = 3;
+            this.profil4.TabStop = false;
+            this.profil4.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox4
+            // profil3
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(159, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.profil3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil3.Image = ((System.Drawing.Image)(resources.GetObject("profil3.Image")));
+            this.profil3.Location = new System.Drawing.Point(159, 3);
+            this.profil3.Name = "profil3";
+            this.profil3.Size = new System.Drawing.Size(70, 70);
+            this.profil3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil3.TabIndex = 2;
+            this.profil3.TabStop = false;
+            this.profil3.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox3
+            // profil2
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(80, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.profil2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil2.Image = ((System.Drawing.Image)(resources.GetObject("profil2.Image")));
+            this.profil2.Location = new System.Drawing.Point(80, 3);
+            this.profil2.Name = "profil2";
+            this.profil2.Size = new System.Drawing.Size(70, 70);
+            this.profil2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil2.TabIndex = 1;
+            this.profil2.TabStop = false;
+            this.profil2.Click += new System.EventHandler(this.PictureBox_Click);
             // 
-            // pictureBox2
+            // profil1
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.profil1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profil1.Image = ((System.Drawing.Image)(resources.GetObject("profil1.Image")));
+            this.profil1.Location = new System.Drawing.Point(3, 3);
+            this.profil1.Name = "profil1";
+            this.profil1.Size = new System.Drawing.Size(70, 70);
+            this.profil1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profil1.TabIndex = 0;
+            this.profil1.TabStop = false;
+            this.profil1.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // panel1
             // 
@@ -250,26 +281,68 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.labelSifreHata);
-            this.panel2.Controls.Add(this.animaButton1);
-            this.panel2.Controls.Add(this.lblDate);
-            this.panel2.Controls.Add(this.lblMail);
-            this.panel2.Controls.Add(this.lblName);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblCikisYap);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Location = new System.Drawing.Point(6, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 208);
             this.panel2.TabIndex = 1;
             // 
+            // lblCikisYap
+            // 
+            this.lblCikisYap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCikisYap.AutoSize = true;
+            this.lblCikisYap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCikisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCikisYap.ForeColor = System.Drawing.Color.Crimson;
+            this.lblCikisYap.Location = new System.Drawing.Point(327, 0);
+            this.lblCikisYap.Name = "lblCikisYap";
+            this.lblCikisYap.Size = new System.Drawing.Size(66, 15);
+            this.lblCikisYap.TabIndex = 24;
+            this.lblCikisYap.Text = "Çıkış Yap";
+            this.lblCikisYap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCikisYap.Click += new System.EventHandler(this.lblCikisYap_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.Controls.Add(this.lblSifreDegis);
+            this.panel5.Controls.Add(this.lblDate);
+            this.panel5.Controls.Add(this.lblMail);
+            this.panel5.Controls.Add(this.btnDegistir);
+            this.panel5.Controls.Add(this.lblName);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Location = new System.Drawing.Point(24, 19);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(322, 183);
+            this.panel5.TabIndex = 25;
+            // 
+            // lblSifreDegis
+            // 
+            this.lblSifreDegis.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSifreDegis.AutoSize = true;
+            this.lblSifreDegis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSifreDegis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSifreDegis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblSifreDegis.Location = new System.Drawing.Point(121, 171);
+            this.lblSifreDegis.Name = "lblSifreDegis";
+            this.lblSifreDegis.Size = new System.Drawing.Size(80, 13);
+            this.lblSifreDegis.TabIndex = 26;
+            this.lblSifreDegis.Text = "Şifre Değiştir";
+            this.lblSifreDegis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSifreDegis.Click += new System.EventHandler(this.lblSifreDegis_Click);
+            // 
             // lblDate
             // 
-            this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblDate.Location = new System.Drawing.Point(217, 115);
+            this.lblDate.Location = new System.Drawing.Point(155, 97);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(71, 18);
             this.lblDate.TabIndex = 19;
@@ -278,11 +351,11 @@
             // 
             // lblMail
             // 
-            this.lblMail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblMail.Location = new System.Drawing.Point(217, 74);
+            this.lblMail.Location = new System.Drawing.Point(155, 56);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(71, 18);
             this.lblMail.TabIndex = 18;
@@ -291,11 +364,11 @@
             // 
             // lblName
             // 
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblName.Location = new System.Drawing.Point(217, 33);
+            this.lblName.Location = new System.Drawing.Point(155, 15);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(76, 18);
             this.lblName.TabIndex = 17;
@@ -308,7 +381,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(88, 115);
+            this.label3.Location = new System.Drawing.Point(43, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 18);
             this.label3.TabIndex = 16;
@@ -321,7 +394,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(88, 74);
+            this.label1.Location = new System.Drawing.Point(39, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 18);
             this.label1.TabIndex = 15;
@@ -334,12 +407,68 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(88, 33);
+            this.label2.Location = new System.Drawing.Point(50, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 18);
+            this.label2.Size = new System.Drawing.Size(109, 18);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Kullanıcı Adı : ";
+            this.label2.Text = "Kullanıcı Adı :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.Controls.Add(this.btnIptal);
+            this.panel6.Controls.Add(this.textboxDg);
+            this.panel6.Controls.Add(this.textboxMail);
+            this.panel6.Controls.Add(this.textboxKadi);
+            this.panel6.Controls.Add(this.btnKaydet);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Location = new System.Drawing.Point(23, 18);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(322, 183);
+            this.panel6.TabIndex = 26;
+            this.panel6.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label9.Location = new System.Drawing.Point(33, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 18);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Doğum Tarihi :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label10.Location = new System.Drawing.Point(29, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 18);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "E-Mail Hesabı :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label11.Location = new System.Drawing.Point(40, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 18);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Kullanıcı Adı :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -375,34 +504,225 @@
             this.label4.Text = "İzleme Geçmişi";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSifreHata
+            // panel7
             // 
-            this.labelSifreHata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSifreHata.AutoSize = true;
-            this.labelSifreHata.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelSifreHata.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelSifreHata.ForeColor = System.Drawing.Color.Crimson;
-            this.labelSifreHata.Location = new System.Drawing.Point(327, 0);
-            this.labelSifreHata.Name = "labelSifreHata";
-            this.labelSifreHata.Size = new System.Drawing.Size(66, 15);
-            this.labelSifreHata.TabIndex = 24;
-            this.labelSifreHata.Text = "Çıkış Yap";
-            this.labelSifreHata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.Controls.Add(this.btnsfreIptal);
+            this.panel7.Controls.Add(this.lblYeniSifreTekrar);
+            this.panel7.Controls.Add(this.LblYeniSifre);
+            this.panel7.Controls.Add(this.lblEskiSifre);
+            this.panel7.Controls.Add(this.sfreKydt);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Location = new System.Drawing.Point(23, 18);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(322, 183);
+            this.panel7.TabIndex = 27;
+            this.panel7.Visible = false;
             // 
-            // animaButton1
+            // label6
             // 
-            this.animaButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.animaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.animaButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.animaButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.animaButton1.ImageLocation = new System.Drawing.Point(30, 6);
-            this.animaButton1.ImageSize = new System.Drawing.Size(14, 14);
-            this.animaButton1.Location = new System.Drawing.Point(123, 164);
-            this.animaButton1.Name = "animaButton1";
-            this.animaButton1.Size = new System.Drawing.Size(136, 34);
-            this.animaButton1.TabIndex = 20;
-            this.animaButton1.Text = "Değişiklik Yap";
-            this.animaButton1.UseVisualStyleBackColor = true;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label6.Location = new System.Drawing.Point(20, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 18);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Yeni Şifre Tekrar :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(59, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 18);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Yeni Şifre :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label8.Location = new System.Drawing.Point(58, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 18);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Eksi Şifre :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnsfreIptal
+            // 
+            this.btnsfreIptal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnsfreIptal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsfreIptal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnsfreIptal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnsfreIptal.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnsfreIptal.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnsfreIptal.Location = new System.Drawing.Point(174, 146);
+            this.btnsfreIptal.Name = "btnsfreIptal";
+            this.btnsfreIptal.Size = new System.Drawing.Size(91, 34);
+            this.btnsfreIptal.TabIndex = 24;
+            this.btnsfreIptal.Text = "İptal";
+            this.btnsfreIptal.UseVisualStyleBackColor = true;
+            this.btnsfreIptal.Click += new System.EventHandler(this.btnsfreIptal_Click);
+            // 
+            // lblYeniSifreTekrar
+            // 
+            this.lblYeniSifreTekrar.Dark = false;
+            this.lblYeniSifreTekrar.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblYeniSifreTekrar.Location = new System.Drawing.Point(151, 94);
+            this.lblYeniSifreTekrar.MaxLength = 40;
+            this.lblYeniSifreTekrar.MultiLine = false;
+            this.lblYeniSifreTekrar.Name = "lblYeniSifreTekrar";
+            this.lblYeniSifreTekrar.Numeric = false;
+            this.lblYeniSifreTekrar.ReadOnly = false;
+            this.lblYeniSifreTekrar.Size = new System.Drawing.Size(128, 22);
+            this.lblYeniSifreTekrar.TabIndex = 23;
+            this.lblYeniSifreTekrar.UseSystemPasswordChar = false;
+            // 
+            // LblYeniSifre
+            // 
+            this.LblYeniSifre.Dark = false;
+            this.LblYeniSifre.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblYeniSifre.Location = new System.Drawing.Point(151, 54);
+            this.LblYeniSifre.MaxLength = 40;
+            this.LblYeniSifre.MultiLine = false;
+            this.LblYeniSifre.Name = "LblYeniSifre";
+            this.LblYeniSifre.Numeric = false;
+            this.LblYeniSifre.ReadOnly = false;
+            this.LblYeniSifre.Size = new System.Drawing.Size(128, 22);
+            this.LblYeniSifre.TabIndex = 22;
+            this.LblYeniSifre.UseSystemPasswordChar = false;
+            // 
+            // lblEskiSifre
+            // 
+            this.lblEskiSifre.Dark = false;
+            this.lblEskiSifre.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEskiSifre.Location = new System.Drawing.Point(151, 14);
+            this.lblEskiSifre.MaxLength = 40;
+            this.lblEskiSifre.MultiLine = false;
+            this.lblEskiSifre.Name = "lblEskiSifre";
+            this.lblEskiSifre.Numeric = false;
+            this.lblEskiSifre.ReadOnly = false;
+            this.lblEskiSifre.Size = new System.Drawing.Size(128, 22);
+            this.lblEskiSifre.TabIndex = 21;
+            this.lblEskiSifre.UseSystemPasswordChar = false;
+            // 
+            // sfreKydt
+            // 
+            this.sfreKydt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sfreKydt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sfreKydt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sfreKydt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.sfreKydt.ImageLocation = new System.Drawing.Point(30, 6);
+            this.sfreKydt.ImageSize = new System.Drawing.Size(14, 14);
+            this.sfreKydt.Location = new System.Drawing.Point(76, 146);
+            this.sfreKydt.Name = "sfreKydt";
+            this.sfreKydt.Size = new System.Drawing.Size(91, 34);
+            this.sfreKydt.TabIndex = 20;
+            this.sfreKydt.Text = "Kaydet";
+            this.sfreKydt.UseVisualStyleBackColor = true;
+            this.sfreKydt.Click += new System.EventHandler(this.sfreKydt_Click);
+            // 
+            // btnIptal
+            // 
+            this.btnIptal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIptal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIptal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIptal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnIptal.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnIptal.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnIptal.Location = new System.Drawing.Point(174, 146);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(91, 34);
+            this.btnIptal.TabIndex = 24;
+            this.btnIptal.Text = "İptal";
+            this.btnIptal.UseVisualStyleBackColor = true;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // textboxDg
+            // 
+            this.textboxDg.Dark = false;
+            this.textboxDg.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxDg.Location = new System.Drawing.Point(151, 94);
+            this.textboxDg.MaxLength = 40;
+            this.textboxDg.MultiLine = false;
+            this.textboxDg.Name = "textboxDg";
+            this.textboxDg.Numeric = false;
+            this.textboxDg.ReadOnly = false;
+            this.textboxDg.Size = new System.Drawing.Size(128, 22);
+            this.textboxDg.TabIndex = 23;
+            this.textboxDg.UseSystemPasswordChar = false;
+            // 
+            // textboxMail
+            // 
+            this.textboxMail.Dark = false;
+            this.textboxMail.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxMail.Location = new System.Drawing.Point(151, 54);
+            this.textboxMail.MaxLength = 40;
+            this.textboxMail.MultiLine = false;
+            this.textboxMail.Name = "textboxMail";
+            this.textboxMail.Numeric = false;
+            this.textboxMail.ReadOnly = false;
+            this.textboxMail.Size = new System.Drawing.Size(128, 22);
+            this.textboxMail.TabIndex = 22;
+            this.textboxMail.UseSystemPasswordChar = false;
+            // 
+            // textboxKadi
+            // 
+            this.textboxKadi.Dark = false;
+            this.textboxKadi.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKadi.Location = new System.Drawing.Point(151, 14);
+            this.textboxKadi.MaxLength = 40;
+            this.textboxKadi.MultiLine = false;
+            this.textboxKadi.Name = "textboxKadi";
+            this.textboxKadi.Numeric = false;
+            this.textboxKadi.ReadOnly = false;
+            this.textboxKadi.Size = new System.Drawing.Size(128, 22);
+            this.textboxKadi.TabIndex = 21;
+            this.textboxKadi.UseSystemPasswordChar = false;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKaydet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnKaydet.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnKaydet.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnKaydet.Location = new System.Drawing.Point(76, 146);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(91, 34);
+            this.btnKaydet.TabIndex = 20;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // btnDegistir
+            // 
+            this.btnDegistir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDegistir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDegistir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDegistir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnDegistir.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnDegistir.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnDegistir.Location = new System.Drawing.Point(85, 129);
+            this.btnDegistir.Name = "btnDegistir";
+            this.btnDegistir.Size = new System.Drawing.Size(136, 34);
+            this.btnDegistir.TabIndex = 20;
+            this.btnDegistir.Text = "Bilgilerini Güncelle";
+            this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnSecimIptal
             // 
@@ -439,58 +759,58 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 34;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGridView1.Location = new System.Drawing.Point(7, 42);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(689, 178);
             this.dataGridView1.TabIndex = 15;
@@ -511,22 +831,28 @@
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profil1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -543,7 +869,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private AnimaButton animaButton1;
+        private AnimaButton btnDegistir;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblName;
@@ -552,16 +878,36 @@
         private System.Windows.Forms.Label label4;
         private Classes.MyDataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox profil8;
+        private System.Windows.Forms.PictureBox profil7;
+        private System.Windows.Forms.PictureBox profil6;
+        private System.Windows.Forms.PictureBox profil5;
+        private System.Windows.Forms.PictureBox profil4;
+        private System.Windows.Forms.PictureBox profil3;
+        private System.Windows.Forms.PictureBox profil2;
+        private System.Windows.Forms.PictureBox profil1;
         private AnimaButton btnSecimIptal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelSifreHata;
+        private System.Windows.Forms.Label lblCikisYap;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private AnimaButton btnKaydet;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private AnimaTextBox textboxDg;
+        private AnimaTextBox textboxMail;
+        private AnimaTextBox textboxKadi;
+        private AnimaButton btnIptal;
+        private System.Windows.Forms.Label lblSifreDegis;
+        private System.Windows.Forms.Panel panel7;
+        private AnimaButton btnsfreIptal;
+        private AnimaTextBox lblYeniSifreTekrar;
+        private AnimaTextBox LblYeniSifre;
+        private AnimaTextBox lblEskiSifre;
+        private AnimaButton sfreKydt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

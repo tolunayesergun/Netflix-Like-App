@@ -1,7 +1,7 @@
 ﻿using StorkFlix.Classes;
 using StorkFlix.Forms;
+using StorkFlix.Model;
 using System;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -14,7 +14,7 @@ namespace StorkFlix
         }
 
         private bool IslemVarmi = false;
-
+        private Form activeForm = null;
 
         private void BtnDizi_Click(object sender, EventArgs e)
         {
@@ -47,9 +47,7 @@ namespace StorkFlix
         private void BtnHesabim_Click(object sender, EventArgs e)
         {
             AltForumGetir(new FormHesabim());
-        }
-
-        private Form activeForm = null;
+        }   
 
         public void AltForumGetir(Form altForum)
         {
@@ -79,20 +77,19 @@ namespace StorkFlix
         private void BackgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             pictureBox2.Enabled = false;
-            IslemVarmi = false;   
+            IslemVarmi = false;
             AltForumGetir(new FormProgramlar());
         }
 
         private void AnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (AktifKullanici.kullaniciId != -1) Application.Exit();
         }
 
         private void PanelChildForm_ControlRemoved(object sender, ControlEventArgs e)
         {
-            if(StorkData.SecilenProgram!=null)AltForumGetir(new FormEkran());
+            if (StorkData.SecilenProgram != null) AltForumGetir(new FormEkran());
+            if (AktifKullanici.kullaniciId == -1) { Giris Tekrar = new Giris(); Tekrar.Show(); this.Hide(); }
         }
-
-
     }
 }

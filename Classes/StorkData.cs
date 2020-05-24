@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StorkFlix.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,22 +12,22 @@ namespace StorkFlix.Classes
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
         public static string SeciliProgramTuru { get; set; }
-       
+
         public void ProgramSec(int GelenId)
         {
-             SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
+            SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
         }
 
         public void ListeDoldur()
         {
-            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).ToList();
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i=> i.id).ToList();
         }
 
         public void ListeFiltrele(int?[] Filtreler)
         {
             if (Filtreler.Count() == 0)
             {
-                ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).ToList();
+                ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
             }
             else
             {
@@ -75,6 +76,15 @@ namespace StorkFlix.Classes
             TurListesi = db.Turler.ToList();
         }
 
+        public void ProfilSec(string ImageName)
+        {
+            Kullanici profilSec = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
+
+            profilSec.profilFotorafi = ImageName;
+
+            db.SaveChanges();
+        }
+
         //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
         public int MailKullaniciAra(string mail, string sifre)
         {
@@ -107,6 +117,17 @@ namespace StorkFlix.Classes
                 dogumTarihi = dgtrh
             };
             db.Kullanici.Add(kat);
+            db.SaveChanges();
+        }
+
+        public void BilgiGuncelle(string nme, string maill, DateTime dgtrh)
+        {
+            Kullanici BilgiDegistir = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
+
+            BilgiDegistir.isim = nme;
+            BilgiDegistir.mail = maill;
+            BilgiDegistir.dogumTarihi = dgtrh;
+
             db.SaveChanges();
         }
     }

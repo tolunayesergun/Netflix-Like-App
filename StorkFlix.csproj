@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>output-onlinepngtools.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -372,6 +375,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\75.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="output-onlinepngtools.ico" />
+    <Content Include="StorkLogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

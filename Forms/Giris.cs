@@ -112,5 +112,10 @@ namespace StorkFlix
                 btnGiris.TabIndex = 1;
             }
         }
+
+        private void Giris_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
