@@ -54,7 +54,7 @@ namespace StorkFlix.Classes
                                  auzunluk = gcs.Key.uzunluk
                              }).ToList();
 
-                ProgramListesi = sorgu.ToList().Select(r => new Programlar
+                ProgramListesi = sorgu.ToList().OrderByDescending(i => i.aid).Select(r => new Programlar
                 {
                     id = r.aid,
                     isim = r.aisim,
@@ -68,7 +68,8 @@ namespace StorkFlix.Classes
         public void ProgramAra(string Kelime)
         {
             ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru)
-                                          .Where(i => i.isim.StartsWith(Kelime)).ToList();
+                                          .Where(i => i.isim.StartsWith(Kelime))
+                                          .OrderByDescending(i => i.id).ToList();
         }
 
         public void TurDoldur()

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>output-onlinepngtools.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Stork-Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -401,9 +401,83 @@
     <None Include="Resources\profil8.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
-    <Content Include="output-onlinepngtools.ico" />
-    <Content Include="StorkLogo.ico" />
+    <Content Include="Resources\icon.ico" />
+    <None Include="Resources\sc1.jpg" />
+    <None Include="Resources\sc2.jpg" />
+    <None Include="Resources\sc3.jpg" />
+    <None Include="Resources\sc4.jpg" />
+    <None Include="Resources\sc5.jpg" />
+    <None Include="Resources\sc6.jpg" />
+    <None Include="Resources\sc7.jpg" />
+    <None Include="Resources\sc8.jpg" />
+    <None Include="Resources\sc9.jpg" />
+    <None Include="Resources\sc10.jpg" />
+    <None Include="Resources\sc11.jpg" />
+    <None Include="Resources\sc12.jpg" />
+    <None Include="Resources\sc13.jpg" />
+    <None Include="Resources\sc14.jpg" />
+    <None Include="Resources\sc15.jpg" />
+    <None Include="Resources\sc16.jpg" />
+    <None Include="Resources\sc17.jpg" />
+    <None Include="Resources\sc18.jpg" />
+    <None Include="Resources\sc19.jpg" />
+    <None Include="Resources\sc20.jpg" />
+    <None Include="Resources\sc21.jpg" />
+    <None Include="Resources\sc22.jpg" />
+    <None Include="Resources\sc23.jpg" />
+    <None Include="Resources\sc24.jpg" />
+    <None Include="Resources\sc25.jpg" />
+    <None Include="Resources\sc26.jpg" />
+    <None Include="Resources\sc27.jpg" />
+    <None Include="Resources\sc28.jpg" />
+    <None Include="Resources\sc29.jpg" />
+    <None Include="Resources\sc30.jpg" />
+    <None Include="Resources\sc31.jpg" />
+    <None Include="Resources\sc32.jpg" />
+    <None Include="Resources\sc33.jpg" />
+    <None Include="Resources\sc34.jpg" />
+    <None Include="Resources\sc35.jpg" />
+    <None Include="Resources\sc36.jpg" />
+    <None Include="Resources\sc37.jpg" />
+    <None Include="Resources\sc38.jpg" />
+    <None Include="Resources\sc39.jpg" />
+    <None Include="Resources\sc40.jpg" />
+    <None Include="Resources\sc41.jpg" />
+    <None Include="Resources\sc42.jpg" />
+    <None Include="Resources\sc43.jpg" />
+    <None Include="Resources\sc44.jpg" />
+    <None Include="Resources\sc45.jpg" />
+    <None Include="Resources\sc46.jpg" />
+    <None Include="Resources\sc47.jpg" />
+    <None Include="Resources\sc48.jpg" />
+    <None Include="Resources\sc49.jpg" />
+    <None Include="Resources\sc50.jpg" />
+    <None Include="Resources\sc51.jpg" />
+    <None Include="Resources\sc52.jpg" />
+    <None Include="Resources\sc53.jpg" />
+    <None Include="Resources\sc54.jpg" />
+    <None Include="Resources\sc55.jpg" />
+    <None Include="Resources\sc56.jpg" />
+    <None Include="Resources\sc57.jpg" />
+    <None Include="Resources\sc58.jpg" />
+    <None Include="Resources\sc59.jpg" />
+    <None Include="Resources\sc60.jpg" />
+    <None Include="Resources\sc61.jpg" />
+    <None Include="Resources\sc62.jpg" />
+    <None Include="Resources\sc63.jpg" />
+    <None Include="Resources\sc64.jpg" />
+    <None Include="Resources\sc65.jpg" />
+    <None Include="Resources\sc66.jpg" />
+    <None Include="Resources\sc67.jpg" />
+    <None Include="Resources\sc68.jpg" />
+    <None Include="Resources\sc69.jpg" />
+    <None Include="Resources\sc70.jpg" />
+    <None Include="Resources\sc71.jpg" />
+    <None Include="Resources\sc72.jpg" />
+    <None Include="Resources\sc73.jpg" />
+    <None Include="Resources\sc74.jpg" />
+    <None Include="Resources\sc75.jpg" />
+    <Content Include="Resources\Stork-Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
