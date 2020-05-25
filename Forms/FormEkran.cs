@@ -22,6 +22,7 @@ namespace StorkFlix.Forms
             KullaniciKayitKontrol();
             BolumUzunlukYaz();
             BolumleriListele();
+            YildizDoldur(Convert.ToInt32(StorkData.SonBolum.puan));
         }
 
         private void KullaniciKayitKontrol()
@@ -39,8 +40,9 @@ namespace StorkFlix.Forms
         {
             Baglanti.BolumBilgileriniYaz();
             BolumUzunlukYaz();
+            YildizDoldur(Convert.ToInt32(StorkData.SonBolum.puan));
         }
-        
+
         private void BolumleriListele()
         {
             dataGridView1.ColumnCount = 1;
@@ -79,6 +81,7 @@ namespace StorkFlix.Forms
 
         private void FormEkran_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Baglanti.BolumIzlemeBilgisiGuncelle(Convert.ToInt32(Math.Floor(sure)));
             StorkData.SecilenProgram = null;
         }
 
@@ -94,6 +97,7 @@ namespace StorkFlix.Forms
                 progressBar1.Value += 1;
                 sure += Convert.ToDecimal(StorkData.SecilenProgram.uzunluk) / 100m;
                 lblKaldiginDakika.Text = Math.Floor(sure).ToString("00") + ":00";
+             
             }
             else
             {
@@ -101,6 +105,7 @@ namespace StorkFlix.Forms
                 btnStop.Visible = false;
                 pictureBox4.Enabled = false;
                 pictureBox4.Visible = false;
+                Baglanti.BolumTamamla(true);
             }
         }
 
@@ -148,20 +153,46 @@ namespace StorkFlix.Forms
             }
         }
 
+        private void YildizDoldur(int yildizSayisi)
+        {
+            PictureBox[] boxes = { Star1, Star2, Star3, Star4, Star5, Star6, Star7, Star8, Star9, Star10 };
+
+            for (int i = 0; i < yildizSayisi; i++)
+            {
+                boxes[i].BackColor = Color.White;
+            }
+            for (int i = yildizSayisi; i < 10; i++)
+            {
+                boxes[i].BackColor = Color.Transparent;
+            }
+            if (yildizSayisi > 0)
+            {
+                Secim = true;
+            }
+            else
+            {
+                Secim = false;
+            }
+        }
+
         private void Star_Click(object sender, EventArgs e)
         {
-            if (Secim == false) Secim = true;
+            if (Secim == false) 
+            {
+                Secim = true;
+                PictureBox Image = sender as PictureBox;
+                int Gpuan = Convert.ToInt32(Image.Name.Substring(4));        
+                Baglanti.PuanGuncelle(Gpuan);
+              
+            }
             else Secim = false;
         }
 
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
-        {    
-            Baglanti.BolumIzlemeBilgisiGuncelle(Convert.ToInt32(Math.Floor(sure)), StorkData.TempBolum);
+        {
+            Baglanti.BolumIzlemeBilgisiGuncelle(Convert.ToInt32(Math.Floor(sure)));
             StorkData.TempBolum = dataGridView1.SelectedRows[0].Index + 1;
             YeniBolumSecildi();
-  
-             //   dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Selected = true;
-    
         }
     }
 }

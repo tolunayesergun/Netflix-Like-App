@@ -144,7 +144,7 @@ namespace StorkFlix.Classes
             {
                 kullaniciId = AktifKullanici.kullaniciId,
                 programId = SecilenProgram.id,
-                izlemeTarihi = DateTime.Now,
+                izlemeTarihi = DateTime.Today,
                 izlemeSuresi = 0,
                 puan = 0,
                 bolum = gelenBolum,
@@ -182,25 +182,51 @@ namespace StorkFlix.Classes
         public void BolumBilgileriniYaz()
         {
             SonBolum = db.KullaniciProgram.Where(i => i.kullaniciId == AktifKullanici.kullaniciId).Where(i => i.programId == SecilenProgram.id).Where(i => i.bolum == TempBolum).FirstOrDefault();
-            if(SonBolum==null)
+            if (SonBolum == null)
             {
                 KullanicProgramKayitEkle(TempBolum);
                 BolumBilgileriniYaz();
             }
         }
 
-
-
-        public void BolumIzlemeBilgisiGuncelle(int GelenSure,int GelenBolum)
+        public void BolumIzlemeBilgisiGuncelle(int GelenSure)
         {
-            KullaniciProgram SureGuncelle = (from i in db.KullaniciProgram where 
-                                             i.kullaniciId == AktifKullanici.kullaniciId &&
-                                             i.programId==SecilenProgram.id &&
-                                             i.bolum== GelenBolum
+            KullaniciProgram SureGuncelle = (from i in db.KullaniciProgram
+                                             where
+               i.kullaniciId == AktifKullanici.kullaniciId &&
+               i.programId == SecilenProgram.id &&
+               i.bolum == TempBolum
                                              select i).SingleOrDefault();
 
             SureGuncelle.izlemeSuresi = GelenSure;
+            SureGuncelle.izlemeTarihi = DateTime.Today;
 
+            db.SaveChanges();
+        }
+
+        public void PuanGuncelle(int Puan)
+        {
+            KullaniciProgram puanGuncelle = (from i in db.KullaniciProgram
+                                             where
+           i.kullaniciId == AktifKullanici.kullaniciId &&
+           i.programId == SecilenProgram.id &&
+           i.bolum == TempBolum
+                                             select i).SingleOrDefault();
+
+            puanGuncelle.puan = Puan;
+            db.SaveChanges();
+        }
+
+        public void BolumTamamla(bool tamamlandimi)
+        {
+            KullaniciProgram tamamlamaGuncelle = (from i in db.KullaniciProgram
+                                                  where
+                i.kullaniciId == AktifKullanici.kullaniciId &&
+                i.programId == SecilenProgram.id &&
+                i.bolum == TempBolum
+                                                  select i).SingleOrDefault();
+            if (tamamlandimi == true) tamamlamaGuncelle.tamamlandi = 1;
+            else tamamlamaGuncelle.tamamlandi = 0;
             db.SaveChanges();
         }
     }
