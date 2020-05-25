@@ -11,7 +11,9 @@ namespace StorkFlix.Classes
         public static List<Programlar> ProgramListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
+        public static KullaniciProgram SonBolum { get; set; }
         public static string SeciliProgramTuru { get; set; }
+        public static int TempBolum { get; set; }
 
         public void ProgramSec(int GelenId)
         {
@@ -20,7 +22,7 @@ namespace StorkFlix.Classes
 
         public void ListeDoldur()
         {
-            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i=> i.id).ToList();
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
         }
 
         public void ListeFiltrele(int?[] Filtreler)
@@ -86,9 +88,10 @@ namespace StorkFlix.Classes
             db.SaveChanges();
         }
 
-        //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
         public int MailKullaniciAra(string mail, string sifre)
         {
+            //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
+
             var kullancilar = db.Kullanici.ToList();
             int mailkontrol = 0;
 
@@ -107,9 +110,10 @@ namespace StorkFlix.Classes
             return mailkontrol;
         }
 
-        //Kullanıcı ekleme sorgusunu gerçekleştiren metot
         public void KullaniciEkle(string nme, string maill, string psw, DateTime dgtrh)
         {
+            //Kullanıcı ekleme sorgusunu gerçekleştiren metot
+
             Kullanici kat = new Kullanici
             {
                 isim = nme,
@@ -128,6 +132,74 @@ namespace StorkFlix.Classes
             BilgiDegistir.isim = nme;
             BilgiDegistir.mail = maill;
             BilgiDegistir.dogumTarihi = dgtrh;
+
+            db.SaveChanges();
+        }
+
+        //////////////////////// Kullanıcı Program Tablosu işlemleri ////////////////////////
+
+        public void KullanicProgramKayitEkle(int gelenBolum)
+        {
+            KullaniciProgram kat = new KullaniciProgram
+            {
+                kullaniciId = AktifKullanici.kullaniciId,
+                programId = SecilenProgram.id,
+                izlemeTarihi = DateTime.Now,
+                izlemeSuresi = 0,
+                puan = 0,
+                bolum = gelenBolum,
+                tamamlandi = 0
+            };
+            db.KullaniciProgram.Add(kat);
+            db.SaveChanges();
+        }
+
+        public int SonBolumBul()
+        {
+            var TempSonBolum = db.KullaniciProgram.Where(i => i.kullaniciId == AktifKullanici.kullaniciId).Where(i => i.programId == SecilenProgram.id).OrderByDescending(i => i.bolum).FirstOrDefault();
+            if (TempSonBolum == null)
+            {
+                TempBolum = 1;
+                return 1;
+            }
+            else
+            {
+                if (TempSonBolum.bolum == SecilenProgram.bolum)
+                {
+                    TempBolum = Convert.ToInt32(SecilenProgram.bolum);
+                    return 0;
+                }
+                if (TempSonBolum.tamamlandi == 1)
+                {
+                    TempBolum = Convert.ToInt32(TempSonBolum.bolum) + 1;
+                    return TempBolum;
+                }
+                TempBolum = Convert.ToInt32(TempSonBolum.bolum);
+                return -1;
+            }
+        }
+
+        public void BolumBilgileriniYaz()
+        {
+            SonBolum = db.KullaniciProgram.Where(i => i.kullaniciId == AktifKullanici.kullaniciId).Where(i => i.programId == SecilenProgram.id).Where(i => i.bolum == TempBolum).FirstOrDefault();
+            if(SonBolum==null)
+            {
+                KullanicProgramKayitEkle(TempBolum);
+                BolumBilgileriniYaz();
+            }
+        }
+
+
+
+        public void BolumIzlemeBilgisiGuncelle(int GelenSure,int GelenBolum)
+        {
+            KullaniciProgram SureGuncelle = (from i in db.KullaniciProgram where 
+                                             i.kullaniciId == AktifKullanici.kullaniciId &&
+                                             i.programId==SecilenProgram.id &&
+                                             i.bolum== GelenBolum
+                                             select i).SingleOrDefault();
+
+            SureGuncelle.izlemeSuresi = GelenSure;
 
             db.SaveChanges();
         }

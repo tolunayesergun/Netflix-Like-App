@@ -16,9 +16,11 @@ namespace StorkFlix
 
         public int? izlemeSuresi { get; set; }
 
-        public int? kaldigiBolum { get; set; }
+        public int? bolum { get; set; }
 
         public int? puan { get; set; }
+
+        public int tamamlandi { get; set; }
 
         public virtual Kullanici Kullanici { get; set; }
 
