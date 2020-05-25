@@ -477,6 +477,8 @@
     <None Include="Resources\sc73.jpg" />
     <None Include="Resources\sc74.jpg" />
     <None Include="Resources\sc75.jpg" />
+    <None Include="Resources\open1.gif" />
+    <None Include="Resources\open2.gif" />
     <Content Include="Resources\Stork-Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
