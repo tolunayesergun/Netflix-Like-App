@@ -103,7 +103,7 @@ namespace StorkFlix
         private void DataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();
-            dataGridView1.RowTemplate.MinimumHeight = 35;
+            dataGridView1.RowTemplate.MinimumHeight = 32;
         }
 
         private void DataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -149,6 +149,12 @@ namespace StorkFlix
                 label1.Text = "   Bu İsimde Bir " + StorkData.SeciliProgramTuru + " Yok";
                 label1.Visible = true;
             }
+        }
+
+        private void animaCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (animaCheckBox1.Checked == false) dataGridView1.MultiSelect = false;
+            else dataGridView1.MultiSelect = true;
         }
     }
 }

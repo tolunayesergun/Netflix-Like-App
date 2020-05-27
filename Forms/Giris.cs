@@ -31,7 +31,7 @@ namespace StorkFlix
         {
             string nme = textboxKayitAd.Text, maill = textboxKayitMail.Text, psw = textboxKayitSifre.Text;
 
-            DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumTarihi.Text);
+            DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
 
             DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
         }

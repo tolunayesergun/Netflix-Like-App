@@ -48,16 +48,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textboxKayitSifreTekrar = new AnimaTextBox();
-            this.textboxKayitDogumTarihi = new AnimaTextBox();
-            this.textboxKayitSifre = new AnimaTextBox();
-            this.btnKayitOl = new AnimaButton();
-            this.textboxKayitMail = new AnimaTextBox();
-            this.textboxKayitAd = new AnimaTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnGiris = new AnimaButton();
             this.chckBeniHatirla = new AnimaCheckBox();
             this.textboxMail = new AnimaTextBox();
             this.textboxPassword = new AnimaTextBox();
+            this.textboxKayitDogumYilTarihi = new AnimaTextBox();
+            this.textboxKayitDogumAyTarihi = new AnimaTextBox();
+            this.textboxKayitSifreTekrar = new AnimaTextBox();
+            this.textboxKayitDogumGunTarihi = new AnimaTextBox();
+            this.textboxKayitSifre = new AnimaTextBox();
+            this.btnKayitOl = new AnimaButton();
+            this.textboxKayitMail = new AnimaTextBox();
+            this.textboxKayitAd = new AnimaTextBox();
             this.panelGiris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -203,11 +208,16 @@
             // panelKayit
             // 
             this.panelKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panelKayit.Controls.Add(this.label11);
+            this.panelKayit.Controls.Add(this.label10);
+            this.panelKayit.Controls.Add(this.label9);
+            this.panelKayit.Controls.Add(this.textboxKayitDogumYilTarihi);
+            this.panelKayit.Controls.Add(this.textboxKayitDogumAyTarihi);
             this.panelKayit.Controls.Add(this.label5);
             this.panelKayit.Controls.Add(this.label8);
             this.panelKayit.Controls.Add(this.textboxKayitSifreTekrar);
             this.panelKayit.Controls.Add(this.label6);
-            this.panelKayit.Controls.Add(this.textboxKayitDogumTarihi);
+            this.panelKayit.Controls.Add(this.textboxKayitDogumGunTarihi);
             this.panelKayit.Controls.Add(this.label7);
             this.panelKayit.Controls.Add(this.textboxKayitSifre);
             this.panelKayit.Controls.Add(this.labelGirisYap);
@@ -227,7 +237,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(161, 14);
+            this.label5.Location = new System.Drawing.Point(162, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 29);
             this.label5.TabIndex = 32;
@@ -238,7 +248,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label8.Location = new System.Drawing.Point(87, 302);
+            this.label8.Location = new System.Drawing.Point(82, 292);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 18);
             this.label8.TabIndex = 31;
@@ -249,7 +259,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(85, 380);
+            this.label6.Location = new System.Drawing.Point(82, 370);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 18);
             this.label6.TabIndex = 29;
@@ -260,7 +270,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label7.Location = new System.Drawing.Point(87, 224);
+            this.label7.Location = new System.Drawing.Point(82, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 28;
@@ -284,7 +294,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(85, 146);
+            this.label3.Location = new System.Drawing.Point(82, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 23;
@@ -295,7 +305,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(87, 68);
+            this.label4.Location = new System.Drawing.Point(82, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 18);
             this.label4.TabIndex = 22;
@@ -306,89 +316,38 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
-            // textboxKayitSifreTekrar
+            // label9
             // 
-            this.textboxKayitSifreTekrar.Dark = false;
-            this.textboxKayitSifreTekrar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxKayitSifreTekrar.Location = new System.Drawing.Point(79, 333);
-            this.textboxKayitSifreTekrar.MaxLength = 32767;
-            this.textboxKayitSifreTekrar.MultiLine = false;
-            this.textboxKayitSifreTekrar.Name = "textboxKayitSifreTekrar";
-            this.textboxKayitSifreTekrar.Numeric = false;
-            this.textboxKayitSifreTekrar.ReadOnly = false;
-            this.textboxKayitSifreTekrar.Size = new System.Drawing.Size(226, 34);
-            this.textboxKayitSifreTekrar.TabIndex = 4;
-            this.textboxKayitSifreTekrar.UseSystemPasswordChar = false;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label9.Location = new System.Drawing.Point(89, 440);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 15);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Gün";
             // 
-            // textboxKayitDogumTarihi
+            // label10
             // 
-            this.textboxKayitDogumTarihi.Dark = false;
-            this.textboxKayitDogumTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxKayitDogumTarihi.Location = new System.Drawing.Point(79, 411);
-            this.textboxKayitDogumTarihi.MaxLength = 32767;
-            this.textboxKayitDogumTarihi.MultiLine = false;
-            this.textboxKayitDogumTarihi.Name = "textboxKayitDogumTarihi";
-            this.textboxKayitDogumTarihi.Numeric = false;
-            this.textboxKayitDogumTarihi.ReadOnly = false;
-            this.textboxKayitDogumTarihi.Size = new System.Drawing.Size(226, 34);
-            this.textboxKayitDogumTarihi.TabIndex = 5;
-            this.textboxKayitDogumTarihi.UseSystemPasswordChar = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label10.Location = new System.Drawing.Point(168, 440);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 15);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Ay";
             // 
-            // textboxKayitSifre
+            // label11
             // 
-            this.textboxKayitSifre.Dark = false;
-            this.textboxKayitSifre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxKayitSifre.Location = new System.Drawing.Point(79, 255);
-            this.textboxKayitSifre.MaxLength = 32767;
-            this.textboxKayitSifre.MultiLine = false;
-            this.textboxKayitSifre.Name = "textboxKayitSifre";
-            this.textboxKayitSifre.Numeric = false;
-            this.textboxKayitSifre.ReadOnly = false;
-            this.textboxKayitSifre.Size = new System.Drawing.Size(226, 34);
-            this.textboxKayitSifre.TabIndex = 3;
-            this.textboxKayitSifre.UseSystemPasswordChar = false;
-            // 
-            // btnKayitOl
-            // 
-            this.btnKayitOl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKayitOl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnKayitOl.ImageLocation = new System.Drawing.Point(30, 6);
-            this.btnKayitOl.ImageSize = new System.Drawing.Size(14, 14);
-            this.btnKayitOl.Location = new System.Drawing.Point(110, 495);
-            this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(165, 39);
-            this.btnKayitOl.TabIndex = 6;
-            this.btnKayitOl.Text = "Kayıt Ol";
-            this.btnKayitOl.UseVisualStyleBackColor = true;
-            this.btnKayitOl.Click += new System.EventHandler(this.BtnKayitOl_Click);
-            // 
-            // textboxKayitMail
-            // 
-            this.textboxKayitMail.Dark = false;
-            this.textboxKayitMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxKayitMail.Location = new System.Drawing.Point(79, 177);
-            this.textboxKayitMail.MaxLength = 32767;
-            this.textboxKayitMail.MultiLine = false;
-            this.textboxKayitMail.Name = "textboxKayitMail";
-            this.textboxKayitMail.Numeric = false;
-            this.textboxKayitMail.ReadOnly = false;
-            this.textboxKayitMail.Size = new System.Drawing.Size(226, 34);
-            this.textboxKayitMail.TabIndex = 2;
-            this.textboxKayitMail.UseSystemPasswordChar = false;
-            // 
-            // textboxKayitAd
-            // 
-            this.textboxKayitAd.Dark = false;
-            this.textboxKayitAd.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxKayitAd.Location = new System.Drawing.Point(79, 99);
-            this.textboxKayitAd.MaxLength = 32767;
-            this.textboxKayitAd.MultiLine = false;
-            this.textboxKayitAd.Name = "textboxKayitAd";
-            this.textboxKayitAd.Numeric = false;
-            this.textboxKayitAd.ReadOnly = false;
-            this.textboxKayitAd.Size = new System.Drawing.Size(226, 34);
-            this.textboxKayitAd.TabIndex = 1;
-            this.textboxKayitAd.UseSystemPasswordChar = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label11.Location = new System.Drawing.Point(251, 440);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 15);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Yıl";
             // 
             // btnGiris
             // 
@@ -446,6 +405,118 @@
             this.textboxPassword.TabIndex = 2;
             this.textboxPassword.UseSystemPasswordChar = true;
             // 
+            // textboxKayitDogumYilTarihi
+            // 
+            this.textboxKayitDogumYilTarihi.Dark = false;
+            this.textboxKayitDogumYilTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitDogumYilTarihi.Location = new System.Drawing.Point(218, 401);
+            this.textboxKayitDogumYilTarihi.MaxLength = 4;
+            this.textboxKayitDogumYilTarihi.MultiLine = false;
+            this.textboxKayitDogumYilTarihi.Name = "textboxKayitDogumYilTarihi";
+            this.textboxKayitDogumYilTarihi.Numeric = false;
+            this.textboxKayitDogumYilTarihi.ReadOnly = false;
+            this.textboxKayitDogumYilTarihi.Size = new System.Drawing.Size(88, 34);
+            this.textboxKayitDogumYilTarihi.TabIndex = 7;
+            this.textboxKayitDogumYilTarihi.UseSystemPasswordChar = false;
+            // 
+            // textboxKayitDogumAyTarihi
+            // 
+            this.textboxKayitDogumAyTarihi.Dark = false;
+            this.textboxKayitDogumAyTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitDogumAyTarihi.Location = new System.Drawing.Point(149, 401);
+            this.textboxKayitDogumAyTarihi.MaxLength = 2;
+            this.textboxKayitDogumAyTarihi.MultiLine = false;
+            this.textboxKayitDogumAyTarihi.Name = "textboxKayitDogumAyTarihi";
+            this.textboxKayitDogumAyTarihi.Numeric = false;
+            this.textboxKayitDogumAyTarihi.ReadOnly = false;
+            this.textboxKayitDogumAyTarihi.Size = new System.Drawing.Size(61, 34);
+            this.textboxKayitDogumAyTarihi.TabIndex = 6;
+            this.textboxKayitDogumAyTarihi.UseSystemPasswordChar = false;
+            // 
+            // textboxKayitSifreTekrar
+            // 
+            this.textboxKayitSifreTekrar.Dark = false;
+            this.textboxKayitSifreTekrar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitSifreTekrar.Location = new System.Drawing.Point(79, 323);
+            this.textboxKayitSifreTekrar.MaxLength = 22;
+            this.textboxKayitSifreTekrar.MultiLine = false;
+            this.textboxKayitSifreTekrar.Name = "textboxKayitSifreTekrar";
+            this.textboxKayitSifreTekrar.Numeric = false;
+            this.textboxKayitSifreTekrar.ReadOnly = false;
+            this.textboxKayitSifreTekrar.Size = new System.Drawing.Size(226, 34);
+            this.textboxKayitSifreTekrar.TabIndex = 4;
+            this.textboxKayitSifreTekrar.UseSystemPasswordChar = false;
+            // 
+            // textboxKayitDogumGunTarihi
+            // 
+            this.textboxKayitDogumGunTarihi.Dark = false;
+            this.textboxKayitDogumGunTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitDogumGunTarihi.Location = new System.Drawing.Point(79, 401);
+            this.textboxKayitDogumGunTarihi.MaxLength = 2;
+            this.textboxKayitDogumGunTarihi.MultiLine = false;
+            this.textboxKayitDogumGunTarihi.Name = "textboxKayitDogumGunTarihi";
+            this.textboxKayitDogumGunTarihi.Numeric = false;
+            this.textboxKayitDogumGunTarihi.ReadOnly = false;
+            this.textboxKayitDogumGunTarihi.Size = new System.Drawing.Size(62, 34);
+            this.textboxKayitDogumGunTarihi.TabIndex = 5;
+            this.textboxKayitDogumGunTarihi.UseSystemPasswordChar = false;
+            // 
+            // textboxKayitSifre
+            // 
+            this.textboxKayitSifre.Dark = false;
+            this.textboxKayitSifre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitSifre.Location = new System.Drawing.Point(79, 245);
+            this.textboxKayitSifre.MaxLength = 22;
+            this.textboxKayitSifre.MultiLine = false;
+            this.textboxKayitSifre.Name = "textboxKayitSifre";
+            this.textboxKayitSifre.Numeric = false;
+            this.textboxKayitSifre.ReadOnly = false;
+            this.textboxKayitSifre.Size = new System.Drawing.Size(226, 34);
+            this.textboxKayitSifre.TabIndex = 3;
+            this.textboxKayitSifre.UseSystemPasswordChar = false;
+            // 
+            // btnKayitOl
+            // 
+            this.btnKayitOl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKayitOl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnKayitOl.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnKayitOl.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnKayitOl.Location = new System.Drawing.Point(110, 495);
+            this.btnKayitOl.Name = "btnKayitOl";
+            this.btnKayitOl.Size = new System.Drawing.Size(165, 39);
+            this.btnKayitOl.TabIndex = 8;
+            this.btnKayitOl.Text = "Kayıt Ol";
+            this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.BtnKayitOl_Click);
+            // 
+            // textboxKayitMail
+            // 
+            this.textboxKayitMail.Dark = false;
+            this.textboxKayitMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitMail.Location = new System.Drawing.Point(79, 167);
+            this.textboxKayitMail.MaxLength = 49;
+            this.textboxKayitMail.MultiLine = false;
+            this.textboxKayitMail.Name = "textboxKayitMail";
+            this.textboxKayitMail.Numeric = false;
+            this.textboxKayitMail.ReadOnly = false;
+            this.textboxKayitMail.Size = new System.Drawing.Size(226, 34);
+            this.textboxKayitMail.TabIndex = 2;
+            this.textboxKayitMail.UseSystemPasswordChar = false;
+            // 
+            // textboxKayitAd
+            // 
+            this.textboxKayitAd.Dark = false;
+            this.textboxKayitAd.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxKayitAd.Location = new System.Drawing.Point(79, 89);
+            this.textboxKayitAd.MaxLength = 22;
+            this.textboxKayitAd.MultiLine = false;
+            this.textboxKayitAd.Name = "textboxKayitAd";
+            this.textboxKayitAd.Numeric = false;
+            this.textboxKayitAd.ReadOnly = false;
+            this.textboxKayitAd.Size = new System.Drawing.Size(226, 34);
+            this.textboxKayitAd.TabIndex = 1;
+            this.textboxKayitAd.UseSystemPasswordChar = false;
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,7 +564,7 @@
         private System.Windows.Forms.Label label8;
         private AnimaTextBox textboxKayitSifreTekrar;
         private System.Windows.Forms.Label label6;
-        private AnimaTextBox textboxKayitDogumTarihi;
+        private AnimaTextBox textboxKayitDogumGunTarihi;
         private System.Windows.Forms.Label label7;
         private AnimaTextBox textboxKayitSifre;
         private System.Windows.Forms.Label label5;
@@ -504,6 +575,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private AnimaCheckBox chckBeniHatirla;
+        private AnimaTextBox textboxKayitDogumYilTarihi;
+        private AnimaTextBox textboxKayitDogumAyTarihi;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 

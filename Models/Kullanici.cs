@@ -31,6 +31,7 @@ namespace StorkFlix
         [StringLength(50)]
         public string profilFotorafi { get; set; }
 
+        [Column(TypeName = "Date")]
         public DateTime dogumTarihi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
