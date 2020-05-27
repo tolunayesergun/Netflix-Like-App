@@ -229,5 +229,17 @@ namespace StorkFlix.Classes
             else tamamlamaGuncelle.tamamlandi = 0;
             db.SaveChanges();
         }
+
+        public void KullaniciKayitKontrol()
+        {
+            int SonBolum = SonBolumBul();
+            if (SonBolum > 0)
+            {
+                KullanicProgramKayitEkle(SonBolum);
+            }
+
+            BolumBilgileriniYaz();
+        }
+
     }
 }

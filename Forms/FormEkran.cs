@@ -19,22 +19,11 @@ namespace StorkFlix.Forms
         private void FormEkran_Load(object sender, EventArgs e)
         {
             GifGetir();
-            KullaniciKayitKontrol();
             BolumUzunlukYaz();
             BolumleriListele();
             YildizDoldur(Convert.ToInt32(StorkData.SonBolum.puan));
         }
 
-        private void KullaniciKayitKontrol()
-        {
-            int SonBolum = Baglanti.SonBolumBul();
-            if (SonBolum > 0)
-            {
-                Baglanti.KullanicProgramKayitEkle(SonBolum);
-            }
-
-            Baglanti.BolumBilgileriniYaz();
-        }
 
         private void YeniBolumSecildi()
         {
