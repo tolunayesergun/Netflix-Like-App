@@ -240,9 +240,17 @@ public class AnimaTextBox : Control
 
     protected override void OnResize(EventArgs e)
     {
-        if (MultiLine)
+        if (AccessibleName== "ParentTextBox")
         {
-            T.Size = new Size(Width - 7, Height - 7); Invalidate();
+            T.Size = new Size(Width - 40, Height - 15); Invalidate();
+        }
+        else if (AccessibleName == "ParentSmallTextBox")
+        {
+            T.Size = new Size(Width - 50, Height - 15); Invalidate();
+        }
+        else if (AccessibleName == "ParentLittleTextBox")
+        {
+            T.Size = new Size(Width - 30, Height - 15); Invalidate();
         }
         else
         {

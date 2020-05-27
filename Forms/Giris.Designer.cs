@@ -40,6 +40,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKayit = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnGiris = new AnimaButton();
             this.chckBeniHatirla = new AnimaCheckBox();
             this.textboxMail = new AnimaTextBox();
@@ -232,6 +232,39 @@
             this.panelKayit.Size = new System.Drawing.Size(384, 601);
             this.panelKayit.TabIndex = 4;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label11.Location = new System.Drawing.Point(251, 440);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 15);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Yıl";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label10.Location = new System.Drawing.Point(168, 440);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 15);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Ay";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label9.Location = new System.Drawing.Point(89, 440);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 15);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Gün";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -315,39 +348,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label9.Location = new System.Drawing.Point(89, 440);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 15);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Gün";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label10.Location = new System.Drawing.Point(168, 440);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 15);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Ay";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label11.Location = new System.Drawing.Point(251, 440);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 15);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Yıl";
             // 
             // btnGiris
             // 

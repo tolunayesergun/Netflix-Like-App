@@ -31,21 +31,21 @@ namespace StorkFlix
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textboxMail = new AnimaTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.animaCheckBox1 = new AnimaCheckBox();
             this.dataGridView1 = new StorkFlix.Classes.MyDataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.animaCheckBox1 = new AnimaCheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -70,11 +70,11 @@ namespace StorkFlix
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(7, 16);
+            this.label2.Location = new System.Drawing.Point(7, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.Size = new System.Drawing.Size(88, 15);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Arama Yapın..";
+            this.label2.Text = "Arama Yapın";
             // 
             // groupBox1
             // 
@@ -88,17 +88,19 @@ namespace StorkFlix
             // 
             // textboxMail
             // 
+            this.textboxMail.AccessibleName = "ParentTextBox";
             this.textboxMail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxMail.Dark = false;
             this.textboxMail.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxMail.Location = new System.Drawing.Point(6, 40);
-            this.textboxMail.MaxLength = 20;
+            this.textboxMail.Location = new System.Drawing.Point(6, 42);
+            this.textboxMail.MaxLength = 21;
             this.textboxMail.MultiLine = false;
             this.textboxMail.Name = "textboxMail";
             this.textboxMail.Numeric = false;
             this.textboxMail.ReadOnly = false;
             this.textboxMail.Size = new System.Drawing.Size(98, 25);
             this.textboxMail.TabIndex = 11;
+            this.textboxMail.Tag = "";
             this.textboxMail.UseSystemPasswordChar = false;
             this.textboxMail.TextChanged += new System.EventHandler(this.TextboxMail_TextChanged);
             // 
@@ -113,57 +115,39 @@ namespace StorkFlix
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
-            // animaCheckBox1
-            // 
-            this.animaCheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.animaCheckBox1.AutoSize = true;
-            this.animaCheckBox1.Caution = false;
-            this.animaCheckBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.animaCheckBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.animaCheckBox1.Location = new System.Drawing.Point(13, 17);
-            this.animaCheckBox1.Name = "animaCheckBox1";
-            this.animaCheckBox1.Radio = false;
-            this.animaCheckBox1.Size = new System.Drawing.Size(102, 21);
-            this.animaCheckBox1.TabIndex = 0;
-            this.animaCheckBox1.Text = "Çoklu Seçim";
-            this.toolTip1.SetToolTip(this.animaCheckBox1, "Birden fazla kategoriye sahip filmleri filtrelemek için kullanılabilir");
-            this.animaCheckBox1.UseVisualStyleBackColor = true;
-            this.animaCheckBox1.CheckedChanged += new System.EventHandler(this.animaCheckBox1_CheckedChanged);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.ColumnHeadersHeight = 34;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -171,21 +155,21 @@ namespace StorkFlix
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(104, 389);
             this.dataGridView1.TabIndex = 14;
@@ -218,6 +202,24 @@ namespace StorkFlix
             this.label1.TabIndex = 0;
             this.label1.Text = "   Bu Kategoriye Uygun Program Yok";
             this.label1.Visible = false;
+            // 
+            // animaCheckBox1
+            // 
+            this.animaCheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.animaCheckBox1.AutoSize = true;
+            this.animaCheckBox1.Caution = false;
+            this.animaCheckBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.animaCheckBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.animaCheckBox1.Location = new System.Drawing.Point(13, 17);
+            this.animaCheckBox1.Name = "animaCheckBox1";
+            this.animaCheckBox1.Radio = false;
+            this.animaCheckBox1.Size = new System.Drawing.Size(102, 21);
+            this.animaCheckBox1.TabIndex = 0;
+            this.animaCheckBox1.Text = "Çoklu Seçim";
+            this.toolTip1.SetToolTip(this.animaCheckBox1, "Birden fazla kategoriye sahip filmleri filtrelemek için kullanılabilir");
+            this.animaCheckBox1.UseVisualStyleBackColor = true;
+            this.animaCheckBox1.CheckedChanged += new System.EventHandler(this.animaCheckBox1_CheckedChanged);
             // 
             // backgroundWorker1
             // 
