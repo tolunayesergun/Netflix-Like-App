@@ -24,7 +24,6 @@ namespace StorkFlix.Forms
             YildizDoldur(Convert.ToInt32(StorkData.SonBolum.puan));
         }
 
-
         private void YeniBolumSecildi()
         {
             Baglanti.BolumBilgileriniYaz();
@@ -86,7 +85,6 @@ namespace StorkFlix.Forms
                 progressBar1.Value += 1;
                 sure += Convert.ToDecimal(StorkData.SecilenProgram.uzunluk) / 100m;
                 lblKaldiginDakika.Text = Math.Floor(sure).ToString("00") + ":00";
-             
             }
             else
             {
@@ -166,13 +164,12 @@ namespace StorkFlix.Forms
 
         private void Star_Click(object sender, EventArgs e)
         {
-            if (Secim == false) 
+            if (Secim == false)
             {
                 Secim = true;
                 PictureBox Image = sender as PictureBox;
-                int Gpuan = Convert.ToInt32(Image.Name.Substring(4));        
+                int Gpuan = Convert.ToInt32(Image.Name.Substring(4));
                 Baglanti.PuanGuncelle(Gpuan);
-              
             }
             else Secim = false;
         }

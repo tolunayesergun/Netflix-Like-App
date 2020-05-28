@@ -1,5 +1,4 @@
 ﻿using StorkFlix.Classes;
-using StorkFlix.Forms;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -34,7 +33,7 @@ namespace StorkFlix
                     Size = new System.Drawing.Size(160, 240),
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Name = item.isim,
-                    Tag=item.id
+                    Tag = item.id
                 };
                 lst.Click += new EventHandler(Image_Click);
                 lst.MouseHover += new EventHandler(Image_MouseHover);

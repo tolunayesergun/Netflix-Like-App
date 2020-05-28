@@ -35,9 +35,9 @@ namespace StorkFlix
                 {
                     string ProgramBilgisi = Convert.ToString(StorkData.IzlemeGecmisi[i].Ad);
                     if (StorkData.IzlemeGecmisi[i].BolumSayisi > 1)
-                    ProgramBilgisi = StorkData.IzlemeGecmisi[i].Ad + " " + StorkData.IzlemeGecmisi[i].BolumNo + ".Bolüm";
+                        ProgramBilgisi = StorkData.IzlemeGecmisi[i].Ad + " " + StorkData.IzlemeGecmisi[i].BolumNo + ".Bolüm";
                     dataGridView1.Rows.Add(ProgramBilgisi,
-                    StorkData.IzlemeGecmisi[i].izlemeSure + " Dk",
+                    StorkData.IzlemeGecmisi[i].izlemeSure + " Dakika",
                     StorkData.IzlemeGecmisi[i].iPuan,
                     Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("HH:mm:ss") + "     " + Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("dd/MM/yyyy"));
                 }

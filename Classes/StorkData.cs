@@ -9,13 +9,14 @@ namespace StorkFlix.Classes
     {
         private readonly StorkModel db = new StorkModel();
         public static List<Programlar> ProgramListesi { get; set; }
-        public static List<JoinedTable> IzlemeGecmisi { get; set; }
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
         public static KullaniciProgram SonBolum { get; set; }
+        public static List<JoinedTable> IzlemeGecmisi { get; set; }
         public static string SeciliProgramTuru { get; set; }
         public static int TempBolum { get; set; }
 
+        //////////////////////// Programlar Formu Data Base İşlemleri ////////////////////////
         public void ProgramSec(int GelenId)
         {
             SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
@@ -68,10 +69,23 @@ namespace StorkFlix.Classes
             }
         }
 
+        public void ProgramAra(string Kelime)
+        {
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru)
+                                          .Where(i => i.isim.StartsWith(Kelime))
+                                          .OrderByDescending(i => i.id).ToList();
+        }
+
+        public void TurDoldur()
+        {
+            TurListesi = db.Turler.ToList();
+        }
+
+        //////////////////////// Hesabım Formu Data Base İşlemleri ////////////////////////
         public void IzlemeGecmisiOlustur(int KullaniciId)
         {
-            /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi 
-            from KullaniciProgram as kp inner join Programlar as p on kp.programId=p.id 
+            /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi
+            from KullaniciProgram as kp inner join Programlar as p on kp.programId=p.id
             where kullaniciId=1 order by  kp.id desc */
 
             IzlemeGecmisi = (from i in db.KullaniciProgram
@@ -86,20 +100,8 @@ namespace StorkFlix.Classes
                                  izlemeSure = i.izlemeSuresi,
                                  iPuan = i.puan,
                                  iTarih = i.izlemeTarihi,
-                                 BolumSayisi=x.bolum
+                                 BolumSayisi = x.bolum
                              }).ToList();
-        }
-
-        public void ProgramAra(string Kelime)
-        {
-            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru)
-                                          .Where(i => i.isim.StartsWith(Kelime))
-                                          .OrderByDescending(i => i.id).ToList();
-        }
-
-        public void TurDoldur()
-        {
-            TurListesi = db.Turler.ToList();
         }
 
         public void ProfilSec(string ImageName)
@@ -111,6 +113,18 @@ namespace StorkFlix.Classes
             db.SaveChanges();
         }
 
+        public void BilgiGuncelle(string nme, string maill, DateTime dgtrh)
+        {
+            Kullanici BilgiDegistir = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
+
+            BilgiDegistir.isim = nme;
+            BilgiDegistir.mail = maill;
+            BilgiDegistir.dogumTarihi = dgtrh;
+
+            db.SaveChanges();
+        }
+
+        //////////////////////// Giriş Formu Data Base İşlemleri ////////////////////////
         public int MailKullaniciAra(string mail, string sifre)
         {
             //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
@@ -148,18 +162,7 @@ namespace StorkFlix.Classes
             db.SaveChanges();
         }
 
-        public void BilgiGuncelle(string nme, string maill, DateTime dgtrh)
-        {
-            Kullanici BilgiDegistir = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
-
-            BilgiDegistir.isim = nme;
-            BilgiDegistir.mail = maill;
-            BilgiDegistir.dogumTarihi = dgtrh;
-
-            db.SaveChanges();
-        }
-
-        //////////////////////// Kullanıcı Program Tablosu işlemleri ////////////////////////
+        //////////////////////// Ekran Formu Data Base İşlemleri ////////////////////////
 
         public void KullanicProgramKayitEkle(int gelenBolum)
         {
