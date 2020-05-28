@@ -17,6 +17,35 @@ namespace StorkFlix
 
         private void FormHesabim_Load(object sender, EventArgs e)
         {
+            ProfilBilgileriniGetir();
+            IzlemeGecmisiniGetir();
+        }
+
+        private void IzlemeGecmisiniGetir()
+        {
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "Program ve Bölümü";
+            dataGridView1.Columns[1].Name = "İzleme Süresi";
+            dataGridView1.Columns[2].Name = "Verdiğiniz Puan";
+            dataGridView1.Columns[3].Name = "İzleme Tarihi";
+            Baglanti.IzlemeGecmisiOlustur(AktifKullanici.kullaniciId);
+            for (int i = 0; i < StorkData.IzlemeGecmisi.Count; i++)
+            {
+                if (StorkData.IzlemeGecmisi[i].izlemeSure != 0)
+                {
+                    string ProgramBilgisi = Convert.ToString(StorkData.IzlemeGecmisi[i].Ad);
+                    if (StorkData.IzlemeGecmisi[i].BolumSayisi > 1)
+                    ProgramBilgisi = StorkData.IzlemeGecmisi[i].Ad + " " + StorkData.IzlemeGecmisi[i].BolumNo + ".Bolüm";
+                    dataGridView1.Rows.Add(ProgramBilgisi,
+                    StorkData.IzlemeGecmisi[i].izlemeSure + " Dk",
+                    StorkData.IzlemeGecmisi[i].iPuan,
+                    Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("HH:mm:ss") + "     " + Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("dd/MM/yyyy"));
+                }
+            }
+        }
+
+        private void ProfilBilgileriniGetir()
+        {
             lblName.Text = AktifKullanici.kullaniciAdi;
             lblMail.Text = AktifKullanici.kullaniciMail;
             lblDate.Text = AktifKullanici.kullaniciDgn.ToString("dd-MM-yyyy");
@@ -57,7 +86,7 @@ namespace StorkFlix
         }
 
         private void btnDegistir_Click(object sender, EventArgs e)
-        {        
+        {
             panel5.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
@@ -111,6 +140,11 @@ namespace StorkFlix
             panel7.Visible = true;
             panel6.Visible = false;
             panel5.Visible = false;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridView1.ClearSelection();
         }
     }
 }

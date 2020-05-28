@@ -9,6 +9,7 @@ namespace StorkFlix.Classes
     {
         private readonly StorkModel db = new StorkModel();
         public static List<Programlar> ProgramListesi { get; set; }
+        public static List<JoinedTable> IzlemeGecmisi { get; set; }
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
         public static KullaniciProgram SonBolum { get; set; }
@@ -65,6 +66,28 @@ namespace StorkFlix.Classes
                     uzunluk = r.auzunluk
                 }).ToList();
             }
+        }
+
+        public void IzlemeGecmisiOlustur(int KullaniciId)
+        {
+            /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi 
+            from KullaniciProgram as kp inner join Programlar as p on kp.programId=p.id 
+            where kullaniciId=1 order by  kp.id desc */
+
+            IzlemeGecmisi = (from i in db.KullaniciProgram
+                             join x in db.Programlar
+                             on i.programId equals x.id
+                             where i.kullaniciId == KullaniciId
+                             orderby i.izlemeTarihi descending
+                             select new JoinedTable
+                             {
+                                 Ad = x.isim,
+                                 BolumNo = i.bolum,
+                                 izlemeSure = i.izlemeSuresi,
+                                 iPuan = i.puan,
+                                 iTarih = i.izlemeTarihi,
+                                 BolumSayisi=x.bolum
+                             }).ToList();
         }
 
         public void ProgramAra(string Kelime)
@@ -144,7 +167,7 @@ namespace StorkFlix.Classes
             {
                 kullaniciId = AktifKullanici.kullaniciId,
                 programId = SecilenProgram.id,
-                izlemeTarihi = DateTime.Today,
+                izlemeTarihi = DateTime.Now,
                 izlemeSuresi = 0,
                 puan = 0,
                 bolum = gelenBolum,
@@ -199,7 +222,7 @@ namespace StorkFlix.Classes
                                              select i).SingleOrDefault();
 
             SureGuncelle.izlemeSuresi = GelenSure;
-            SureGuncelle.izlemeTarihi = DateTime.Today;
+            SureGuncelle.izlemeTarihi = DateTime.Now;
 
             db.SaveChanges();
         }
@@ -240,6 +263,15 @@ namespace StorkFlix.Classes
 
             BolumBilgileriniYaz();
         }
+    }
 
+    public class JoinedTable
+    {
+        public string Ad { get; set; }
+        public int? BolumNo { get; set; }
+        public int? BolumSayisi { get; set; }
+        public int? izlemeSure { get; set; }
+        public int? iPuan { get; set; }
+        public DateTime? iTarih { get; set; }
     }
 }
