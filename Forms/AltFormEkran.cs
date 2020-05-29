@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace StorkFlix.Forms
 {
-    public partial class FormEkran : Form
+    public partial class AltFormEkran : Form
     {
-        public FormEkran()
+        public AltFormEkran()
         {
             InitializeComponent();
         }

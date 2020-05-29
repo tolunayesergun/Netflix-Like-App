@@ -12,7 +12,7 @@ namespace StorkFlix.Classes
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
         public static KullaniciProgram SonBolum { get; set; }
-        public static List<JoinedTable> IzlemeGecmisi { get; set; }
+        public static List<BagliTablo> IzlemeGecmisi { get; set; }
         public static string SeciliProgramTuru { get; set; }
         public static int TempBolum { get; set; }
 
@@ -93,7 +93,7 @@ namespace StorkFlix.Classes
                              on i.programId equals x.id
                              where i.kullaniciId == KullaniciId
                              orderby i.izlemeTarihi descending
-                             select new JoinedTable
+                             select new BagliTablo
                              {
                                  Ad = x.isim,
                                  BolumNo = i.bolum,
@@ -122,6 +122,16 @@ namespace StorkFlix.Classes
             BilgiDegistir.dogumTarihi = dgtrh;
 
             db.SaveChanges();
+        }
+
+        public void SifreGuncelle(string yeniSifre)
+        {
+            var GuncellencekVeri = db.Kullanici.SingleOrDefault(k => k.id == AktifKullanici.kullaniciId);
+            if (GuncellencekVeri != null)
+            {
+                GuncellencekVeri.sifre = yeniSifre;
+                db.SaveChanges();
+            }
         }
 
         //////////////////////// Giriş Formu Data Base İşlemleri ////////////////////////
@@ -268,7 +278,7 @@ namespace StorkFlix.Classes
         }
     }
 
-    public class JoinedTable
+    public class BagliTablo
     {
         public string Ad { get; set; }
         public int? BolumNo { get; set; }

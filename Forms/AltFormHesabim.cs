@@ -36,10 +36,17 @@ namespace StorkFlix
                     string ProgramBilgisi = Convert.ToString(StorkData.IzlemeGecmisi[i].Ad);
                     if (StorkData.IzlemeGecmisi[i].BolumSayisi > 1)
                         ProgramBilgisi = StorkData.IzlemeGecmisi[i].Ad + " " + StorkData.IzlemeGecmisi[i].BolumNo + ".Bolüm";
-                    dataGridView1.Rows.Add(ProgramBilgisi,
-                    StorkData.IzlemeGecmisi[i].izlemeSure + " Dakika",
-                    StorkData.IzlemeGecmisi[i].iPuan,
-                    Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("HH:mm:ss") + "     " + Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("dd/MM/yyyy"));
+
+                    string DakikaBilgisi = StorkData.IzlemeGecmisi[i].izlemeSure + " Dakika";
+
+                    string PuanBilgisi = "Puanlanmadı";
+                    if (StorkData.IzlemeGecmisi[i].iPuan > 0)
+                        PuanBilgisi = StorkData.IzlemeGecmisi[i].iPuan.ToString();
+
+                    string TarihBilgisi = Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("HH:mm:ss") + "     " +
+                                          Convert.ToDateTime(StorkData.IzlemeGecmisi[i].iTarih).ToString("dd/MM/yyyy");
+
+                    dataGridView1.Rows.Add(ProgramBilgisi, DakikaBilgisi, PuanBilgisi, TarihBilgisi);
                 }
             }
         }
@@ -127,6 +134,27 @@ namespace StorkFlix
 
         private void sfreKydt_Click(object sender, EventArgs e)
         {
+            if(lblEskiSifre.Text==AktifKullanici.kullaniciSifre)
+            {
+                if(LblYeniSifre.Text==lblYeniSifreTekrar.Text)
+                {
+                    Baglanti.SifreGuncelle(LblYeniSifre.Text);
+                    lblUyumProblemi.Visible = false;
+                    panel7.Visible = false;
+                    panel6.Visible = true;
+                    panel5.Visible = false;
+                }
+                else
+                {
+                    lblUyumProblemi.Visible = true;
+                }
+                labelSifreHata.Visible = false;
+            }
+            else
+            {
+                labelSifreHata.Visible = true;
+            }
+            
         }
 
         private void lblCikisYap_Click(object sender, EventArgs e)

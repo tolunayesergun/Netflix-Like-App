@@ -110,7 +110,12 @@ namespace StorkFlix
         {
             pictureBox2.Enabled = false;
             IslemVarmi = false;
-            AltForumGetir(new FormEkran());
+            AltForumGetir(new AltFormEkran());
+        }
+
+        private void btnAltAnaSayfa_Click(object sender, EventArgs e)
+        {
+            AltForumGetir(new AltFormAnaSayfa());
         }
     }
 }

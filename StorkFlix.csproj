@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\Stork-Logo.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\StorkIco.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -63,36 +63,42 @@
     <Compile Include="Classes\MyDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\FormEkran.cs">
+    <Compile Include="Forms\AltFormAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormEkran.Designer.cs">
-      <DependentUpon>FormEkran.cs</DependentUpon>
+    <Compile Include="Forms\AltFormAnaSayfa.Designer.cs">
+      <DependentUpon>AltFormAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AltFormEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AltFormEkran.Designer.cs">
+      <DependentUpon>AltFormEkran.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Forms\AnaSayfa.cs">
+    <Compile Include="Forms\FormAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AnaSayfa.designer.cs">
-      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    <Compile Include="Forms\FormAnaSayfa.designer.cs">
+      <DependentUpon>FormAnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormHesabim.cs">
+    <Compile Include="Forms\AltFormHesabim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormHesabim.designer.cs">
-      <DependentUpon>FormHesabim.cs</DependentUpon>
+    <Compile Include="Forms\AltFormHesabim.designer.cs">
+      <DependentUpon>AltFormHesabim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormProgramlar.cs">
+    <Compile Include="Forms\AltFormProgramlar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormProgramlar.designer.cs">
-      <DependentUpon>FormProgramlar.cs</DependentUpon>
+    <Compile Include="Forms\AltFormProgramlar.designer.cs">
+      <DependentUpon>AltFormProgramlar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Giris.cs">
+    <Compile Include="Forms\FormGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Giris.Designer.cs">
-      <DependentUpon>Giris.cs</DependentUpon>
+    <Compile Include="Forms\FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\AktifKullanici.cs" />
     <Compile Include="Migrations\202005231812037_FirstMigration.cs" />
@@ -109,20 +115,23 @@
     <Compile Include="Models\StorkModel.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Turler.cs" />
-    <EmbeddedResource Include="Forms\AnaSayfa.resx">
-      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AltFormAnaSayfa.resx">
+      <DependentUpon>AltFormAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormEkran.resx">
-      <DependentUpon>FormEkran.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormAnaSayfa.resx">
+      <DependentUpon>FormAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormHesabim.resx">
-      <DependentUpon>FormHesabim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AltFormEkran.resx">
+      <DependentUpon>AltFormEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormProgramlar.resx">
-      <DependentUpon>FormProgramlar.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AltFormHesabim.resx">
+      <DependentUpon>AltFormHesabim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Giris.resx">
-      <DependentUpon>Giris.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AltFormProgramlar.resx">
+      <DependentUpon>AltFormProgramlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005231812037_FirstMigration.resx">
       <DependentUpon>202005231812037_FirstMigration.cs</DependentUpon>
@@ -401,7 +410,9 @@
     <None Include="Resources\profil8.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Logo.ico" />
     <Content Include="Resources\icon.ico" />
+    <Content Include="Resources\StorkIco.ico" />
     <None Include="Resources\sc1.jpg" />
     <None Include="Resources\sc2.jpg" />
     <None Include="Resources\sc3.jpg" />
