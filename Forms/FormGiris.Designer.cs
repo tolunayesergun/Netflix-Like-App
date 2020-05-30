@@ -29,46 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGiris = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelSifreHata = new System.Windows.Forms.Label();
             this.labelMailHata = new System.Windows.Forms.Label();
             this.labelKayitOl = new System.Windows.Forms.Label();
+            this.btnGiris = new AnimaButton();
+            this.chckBeniHatirla = new AnimaCheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textboxMail = new AnimaTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textboxPassword = new AnimaTextBox();
             this.panelKayit = new System.Windows.Forms.Panel();
+            this.panelKategoriSec = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new StorkFlix.Classes.MyDataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelGirisYap = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.textboxKayitDogumYilTarihi = new AnimaTextBox();
             this.textboxKayitDogumAyTarihi = new AnimaTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.textboxKayitSifreTekrar = new AnimaTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textboxKayitDogumGunTarihi = new AnimaTextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textboxKayitSifre = new AnimaTextBox();
+            this.labelGirisYap = new System.Windows.Forms.Label();
             this.btnKayitOl = new AnimaButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.textboxKayitMail = new AnimaTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textboxKayitAd = new AnimaTextBox();
-            this.btnGiris = new AnimaButton();
-            this.chckBeniHatirla = new AnimaCheckBox();
-            this.textboxMail = new AnimaTextBox();
-            this.textboxPassword = new AnimaTextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.animaButton1 = new AnimaButton();
+            this.lblSecimSayisi = new System.Windows.Forms.Label();
             this.panelGiris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKayit.SuspendLayout();
+            this.panelKategoriSec.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGiris
@@ -156,6 +171,34 @@
             this.labelKayitOl.Text = "Kayıt Ol";
             this.labelKayitOl.Click += new System.EventHandler(this.LabelKayitOl_Click);
             // 
+            // btnGiris
+            // 
+            this.btnGiris.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnGiris.ImageLocation = new System.Drawing.Point(30, 6);
+            this.btnGiris.ImageSize = new System.Drawing.Size(14, 14);
+            this.btnGiris.Location = new System.Drawing.Point(110, 500);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(165, 39);
+            this.btnGiris.TabIndex = 3;
+            this.btnGiris.Text = "Giriş Yap";
+            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
+            // 
+            // chckBeniHatirla
+            // 
+            this.chckBeniHatirla.AutoSize = true;
+            this.chckBeniHatirla.Caution = false;
+            this.chckBeniHatirla.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.chckBeniHatirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.chckBeniHatirla.Location = new System.Drawing.Point(81, 422);
+            this.chckBeniHatirla.Name = "chckBeniHatirla";
+            this.chckBeniHatirla.Radio = false;
+            this.chckBeniHatirla.Size = new System.Drawing.Size(87, 19);
+            this.chckBeniHatirla.TabIndex = 26;
+            this.chckBeniHatirla.Text = "Beni Hatırla";
+            this.chckBeniHatirla.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -177,6 +220,20 @@
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 12;
             this.label1.Text = "E-Posta";
+            // 
+            // textboxMail
+            // 
+            this.textboxMail.Dark = false;
+            this.textboxMail.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxMail.Location = new System.Drawing.Point(79, 296);
+            this.textboxMail.MaxLength = 32767;
+            this.textboxMail.MultiLine = false;
+            this.textboxMail.Name = "textboxMail";
+            this.textboxMail.Numeric = false;
+            this.textboxMail.ReadOnly = false;
+            this.textboxMail.Size = new System.Drawing.Size(226, 34);
+            this.textboxMail.TabIndex = 1;
+            this.textboxMail.UseSystemPasswordChar = false;
             // 
             // pictureBox3
             // 
@@ -205,9 +262,24 @@
             this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
+            // textboxPassword
+            // 
+            this.textboxPassword.Dark = false;
+            this.textboxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textboxPassword.Location = new System.Drawing.Point(79, 372);
+            this.textboxPassword.MaxLength = 19;
+            this.textboxPassword.MultiLine = false;
+            this.textboxPassword.Name = "textboxPassword";
+            this.textboxPassword.Numeric = false;
+            this.textboxPassword.ReadOnly = false;
+            this.textboxPassword.Size = new System.Drawing.Size(226, 34);
+            this.textboxPassword.TabIndex = 2;
+            this.textboxPassword.UseSystemPasswordChar = true;
+            // 
             // panelKayit
             // 
             this.panelKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panelKayit.Controls.Add(this.panelKategoriSec);
             this.panelKayit.Controls.Add(this.label11);
             this.panelKayit.Controls.Add(this.label10);
             this.panelKayit.Controls.Add(this.label9);
@@ -231,6 +303,93 @@
             this.panelKayit.Name = "panelKayit";
             this.panelKayit.Size = new System.Drawing.Size(384, 601);
             this.panelKayit.TabIndex = 4;
+            // 
+            // panelKategoriSec
+            // 
+            this.panelKategoriSec.Controls.Add(this.lblSecimSayisi);
+            this.panelKategoriSec.Controls.Add(this.animaButton1);
+            this.panelKategoriSec.Controls.Add(this.groupBox1);
+            this.panelKategoriSec.Controls.Add(this.label13);
+            this.panelKategoriSec.Controls.Add(this.label12);
+            this.panelKategoriSec.Location = new System.Drawing.Point(12, 12);
+            this.panelKategoriSec.Name = "panelKategoriSec";
+            this.panelKategoriSec.Size = new System.Drawing.Size(360, 577);
+            this.panelKategoriSec.TabIndex = 38;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label12.Location = new System.Drawing.Point(29, -5);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label12.Size = new System.Drawing.Size(318, 28);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Sana Tavsiye Verebilmemiz için Aşağıdan";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridView1.ColumnHeadersHeight = 34;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridView1.RowTemplate.Height = 34;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(166, 411);
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // label11
             // 
@@ -265,90 +424,6 @@
             this.label9.TabIndex = 35;
             this.label9.Text = "Gün";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(162, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 29);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Kayıt";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label8.Location = new System.Drawing.Point(82, 292);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 18);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Şifre Tekrar";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(82, 370);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 18);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Doğum Tarihi";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label7.Location = new System.Drawing.Point(82, 214);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 18);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Şire";
-            // 
-            // labelGirisYap
-            // 
-            this.labelGirisYap.AutoSize = true;
-            this.labelGirisYap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelGirisYap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.labelGirisYap.Location = new System.Drawing.Point(163, 552);
-            this.labelGirisYap.Name = "labelGirisYap";
-            this.labelGirisYap.Size = new System.Drawing.Size(58, 13);
-            this.labelGirisYap.TabIndex = 25;
-            this.labelGirisYap.Text = "Giriş Yap";
-            this.labelGirisYap.Click += new System.EventHandler(this.LabelGirisYap_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(82, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "E-Posta";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(82, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 18);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "İsim";
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
-            // 
             // textboxKayitDogumYilTarihi
             // 
             this.textboxKayitDogumYilTarihi.Dark = false;
@@ -377,6 +452,28 @@
             this.textboxKayitDogumAyTarihi.TabIndex = 6;
             this.textboxKayitDogumAyTarihi.UseSystemPasswordChar = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label5.Location = new System.Drawing.Point(162, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 29);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Kayıt";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label8.Location = new System.Drawing.Point(82, 292);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 18);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Şifre Tekrar";
+            // 
             // textboxKayitSifreTekrar
             // 
             this.textboxKayitSifreTekrar.Dark = false;
@@ -390,6 +487,17 @@
             this.textboxKayitSifreTekrar.Size = new System.Drawing.Size(226, 34);
             this.textboxKayitSifreTekrar.TabIndex = 4;
             this.textboxKayitSifreTekrar.UseSystemPasswordChar = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label6.Location = new System.Drawing.Point(82, 370);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 18);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Doğum Tarihi";
             // 
             // textboxKayitDogumGunTarihi
             // 
@@ -405,6 +513,17 @@
             this.textboxKayitDogumGunTarihi.TabIndex = 5;
             this.textboxKayitDogumGunTarihi.UseSystemPasswordChar = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(82, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 18);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Şire";
+            // 
             // textboxKayitSifre
             // 
             this.textboxKayitSifre.Dark = false;
@@ -418,6 +537,19 @@
             this.textboxKayitSifre.Size = new System.Drawing.Size(226, 34);
             this.textboxKayitSifre.TabIndex = 3;
             this.textboxKayitSifre.UseSystemPasswordChar = false;
+            // 
+            // labelGirisYap
+            // 
+            this.labelGirisYap.AutoSize = true;
+            this.labelGirisYap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelGirisYap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.labelGirisYap.Location = new System.Drawing.Point(163, 552);
+            this.labelGirisYap.Name = "labelGirisYap";
+            this.labelGirisYap.Size = new System.Drawing.Size(58, 13);
+            this.labelGirisYap.TabIndex = 25;
+            this.labelGirisYap.Text = "Giriş Yap";
+            this.labelGirisYap.Click += new System.EventHandler(this.LabelGirisYap_Click);
             // 
             // btnKayitOl
             // 
@@ -433,6 +565,17 @@
             this.btnKayitOl.UseVisualStyleBackColor = true;
             this.btnKayitOl.Click += new System.EventHandler(this.BtnKayitOl_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label3.Location = new System.Drawing.Point(82, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "E-Posta";
+            // 
             // textboxKayitMail
             // 
             this.textboxKayitMail.Dark = false;
@@ -446,6 +589,17 @@
             this.textboxKayitMail.Size = new System.Drawing.Size(226, 34);
             this.textboxKayitMail.TabIndex = 2;
             this.textboxKayitMail.UseSystemPasswordChar = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(82, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "İsim";
             // 
             // textboxKayitAd
             // 
@@ -461,61 +615,56 @@
             this.textboxKayitAd.TabIndex = 1;
             this.textboxKayitAd.UseSystemPasswordChar = false;
             // 
-            // btnGiris
+            // backgroundWorker1
             // 
-            this.btnGiris.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGiris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnGiris.ImageLocation = new System.Drawing.Point(30, 6);
-            this.btnGiris.ImageSize = new System.Drawing.Size(14, 14);
-            this.btnGiris.Location = new System.Drawing.Point(110, 500);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(165, 39);
-            this.btnGiris.TabIndex = 3;
-            this.btnGiris.Text = "Giriş Yap";
-            this.btnGiris.UseVisualStyleBackColor = true;
-            this.btnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
-            // chckBeniHatirla
+            // label13
             // 
-            this.chckBeniHatirla.AutoSize = true;
-            this.chckBeniHatirla.Caution = false;
-            this.chckBeniHatirla.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chckBeniHatirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.chckBeniHatirla.Location = new System.Drawing.Point(81, 422);
-            this.chckBeniHatirla.Name = "chckBeniHatirla";
-            this.chckBeniHatirla.Radio = false;
-            this.chckBeniHatirla.Size = new System.Drawing.Size(87, 19);
-            this.chckBeniHatirla.TabIndex = 26;
-            this.chckBeniHatirla.Text = "Beni Hatırla";
-            this.chckBeniHatirla.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label13.Location = new System.Drawing.Point(94, 24);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label13.Size = new System.Drawing.Size(170, 28);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Sevdiğin Üç Türü Seç";
             // 
-            // textboxMail
+            // groupBox1
             // 
-            this.textboxMail.Dark = false;
-            this.textboxMail.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxMail.Location = new System.Drawing.Point(79, 296);
-            this.textboxMail.MaxLength = 32767;
-            this.textboxMail.MultiLine = false;
-            this.textboxMail.Name = "textboxMail";
-            this.textboxMail.Numeric = false;
-            this.textboxMail.ReadOnly = false;
-            this.textboxMail.Size = new System.Drawing.Size(226, 34);
-            this.textboxMail.TabIndex = 1;
-            this.textboxMail.UseSystemPasswordChar = false;
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(97, 65);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(172, 430);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
             // 
-            // textboxPassword
+            // animaButton1
             // 
-            this.textboxPassword.Dark = false;
-            this.textboxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textboxPassword.Location = new System.Drawing.Point(79, 372);
-            this.textboxPassword.MaxLength = 19;
-            this.textboxPassword.MultiLine = false;
-            this.textboxPassword.Name = "textboxPassword";
-            this.textboxPassword.Numeric = false;
-            this.textboxPassword.ReadOnly = false;
-            this.textboxPassword.Size = new System.Drawing.Size(226, 34);
-            this.textboxPassword.TabIndex = 2;
-            this.textboxPassword.UseSystemPasswordChar = true;
+            this.animaButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.animaButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.animaButton1.ImageLocation = new System.Drawing.Point(30, 6);
+            this.animaButton1.ImageSize = new System.Drawing.Size(14, 14);
+            this.animaButton1.Location = new System.Drawing.Point(80, 532);
+            this.animaButton1.Name = "animaButton1";
+            this.animaButton1.Size = new System.Drawing.Size(209, 39);
+            this.animaButton1.TabIndex = 19;
+            this.animaButton1.Text = "Seçimlerini Kaydet";
+            this.animaButton1.UseVisualStyleBackColor = true;
+            // 
+            // lblSecimSayisi
+            // 
+            this.lblSecimSayisi.AutoSize = true;
+            this.lblSecimSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSecimSayisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblSecimSayisi.Location = new System.Drawing.Point(102, 498);
+            this.lblSecimSayisi.Name = "lblSecimSayisi";
+            this.lblSecimSayisi.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSecimSayisi.Size = new System.Drawing.Size(150, 25);
+            this.lblSecimSayisi.TabIndex = 20;
+            this.lblSecimSayisi.Text = "Kalan Seçim Sayısı : 3";
             // 
             // Giris
             // 
@@ -540,6 +689,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKayit.ResumeLayout(false);
             this.panelKayit.PerformLayout();
+            this.panelKategoriSec.ResumeLayout(false);
+            this.panelKategoriSec.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -580,6 +733,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelKategoriSec;
+        private Classes.MyDataGridView dataGridView1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private AnimaButton animaButton1;
+        private System.Windows.Forms.Label lblSecimSayisi;
     }
 }
 

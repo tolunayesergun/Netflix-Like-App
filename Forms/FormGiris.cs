@@ -38,6 +38,7 @@ namespace StorkFlix
 
         private void LabelKayitOl_Click(object sender, EventArgs e)
         {
+            TurDataGridiniDoldur();
             panelKayit.BringToFront();
         }
 
@@ -104,6 +105,7 @@ namespace StorkFlix
 
         private void Giris_Load(object sender, EventArgs e)
         {
+            TurDataGridiniDoldur();
             if (Properties.Settings.Default.KullaniciAdi != "")
             {
                 textboxMail.Text = Properties.Settings.Default.KullaniciAdi;
@@ -113,9 +115,42 @@ namespace StorkFlix
             }
         }
 
+        private void TurDataGridiniDoldur()
+        {
+            dataGridView1.ColumnCount = 1;
+            dataGridView1.Columns[0].Name = "Turler";
+            dataGridView1.Rows.Add("Aksiyon ve Macera");
+            dataGridView1.Rows.Add("Belgesel");
+            dataGridView1.Rows.Add("Bilim Kurgu");
+            dataGridView1.Rows.Add("Bilim ve Doğa");
+            dataGridView1.Rows.Add("Çocuk ve Aile");
+            dataGridView1.Rows.Add("Dramalar");
+            dataGridView1.Rows.Add("Gerilim");
+            dataGridView1.Rows.Add("Komedi");
+            dataGridView1.Rows.Add("Korku");
+            dataGridView1.Rows.Add("Romantizim");
+            dataGridView1.Rows.Add("Reality Program");
+            dataGridView1.Rows.Add("Anime");
+            dataGridView1.ClearSelection();
+        }
+
         private void Giris_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 3)
+            {
+                dataGridView1.SelectedRows[0].Selected = false;
+            }
+            if (dataGridView1.SelectedRows.Count < 3)
+            {
+                lblSecimSayisi.Text = "Kalan Seçim Sayısı : " + (3 - dataGridView1.SelectedRows.Count);
+                lblSecimSayisi.Visible = true;
+            }
+            else lblSecimSayisi.Visible = false;
         }
     }
 }
