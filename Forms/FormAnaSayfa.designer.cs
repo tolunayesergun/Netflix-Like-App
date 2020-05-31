@@ -58,7 +58,7 @@
             this.panelChildForm.Controls.Add(this.pictureBox9);
             this.panelChildForm.Location = new System.Drawing.Point(0, 73);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(904, 569);
+            this.panelChildForm.Size = new System.Drawing.Size(920, 608);
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.PanelChildForm_ControlRemoved);
             // 
@@ -78,7 +78,7 @@
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(348, 171);
+            this.pictureBox9.Location = new System.Drawing.Point(356, 191);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(226, 218);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -101,7 +101,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 76);
+            this.panel1.Size = new System.Drawing.Size(920, 76);
             this.panel1.TabIndex = 3;
             // 
             // btnAltAnaSayfa
@@ -160,7 +160,7 @@
             this.btnHesabim.ForeColor = System.Drawing.Color.Silver;
             this.btnHesabim.Image = ((System.Drawing.Image)(resources.GetObject("btnHesabim.Image")));
             this.btnHesabim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHesabim.Location = new System.Drawing.Point(775, 3);
+            this.btnHesabim.Location = new System.Drawing.Point(791, 3);
             this.btnHesabim.Name = "btnHesabim";
             this.btnHesabim.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnHesabim.Size = new System.Drawing.Size(114, 70);
@@ -217,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(904, 641);
+            this.ClientSize = new System.Drawing.Size(920, 680);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelChildForm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
