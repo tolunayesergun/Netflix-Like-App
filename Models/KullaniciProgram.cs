@@ -17,13 +17,30 @@ namespace StorkFlix
         public int? izlemeSuresi { get; set; }
 
         public int? bolum { get; set; }
+        
 
-        public int? puan { get; set; }
+        [DecimalPrecision(20, 10)]
+        public decimal? puan { get; set; }
 
         public int tamamlandi { get; set; }
 
         public virtual Kullanici Kullanici { get; set; }
 
         public virtual Programlar Programlar { get; set; }
+    }
+
+    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
+    public sealed class DecimalPrecisionAttribute : Attribute
+    {
+        public DecimalPrecisionAttribute(byte precision, byte scale)
+        {
+            Precision = precision;
+            Scale = scale;
+
+        }
+
+        public byte Precision { get; set; }
+        public byte Scale { get; set; }
+
     }
 }

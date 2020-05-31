@@ -134,9 +134,9 @@ namespace StorkFlix
 
         private void sfreKydt_Click(object sender, EventArgs e)
         {
-            if(lblEskiSifre.Text==AktifKullanici.kullaniciSifre)
+            if (lblEskiSifre.Text == AktifKullanici.kullaniciSifre)
             {
-                if(LblYeniSifre.Text==lblYeniSifreTekrar.Text)
+                if (LblYeniSifre.Text == lblYeniSifreTekrar.Text)
                 {
                     Baglanti.SifreGuncelle(LblYeniSifre.Text);
                     lblUyumProblemi.Visible = false;
@@ -154,7 +154,7 @@ namespace StorkFlix
             {
                 labelSifreHata.Visible = true;
             }
-            
+
         }
 
         private void lblCikisYap_Click(object sender, EventArgs e)

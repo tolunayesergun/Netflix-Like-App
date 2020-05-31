@@ -2,6 +2,7 @@
 using StorkFlix.Forms;
 using StorkFlix.Model;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -65,6 +66,15 @@ namespace StorkFlix
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
             this.BringToFront();
+            if (IslemVarmi == false)
+            {
+                pictureBox2.Enabled = true;
+                pictureBox2.Visible = true;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.BringToFront();
+                IslemVarmi = true;
+                backgroundWorker3.RunWorkerAsync();
+            }
         }
 
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
@@ -115,7 +125,30 @@ namespace StorkFlix
 
         private void btnAltAnaSayfa_Click(object sender, EventArgs e)
         {
+            if (IslemVarmi == false)
+            {
+                pictureBox2.Enabled = true;
+                pictureBox2.Visible = true;
+                this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+                pictureBox2.BringToFront();
+                IslemVarmi = true;
+                backgroundWorker3.RunWorkerAsync();
+            }
+        }
+
+        private void backgroundWorker3_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            StorkData Baglanti = new StorkData();
+            int?[] deneme = new int?[] { 1, 3, 5 };
+            Baglanti.OnerilenleriBul(deneme);
+        }
+
+        private void backgroundWorker3_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            
+            IslemVarmi = false;
             AltForumGetir(new AltFormAnaSayfa());
+            pictureBox2.Enabled = false;
         }
     }
 }

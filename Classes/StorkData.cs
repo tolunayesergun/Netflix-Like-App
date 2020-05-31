@@ -7,173 +7,39 @@ namespace StorkFlix.Classes
 {
     internal class StorkData
     {
+        #region Nesneler
         private readonly StorkModel db = new StorkModel();
         public static List<Programlar> ProgramListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
         public static Programlar SecilenProgram { get; set; }
         public static KullaniciProgram SonBolum { get; set; }
         public static List<BagliTablo> IzlemeGecmisi { get; set; }
+        public static List<Programlar> tempList { get; set; }
         public static string SeciliProgramTuru { get; set; }
         public static int TempBolum { get; set; }
+        #endregion Nesneler
 
-        //////////////////////// Programlar Formu Data Base İşlemleri ////////////////////////
-        public void ProgramSec(int GelenId)
+        #region AnaSayfa
+        //////////////////////// AnaSayfa Formu Data Base İşlemleri ////////////////////////
+        public void OnerilenleriBul(int?[] Filtreler)
         {
-            SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
-        }
+            tempList = new List<Programlar>();
 
-        public void ListeDoldur()
-        {
-            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
-        }
-
-        public void ListeFiltrele(int?[] Filtreler)
-        {
-            if (Filtreler.Count() == 0)
+            foreach (int i in Filtreler)
             {
-                ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
-            }
-            else
-            {
-                // Önce Linq sorgusu alınıp, sonra extension şekilde liste değiştiriliyor
-                var sorgu = (from i in db.Programlar
-                             join x in db.ProgramTurleri
-                             on i.id equals x.programId
-                             where Filtreler.Contains(x.turId) && i.tip == SeciliProgramTuru
-                             group i by new
-                             {
-                                 i.id,
-                                 i.isim,
-                                 i.tip,
-                                 i.bolum,
-                                 i.uzunluk
-                             } into gcs
-                             where gcs.Count() == Filtreler.Count()
-                             select new
-                             {
-                                 aid = gcs.Key.id,
-                                 aisim = gcs.Key.isim,
-                                 atip = gcs.Key.tip,
-                                 abolum = gcs.Key.bolum,
-                                 auzunluk = gcs.Key.uzunluk
-                             }).ToList();
+                int[] tempArray = tempList.Select(x => x.id).ToArray();
 
-                ProgramListesi = sorgu.ToList().OrderByDescending(i => i.aid).Select(r => new Programlar
-                {
-                    id = r.aid,
-                    isim = r.aisim,
-                    tip = r.atip,
-                    bolum = r.abolum,
-                    uzunluk = r.auzunluk
-                }).ToList();
+                tempList.AddRange(db.Programlar
+                      .Where(y => y.ProgramTurleri.Any(z => z.turId == i) && !(tempArray.Contains(y.id)))
+                      .OrderByDescending(x => x.KullaniciProgram.Average(y => y.puan))
+                      .Take(2)
+                      .ToList());
             }
         }
+        #endregion AnaSayfa
 
-        public void ProgramAra(string Kelime)
-        {
-            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru)
-                                          .Where(i => i.isim.StartsWith(Kelime))
-                                          .OrderByDescending(i => i.id).ToList();
-        }
-
-        public void TurDoldur()
-        {
-            TurListesi = db.Turler.ToList();
-        }
-
-        //////////////////////// Hesabım Formu Data Base İşlemleri ////////////////////////
-        public void IzlemeGecmisiOlustur(int KullaniciId)
-        {
-            /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi
-            from KullaniciProgram as kp inner join Programlar as p on kp.programId=p.id
-            where kullaniciId=1 order by  kp.id desc */
-
-            IzlemeGecmisi = (from i in db.KullaniciProgram
-                             join x in db.Programlar
-                             on i.programId equals x.id
-                             where i.kullaniciId == KullaniciId
-                             orderby i.izlemeTarihi descending
-                             select new BagliTablo
-                             {
-                                 Ad = x.isim,
-                                 BolumNo = i.bolum,
-                                 izlemeSure = i.izlemeSuresi,
-                                 iPuan = i.puan,
-                                 iTarih = i.izlemeTarihi,
-                                 BolumSayisi = x.bolum
-                             }).ToList();
-        }
-
-        public void ProfilSec(string ImageName)
-        {
-            Kullanici profilSec = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
-
-            profilSec.profilFotorafi = ImageName;
-
-            db.SaveChanges();
-        }
-
-        public void BilgiGuncelle(string nme, string maill, DateTime dgtrh)
-        {
-            Kullanici BilgiDegistir = (from i in db.Kullanici where i.id == AktifKullanici.kullaniciId select i).SingleOrDefault();
-
-            BilgiDegistir.isim = nme;
-            BilgiDegistir.mail = maill;
-            BilgiDegistir.dogumTarihi = dgtrh;
-
-            db.SaveChanges();
-        }
-
-        public void SifreGuncelle(string yeniSifre)
-        {
-            var GuncellencekVeri = db.Kullanici.SingleOrDefault(k => k.id == AktifKullanici.kullaniciId);
-            if (GuncellencekVeri != null)
-            {
-                GuncellencekVeri.sifre = yeniSifre;
-                db.SaveChanges();
-            }
-        }
-
-        //////////////////////// Giriş Formu Data Base İşlemleri ////////////////////////
-        public int MailKullaniciAra(string mail, string sifre)
-        {
-            //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
-
-            var kullancilar = db.Kullanici.ToList();
-            int mailkontrol = 0;
-
-            foreach (var item in kullancilar)
-            {
-                if (item.mail == mail)
-                {
-                    mailkontrol = 2;
-                    if (item.sifre == sifre)
-                    {
-                        return 1;
-                    }
-                    break;
-                }
-            }
-            return mailkontrol;
-        }
-
-        public void KullaniciEkle(string nme, string maill, string psw, DateTime dgtrh)
-        {
-            //Kullanıcı ekleme sorgusunu gerçekleştiren metot
-
-            Kullanici kat = new Kullanici
-            {
-                isim = nme,
-                mail = maill,
-                sifre = psw,
-                dogumTarihi = dgtrh
-            };
-            db.Kullanici.Add(kat);
-            db.SaveChanges();
-        }
-
+        #region Ekran
         //////////////////////// Ekran Formu Data Base İşlemleri ////////////////////////
-
         public void KullanicProgramKayitEkle(int gelenBolum)
         {
             KullaniciProgram kat = new KullaniciProgram
@@ -227,40 +93,37 @@ namespace StorkFlix.Classes
 
         public void BolumIzlemeBilgisiGuncelle(int GelenSure)
         {
-            KullaniciProgram SureGuncelle = (from i in db.KullaniciProgram
-                                             where
+            KullaniciProgram SureGuncelle = db.KullaniciProgram.SingleOrDefault(i =>
                i.kullaniciId == AktifKullanici.kullaniciId &&
                i.programId == SecilenProgram.id &&
                i.bolum == TempBolum
-                                             select i).SingleOrDefault();
-
+               );
             SureGuncelle.izlemeSuresi = GelenSure;
             SureGuncelle.izlemeTarihi = DateTime.Now;
-
             db.SaveChanges();
         }
 
         public void PuanGuncelle(int Puan)
         {
-            KullaniciProgram puanGuncelle = (from i in db.KullaniciProgram
-                                             where
-           i.kullaniciId == AktifKullanici.kullaniciId &&
-           i.programId == SecilenProgram.id &&
-           i.bolum == TempBolum
-                                             select i).SingleOrDefault();
-
-            puanGuncelle.puan = Puan;
-            db.SaveChanges();
+            KullaniciProgram puanGuncelle = db.KullaniciProgram.SingleOrDefault(i =>
+            i.kullaniciId == AktifKullanici.kullaniciId &&
+            i.programId == SecilenProgram.id &&
+            i.bolum == TempBolum);
+            if (puanGuncelle != null)
+            {
+                puanGuncelle.puan = Puan;
+                db.SaveChanges();
+            }
         }
 
         public void BolumTamamla(bool tamamlandimi)
         {
-            KullaniciProgram tamamlamaGuncelle = (from i in db.KullaniciProgram
-                                                  where
-                i.kullaniciId == AktifKullanici.kullaniciId &&
-                i.programId == SecilenProgram.id &&
-                i.bolum == TempBolum
-                                                  select i).SingleOrDefault();
+            KullaniciProgram tamamlamaGuncelle = db.KullaniciProgram.SingleOrDefault(i =>
+               i.kullaniciId == AktifKullanici.kullaniciId &&
+               i.programId == SecilenProgram.id &&
+               i.bolum == TempBolum
+               );
+
             if (tamamlandimi == true) tamamlamaGuncelle.tamamlandi = 1;
             else tamamlamaGuncelle.tamamlandi = 0;
             db.SaveChanges();
@@ -276,8 +139,192 @@ namespace StorkFlix.Classes
 
             BolumBilgileriniYaz();
         }
-    }
+        #endregion Ekran
 
+        #region Hesabim
+        //////////////////////// Hesabım Formu Data Base İşlemleri ////////////////////////
+        public void IzlemeGecmisiOlustur(int KullaniciId)
+        {
+            #region entityFrameWorkKullanimi
+
+            // Hız probleminden dolayı, extansion yerine linq kullandık.
+            //IzlemeGecmisi = db.KullaniciProgram.Where(x => x.kullaniciId == KullaniciId).OrderByDescending(x => x.izlemeTarihi).ToList();
+
+            #endregion entityFrameWorkKullanimi
+
+            #region SqlSorgusu
+
+            /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi
+            from KullaniciProgram as kp inner join Programlar as p on kp.programId=p.id
+            where kullaniciId=1 order by  kp.id desc */
+
+            #endregion SqlSorgusu
+
+            IzlemeGecmisi = (from i in db.KullaniciProgram
+                             join x in db.Programlar
+                             on i.programId equals x.id
+                             where i.kullaniciId == KullaniciId
+                             orderby i.izlemeTarihi descending
+                             select new BagliTablo
+                             {
+                                 Ad = x.isim,
+                                 BolumNo = i.bolum,
+                                 izlemeSure = i.izlemeSuresi,
+                                 iPuan = i.puan,
+                                 iTarih = i.izlemeTarihi,
+                                 BolumSayisi = x.bolum
+                             }).ToList();
+        }
+
+        public void ProfilSec(string ImageName)
+        {
+            Kullanici profilSec = db.Kullanici.SingleOrDefault(k => k.id == AktifKullanici.kullaniciId);
+
+            profilSec.profilFotorafi = ImageName;
+
+            db.SaveChanges();
+        }
+
+        public void BilgiGuncelle(string nme, string maill, DateTime dgtrh)
+        {
+            Kullanici BilgiDegistir = db.Kullanici.SingleOrDefault(k => k.id == AktifKullanici.kullaniciId);
+
+            BilgiDegistir.isim = nme;
+            BilgiDegistir.mail = maill;
+            BilgiDegistir.dogumTarihi = dgtrh;
+
+            db.SaveChanges();
+        }
+
+        public void SifreGuncelle(string yeniSifre)
+        {
+            var GuncellencekVeri = db.Kullanici.SingleOrDefault(k => k.id == AktifKullanici.kullaniciId);
+            if (GuncellencekVeri != null)
+            {
+                GuncellencekVeri.sifre = yeniSifre;
+                db.SaveChanges();
+            }
+        }
+        #endregion Hesabim
+
+        #region Programlar
+        //////////////////////// Programlar Formu Data Base İşlemleri ////////////////////////
+        public void ProgramSec(int GelenId)
+        {
+            SecilenProgram = db.Programlar.Where(i => i.id == GelenId).Single();
+        }
+
+        public void ListeDoldur()
+        {
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
+        }
+
+        public void ListeFiltrele(int?[] Filtreler)
+        {
+            if (Filtreler.Count() == 0)
+            {
+                ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru).OrderByDescending(i => i.id).ToList();
+            }
+            else
+            {
+                ProgramListesi = db.Programlar
+                    .Where(y => y.ProgramTurleri.Select(x => x.turId)
+                    .Intersect(Filtreler).Count() == Filtreler.Count() && y.tip == SeciliProgramTuru)
+                    .OrderByDescending(i => i.id)
+                    .ToList();
+
+                #region LinqKullanimi
+
+                //Eğer lazyloading açık ise include yazıp joinlemeye gerek yok otomatik entity frtamework o işlemi yapacak
+                //Eğer lazyloading kapatılmış ise include(x=>x.altsınıf) şeklinde istenen alt ilişkiler manuel joinlenir
+                // Önce Linq sorgusu alınıp, sonra extension şekilde liste değiştiriliyor
+                //var sorgu = (from i in db.Programlar
+                //             join x in db.ProgramTurleri
+                //             on i.id equals x.programId
+                //             where Filtreler.Contains(x.turId) && i.tip == SeciliProgramTuru
+                //             group i by new
+                //             {
+                //                 i.id,
+                //                 i.isim,
+                //                 i.tip,
+                //                 i.bolum,
+                //                 i.uzunluk
+                //             } into gcs
+                //             where gcs.Count() == Filtreler.Count()
+                //             select new
+                //             {
+                //                 aid = gcs.Key.id,
+                //                 aisim = gcs.Key.isim,
+                //                 atip = gcs.Key.tip,
+                //                 abolum = gcs.Key.bolum,
+                //                 auzunluk = gcs.Key.uzunluk
+                //             }).ToList();
+
+                //ProgramListesi = sorgu2.ToList().OrderByDescending(i => i.id).Select(r => new Programlar
+                //{
+                //    id = r.id,
+                //    isim = r.isim,
+                //    tip = r.tip,
+                //    bolum = r.bolum,
+                //    uzunluk = r.uzunluk
+                //}).ToList();
+
+                #endregion LinqKullanimi
+            }
+        }
+
+        public void ProgramAra(string Kelime)
+        {
+            ProgramListesi = db.Programlar.Where(i => i.tip == SeciliProgramTuru && i.isim.StartsWith(Kelime)).OrderByDescending(i => i.id).ToList();
+        }
+
+        public void TurDoldur()
+        {
+            TurListesi = db.Turler.ToList();
+        }
+        #endregion Programlar
+
+        #region Giris
+        //////////////////////// Giriş Formu Data Base İşlemleri ////////////////////////
+        public int MailKullaniciAra(string mail, string sifre)
+        {
+            //Mail-Şifre Kontrolü Yapan sorguyu barındıran metot
+
+            var kullancilar = db.Kullanici.ToList();
+            int mailkontrol = 0;
+
+            foreach (var item in kullancilar)
+            {
+                if (item.mail == mail)
+                {
+                    mailkontrol = 2;
+                    if (item.sifre == sifre)
+                    {
+                        return 1;
+                    }
+                    break;
+                }
+            }
+            return mailkontrol;
+        }
+
+        public void KullaniciEkle(string nme, string maill, string psw, DateTime dgtrh)
+        {
+            //Kullanıcı ekleme sorgusunu gerçekleştiren metot
+
+            Kullanici kat = new Kullanici
+            {
+                isim = nme,
+                mail = maill,
+                sifre = psw,
+                dogumTarihi = dgtrh
+            };
+            db.Kullanici.Add(kat);
+            db.SaveChanges();
+        }
+        #endregion Giris
+
+    }
     public class BagliTablo
     {
         public string Ad { get; set; }
