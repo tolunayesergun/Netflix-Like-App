@@ -64,6 +64,7 @@
             this.lblPuan3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,13 +87,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox9
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(251, -1);
+            this.pictureBox9.Location = new System.Drawing.Point(238, 16);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(202, 165);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +103,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Location = new System.Drawing.Point(6, 206);
             this.groupBox1.Name = "groupBox1";
@@ -111,6 +114,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.lblFilmAd6);
             this.panel2.Controls.Add(this.FilmAfis6);
             this.panel2.Controls.Add(this.lblFilmAd5);
@@ -148,6 +153,7 @@
             // 
             // lblFilmAd6
             // 
+            this.lblFilmAd6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd6.CausesValidation = false;
@@ -169,6 +175,7 @@
             // 
             // FilmAfis6
             // 
+            this.FilmAfis6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis6.Location = new System.Drawing.Point(541, 0);
             this.FilmAfis6.Name = "FilmAfis6";
@@ -180,6 +187,7 @@
             // 
             // lblFilmAd5
             // 
+            this.lblFilmAd5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd5.CausesValidation = false;
@@ -201,6 +209,7 @@
             // 
             // FilmAfis4
             // 
+            this.FilmAfis4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis4.Location = new System.Drawing.Point(327, 0);
             this.FilmAfis4.Name = "FilmAfis4";
@@ -212,6 +221,7 @@
             // 
             // lblFilmAd4
             // 
+            this.lblFilmAd4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd4.CausesValidation = false;
@@ -233,6 +243,7 @@
             // 
             // FilmAfis5
             // 
+            this.FilmAfis5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis5.Location = new System.Drawing.Point(434, 0);
             this.FilmAfis5.Name = "FilmAfis5";
@@ -244,6 +255,7 @@
             // 
             // lblFilmAd1
             // 
+            this.lblFilmAd1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd1.CausesValidation = false;
@@ -265,6 +277,7 @@
             // 
             // FilmAfis2
             // 
+            this.FilmAfis2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis2.Location = new System.Drawing.Point(113, 0);
             this.FilmAfis2.Name = "FilmAfis2";
@@ -276,6 +289,7 @@
             // 
             // lblFilmAd3
             // 
+            this.lblFilmAd3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd3.CausesValidation = false;
@@ -297,6 +311,7 @@
             // 
             // FilmAfis3
             // 
+            this.FilmAfis3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis3.Location = new System.Drawing.Point(220, 0);
             this.FilmAfis3.Name = "FilmAfis3";
@@ -308,7 +323,7 @@
             // 
             // Star9
             // 
-            this.Star9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Star9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Star9.BackColor = System.Drawing.Color.White;
             this.Star9.Image = ((System.Drawing.Image)(resources.GetObject("Star9.Image")));
             this.Star9.Location = new System.Drawing.Point(32, 164);
@@ -320,6 +335,7 @@
             // 
             // FilmAfis1
             // 
+            this.FilmAfis1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FilmAfis1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FilmAfis1.Location = new System.Drawing.Point(6, 0);
             this.FilmAfis1.Name = "FilmAfis1";
@@ -331,6 +347,7 @@
             // 
             // lblFilmAd2
             // 
+            this.lblFilmAd2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFilmAd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.lblFilmAd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFilmAd2.CausesValidation = false;
@@ -352,7 +369,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.BackColor = System.Drawing.Color.White;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(565, 164);
@@ -364,7 +381,7 @@
             // 
             // Star10
             // 
-            this.Star10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Star10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Star10.BackColor = System.Drawing.Color.White;
             this.Star10.Image = ((System.Drawing.Image)(resources.GetObject("Star10.Image")));
             this.Star10.Location = new System.Drawing.Point(40, 164);
@@ -376,7 +393,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.BackColor = System.Drawing.Color.White;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
             this.pictureBox14.Location = new System.Drawing.Point(466, 164);
@@ -388,7 +405,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.Color.White;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(136, 164);
@@ -400,7 +417,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox12.BackColor = System.Drawing.Color.White;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
             this.pictureBox12.Location = new System.Drawing.Point(573, 164);
@@ -412,6 +429,7 @@
             // 
             // lblPuan6
             // 
+            this.lblPuan6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan6.AutoSize = true;
             this.lblPuan6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan6.ForeColor = System.Drawing.Color.White;
@@ -424,7 +442,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.BackColor = System.Drawing.Color.White;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
             this.pictureBox15.Location = new System.Drawing.Point(458, 164);
@@ -436,7 +454,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(144, 164);
@@ -448,6 +466,7 @@
             // 
             // lblPuan1
             // 
+            this.lblPuan1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan1.AutoSize = true;
             this.lblPuan1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan1.ForeColor = System.Drawing.Color.White;
@@ -460,6 +479,7 @@
             // 
             // lblPuan5
             // 
+            this.lblPuan5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan5.AutoSize = true;
             this.lblPuan5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan5.ForeColor = System.Drawing.Color.White;
@@ -472,7 +492,7 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox16.BackColor = System.Drawing.Color.White;
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
             this.pictureBox16.Location = new System.Drawing.Point(358, 164);
@@ -484,7 +504,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.BackColor = System.Drawing.Color.White;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(242, 164);
@@ -496,6 +516,7 @@
             // 
             // lblPuan2
             // 
+            this.lblPuan2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan2.AutoSize = true;
             this.lblPuan2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan2.ForeColor = System.Drawing.Color.White;
@@ -508,6 +529,7 @@
             // 
             // lblPuan4
             // 
+            this.lblPuan4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan4.AutoSize = true;
             this.lblPuan4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan4.ForeColor = System.Drawing.Color.White;
@@ -520,7 +542,7 @@
             // 
             // pictureBox17
             // 
-            this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox17.BackColor = System.Drawing.Color.White;
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
             this.pictureBox17.Location = new System.Drawing.Point(350, 164);
@@ -532,7 +554,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackColor = System.Drawing.Color.White;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(250, 164);
@@ -544,6 +566,7 @@
             // 
             // lblPuan3
             // 
+            this.lblPuan3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPuan3.AutoSize = true;
             this.lblPuan3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan3.ForeColor = System.Drawing.Color.White;
@@ -559,9 +582,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Location = new System.Drawing.Point(6, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 443);
@@ -573,12 +594,25 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(106, 170);
+            this.label1.Location = new System.Drawing.Point(89, 174);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.label1.Size = new System.Drawing.Size(634, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Sevdiğin Kategorilerde En Çok Puan Alan Programlar";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.pictureBox9);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(653, 216);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
             // 
             // AltFormAnaSayfa
             // 
@@ -586,6 +620,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(677, 460);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AltFormAnaSayfa";
@@ -614,7 +649,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -656,5 +692,6 @@
         private System.Windows.Forms.PictureBox FilmAfis3;
         private System.Windows.Forms.PictureBox FilmAfis1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

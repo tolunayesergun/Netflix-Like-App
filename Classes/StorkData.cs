@@ -17,6 +17,9 @@ namespace StorkFlix.Classes
         public static List<Programlar> tempList { get; set; }
         public static string SeciliProgramTuru { get; set; }
         public static int TempBolum { get; set; }
+
+        public static decimal[] PuanListesi = new decimal[6];
+
         #endregion Nesneler
 
         #region AnaSayfa
@@ -35,6 +38,8 @@ namespace StorkFlix.Classes
                       .Take(2)
                       .ToList());
             }
+            for (int i = 0; i < StorkData.tempList.Count; i++) PuanListesi[i] = Convert.ToDecimal(StorkData.tempList[i].KullaniciProgram.Average(y => y.puan));
+
         }
         #endregion AnaSayfa
 
@@ -151,7 +156,6 @@ namespace StorkFlix.Classes
             //IzlemeGecmisi = db.KullaniciProgram.Where(x => x.kullaniciId == KullaniciId).OrderByDescending(x => x.izlemeTarihi).ToList();
 
             #endregion entityFrameWorkKullanimi
-
             #region SqlSorgusu
 
             /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi
@@ -331,7 +335,7 @@ namespace StorkFlix.Classes
         public int? BolumNo { get; set; }
         public int? BolumSayisi { get; set; }
         public int? izlemeSure { get; set; }
-        public int? iPuan { get; set; }
+        public decimal? iPuan { get; set; }
         public DateTime? iTarih { get; set; }
     }
 }

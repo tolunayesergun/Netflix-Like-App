@@ -18,8 +18,7 @@ namespace StorkFlix
 
         public int? bolum { get; set; }
         
-
-        [DecimalPrecision(20, 10)]
+        [DecimalPrecision(2, 2)]
         public decimal? puan { get; set; }
 
         public int tamamlandi { get; set; }

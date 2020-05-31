@@ -29,11 +29,25 @@ namespace StorkFlix
 
         private void BtnKayitOl_Click(object sender, EventArgs e)
         {
+            lblKayitliHatasi.Visible = false;
+            lblTekrarHatasi.Visible = false;
+            lblDogHata.Visible = false;
             string nme = textboxKayitAd.Text, maill = textboxKayitMail.Text, psw = textboxKayitSifre.Text;
-
-            DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
-
-            DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
+            int KullaniciKontrol = DataBaglan.MailKullaniciAra(maill, psw);
+            if (KullaniciKontrol == 0)
+            {
+                if (textboxKayitSifre.Text == textboxKayitSifreTekrar.Text)
+                {
+                    if (Convert.ToInt32(textboxKayitDogumGunTarihi.Text) <= 31 && Convert.ToInt32(textboxKayitDogumGunTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) <= 12 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) <= 2020 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) > 1890)
+                    {
+                        DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
+                        DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
+                    }
+                    else lblDogHata.Visible = true;
+                }
+                else lblTekrarHatasi.Visible = true;
+            }
+            else lblKayitliHatasi.Visible = true;
         }
 
         private void LabelKayitOl_Click(object sender, EventArgs e)
