@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StorkFlix.Model
 {
-    class AktifKullanici
+    internal class AktifKullanici
     {
         public static int kullaniciId { get; set; }
         public static string kullaniciAdi { get; set; }
@@ -15,7 +12,9 @@ namespace StorkFlix.Model
         public static DateTime kullaniciDgn { get; set; }
         public static string kullaniciProfil { get; set; }
 
-        public  void KullaniciSec(string mail)
+        public static int?[] favKats = new int?[3];
+
+        public void KullaniciSec(string mail)
         {
             StorkModel db = new StorkModel();
             var kullaniciBilgileri = db.Kullanici.Where(i => i.mail == mail).First();
@@ -26,6 +25,24 @@ namespace StorkFlix.Model
             kullaniciSifre = kullaniciBilgileri.sifre;
             kullaniciDgn = kullaniciBilgileri.dogumTarihi;
             kullaniciProfil = kullaniciBilgileri.profilFotorafi;
+
+            if (kullaniciBilgileri.FavKats != null)
+            {
+                string[] kats = kullaniciBilgileri.FavKats.Split(',');
+                for (int i = 0; i < 3; i++)
+                {
+                    favKats[i] = Convert.ToInt32(kats[i]);
+                }
+            }
+        }
+
+        public void favDegistir(string favs)
+        {
+            string[] kats = favs.Split(',');
+            for (int i = 0; i < 3; i++)
+            {
+                favKats[i] = Convert.ToInt32(kats[i]);
+            }
         }
     }
 }

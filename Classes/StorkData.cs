@@ -8,6 +8,7 @@ namespace StorkFlix.Classes
     internal class StorkData
     {
         #region Nesneler
+
         private readonly StorkModel db = new StorkModel();
         public static List<Programlar> ProgramListesi { get; set; }
         public static List<Turler> TurListesi { get; set; }
@@ -23,27 +24,31 @@ namespace StorkFlix.Classes
         #endregion Nesneler
 
         #region AnaSayfa
+
         //////////////////////// AnaSayfa Formu Data Base İşlemleri ////////////////////////
-        public void OnerilenleriBul(int?[] Filtreler)
+        public void OnerilenleriBul()
         {
-            tempList = new List<Programlar>();
-
-            foreach (int i in Filtreler)
+            if (AktifKullanici.favKats[0] != null)
             {
-                int[] tempArray = tempList.Select(x => x.id).ToArray();
+                tempList = new List<Programlar>();
+                foreach (int i in AktifKullanici.favKats)
+                {
+                    int[] tempArray = tempList.Select(x => x.id).ToArray();
 
-                tempList.AddRange(db.Programlar
-                      .Where(y => y.ProgramTurleri.Any(z => z.turId == i) && !(tempArray.Contains(y.id)))
-                      .OrderByDescending(x => x.KullaniciProgram.Average(y => y.puan))
-                      .Take(2)
-                      .ToList());
+                    tempList.AddRange(db.Programlar
+                          .Where(y => y.ProgramTurleri.Any(z => z.turId == i) && !(tempArray.Contains(y.id)))
+                          .OrderByDescending(x => x.KullaniciProgram.Average(y => y.puan))
+                          .Take(2)
+                          .ToList());
+                }
+                for (int i = 0; i < StorkData.tempList.Count; i++) PuanListesi[i] = Convert.ToDecimal(StorkData.tempList[i].KullaniciProgram.Average(y => y.puan));
             }
-            for (int i = 0; i < StorkData.tempList.Count; i++) PuanListesi[i] = Convert.ToDecimal(StorkData.tempList[i].KullaniciProgram.Average(y => y.puan));
-
         }
+
         #endregion AnaSayfa
 
         #region Ekran
+
         //////////////////////// Ekran Formu Data Base İşlemleri ////////////////////////
         public void KullanicProgramKayitEkle(int gelenBolum)
         {
@@ -144,9 +149,11 @@ namespace StorkFlix.Classes
 
             BolumBilgileriniYaz();
         }
+
         #endregion Ekran
 
         #region Hesabim
+
         //////////////////////// Hesabım Formu Data Base İşlemleri ////////////////////////
         public void IzlemeGecmisiOlustur(int KullaniciId)
         {
@@ -156,6 +163,7 @@ namespace StorkFlix.Classes
             //IzlemeGecmisi = db.KullaniciProgram.Where(x => x.kullaniciId == KullaniciId).OrderByDescending(x => x.izlemeTarihi).ToList();
 
             #endregion entityFrameWorkKullanimi
+
             #region SqlSorgusu
 
             /*select p.isim,kp.Bolum,kp.izlemeSuresi,kp.puan,kp.izlemeTarihi
@@ -209,9 +217,11 @@ namespace StorkFlix.Classes
                 db.SaveChanges();
             }
         }
+
         #endregion Hesabim
 
         #region Programlar
+
         //////////////////////// Programlar Formu Data Base İşlemleri ////////////////////////
         public void ProgramSec(int GelenId)
         {
@@ -286,9 +296,11 @@ namespace StorkFlix.Classes
         {
             TurListesi = db.Turler.ToList();
         }
+
         #endregion Programlar
 
         #region Giris
+
         //////////////////////// Giriş Formu Data Base İşlemleri ////////////////////////
         public int MailKullaniciAra(string mail, string sifre)
         {
@@ -326,9 +338,19 @@ namespace StorkFlix.Classes
             db.Kullanici.Add(kat);
             db.SaveChanges();
         }
-        #endregion Giris
 
+        public void FavSec(string favs, string mail)
+        {
+            Kullanici profilSec = db.Kullanici.SingleOrDefault(k => k.mail == mail);
+
+            profilSec.FavKats = favs;
+
+            db.SaveChanges();
+        }
+
+        #endregion Giris
     }
+
     public class BagliTablo
     {
         public string Ad { get; set; }

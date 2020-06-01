@@ -17,6 +17,7 @@ namespace StorkFlix
 
         private void BtnGiris_Click(object sender, EventArgs e)
         {
+            lblBasarili.Visible = false;
             if (IslemVarmi == false)
             {
                 pictureBox2.Visible = true;
@@ -48,6 +49,7 @@ namespace StorkFlix
                             {
                                 DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
                                 DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
+                                panelKategoriSec.Visible = true;
                             }
                             catch (FormatException)
                             {
@@ -65,7 +67,6 @@ namespace StorkFlix
 
         private void LabelKayitOl_Click(object sender, EventArgs e)
         {
-            TurDataGridiniDoldur();
             panelKayit.BringToFront();
         }
 
@@ -144,21 +145,10 @@ namespace StorkFlix
 
         private void TurDataGridiniDoldur()
         {
-            dataGridView1.ColumnCount = 1;
-            dataGridView1.Columns[0].Name = "Turler";
-            dataGridView1.Rows.Add("Aksiyon ve Macera");
-            dataGridView1.Rows.Add("Belgesel");
-            dataGridView1.Rows.Add("Bilim Kurgu");
-            dataGridView1.Rows.Add("Bilim ve Doğa");
-            dataGridView1.Rows.Add("Çocuk ve Aile");
-            dataGridView1.Rows.Add("Dramalar");
-            dataGridView1.Rows.Add("Gerilim");
-            dataGridView1.Rows.Add("Komedi");
-            dataGridView1.Rows.Add("Korku");
-            dataGridView1.Rows.Add("Romantizim");
-            dataGridView1.Rows.Add("Reality Program");
-            dataGridView1.Rows.Add("Anime");
-            dataGridView1.ClearSelection();
+            DataBaglan.TurDoldur();
+            dataGridView1.DataSource = StorkData.TurListesi;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
         }
 
         private void Giris_FormClosed(object sender, FormClosedEventArgs e)
@@ -176,8 +166,31 @@ namespace StorkFlix
             {
                 lblSecimSayisi.Text = "Kalan Seçim Sayısı : " + (3 - dataGridView1.SelectedRows.Count);
                 lblSecimSayisi.Visible = true;
+                FavKatsKaydet.Visible = false;
             }
-            else lblSecimSayisi.Visible = false;
+            else
+            {
+                lblSecimSayisi.Visible = false;
+                FavKatsKaydet.Visible = true;
+            }
+        }
+
+        private void FavKatsKaydet_Click(object sender, EventArgs e)
+        {
+            string favkats = "";
+            for (int i = 0; i < 3; i++)
+            {
+                favkats += dataGridView1.SelectedRows[i].Index + 1;
+                if (i != 2) favkats += ",";
+            }
+            DataBaglan.FavSec(favkats, textboxKayitMail.Text);
+            panelKayit.Visible = false;
+            lblBasarili.Visible = true;
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.ClearSelection();
         }
     }
 }

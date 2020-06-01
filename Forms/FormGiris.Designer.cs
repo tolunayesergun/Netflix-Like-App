@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGiris = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblBasarili = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.labelSifreHata = new System.Windows.Forms.Label();
             this.labelMailHata = new System.Windows.Forms.Label();
@@ -51,11 +52,12 @@
             this.panelKayit = new System.Windows.Forms.Panel();
             this.panelKategoriSec = new System.Windows.Forms.Panel();
             this.lblSecimSayisi = new System.Windows.Forms.Label();
-            this.animaButton1 = new AnimaButton();
+            this.FavKatsKaydet = new AnimaButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new StorkFlix.Classes.MyDataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblalanEksik = new System.Windows.Forms.Label();
             this.lblDogHata = new System.Windows.Forms.Label();
             this.lblTekrarHatasi = new System.Windows.Forms.Label();
             this.lblKayitliHatasi = new System.Windows.Forms.Label();
@@ -78,7 +80,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textboxKayitAd = new AnimaTextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblalanEksik = new System.Windows.Forms.Label();
             this.panelGiris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -94,6 +95,7 @@
             // 
             this.panelGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panelGiris.Controls.Add(this.pictureBox2);
+            this.panelGiris.Controls.Add(this.lblBasarili);
             this.panelGiris.Controls.Add(this.pictureBox9);
             this.panelGiris.Controls.Add(this.labelSifreHata);
             this.panelGiris.Controls.Add(this.labelMailHata);
@@ -115,13 +117,27 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 238);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 243);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(366, 364);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
+            // 
+            // lblBasarili
+            // 
+            this.lblBasarili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBasarili.AutoSize = true;
+            this.lblBasarili.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblBasarili.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblBasarili.Location = new System.Drawing.Point(49, 513);
+            this.lblBasarili.Name = "lblBasarili";
+            this.lblBasarili.Size = new System.Drawing.Size(297, 17);
+            this.lblBasarili.TabIndex = 27;
+            this.lblBasarili.Text = "Kaydınız tamamlandı, giriş yapabilirsiniz";
+            this.lblBasarili.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBasarili.Visible = false;
             // 
             // pictureBox9
             // 
@@ -140,7 +156,7 @@
             this.labelSifreHata.AutoSize = true;
             this.labelSifreHata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.labelSifreHata.ForeColor = System.Drawing.Color.Crimson;
-            this.labelSifreHata.Location = new System.Drawing.Point(146, 528);
+            this.labelSifreHata.Location = new System.Drawing.Point(146, 515);
             this.labelSifreHata.Name = "labelSifreHata";
             this.labelSifreHata.Size = new System.Drawing.Size(91, 17);
             this.labelSifreHata.TabIndex = 23;
@@ -154,7 +170,7 @@
             this.labelMailHata.AutoSize = true;
             this.labelMailHata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.labelMailHata.ForeColor = System.Drawing.Color.Crimson;
-            this.labelMailHata.Location = new System.Drawing.Point(60, 528);
+            this.labelMailHata.Location = new System.Drawing.Point(60, 515);
             this.labelMailHata.Name = "labelMailHata";
             this.labelMailHata.Size = new System.Drawing.Size(263, 17);
             this.labelMailHata.TabIndex = 22;
@@ -168,7 +184,7 @@
             this.labelKayitOl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelKayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelKayitOl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.labelKayitOl.Location = new System.Drawing.Point(169, 585);
+            this.labelKayitOl.Location = new System.Drawing.Point(169, 590);
             this.labelKayitOl.Name = "labelKayitOl";
             this.labelKayitOl.Size = new System.Drawing.Size(51, 13);
             this.labelKayitOl.TabIndex = 20;
@@ -181,7 +197,7 @@
             this.btnGiris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnGiris.ImageLocation = new System.Drawing.Point(30, 6);
             this.btnGiris.ImageSize = new System.Drawing.Size(14, 14);
-            this.btnGiris.Location = new System.Drawing.Point(109, 530);
+            this.btnGiris.Location = new System.Drawing.Point(109, 541);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(165, 39);
             this.btnGiris.TabIndex = 3;
@@ -283,8 +299,8 @@
             // panelKayit
             // 
             this.panelKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panelKayit.Controls.Add(this.lblalanEksik);
             this.panelKayit.Controls.Add(this.panelKategoriSec);
+            this.panelKayit.Controls.Add(this.lblalanEksik);
             this.panelKayit.Controls.Add(this.lblDogHata);
             this.panelKayit.Controls.Add(this.lblTekrarHatasi);
             this.panelKayit.Controls.Add(this.lblKayitliHatasi);
@@ -315,39 +331,42 @@
             // panelKategoriSec
             // 
             this.panelKategoriSec.Controls.Add(this.lblSecimSayisi);
-            this.panelKategoriSec.Controls.Add(this.animaButton1);
+            this.panelKategoriSec.Controls.Add(this.FavKatsKaydet);
             this.panelKategoriSec.Controls.Add(this.groupBox1);
             this.panelKategoriSec.Controls.Add(this.label13);
             this.panelKategoriSec.Controls.Add(this.label12);
             this.panelKategoriSec.Location = new System.Drawing.Point(12, 32);
             this.panelKategoriSec.Name = "panelKategoriSec";
-            this.panelKategoriSec.Size = new System.Drawing.Size(41, 597);
+            this.panelKategoriSec.Size = new System.Drawing.Size(360, 597);
             this.panelKategoriSec.TabIndex = 38;
+            this.panelKategoriSec.Visible = false;
             // 
             // lblSecimSayisi
             // 
             this.lblSecimSayisi.AutoSize = true;
             this.lblSecimSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSecimSayisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblSecimSayisi.Location = new System.Drawing.Point(102, 506);
+            this.lblSecimSayisi.Location = new System.Drawing.Point(101, 534);
             this.lblSecimSayisi.Name = "lblSecimSayisi";
             this.lblSecimSayisi.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.lblSecimSayisi.Size = new System.Drawing.Size(150, 25);
             this.lblSecimSayisi.TabIndex = 20;
             this.lblSecimSayisi.Text = "Kalan Seçim Sayısı : 3";
             // 
-            // animaButton1
+            // FavKatsKaydet
             // 
-            this.animaButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.animaButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.animaButton1.ImageLocation = new System.Drawing.Point(30, 6);
-            this.animaButton1.ImageSize = new System.Drawing.Size(14, 14);
-            this.animaButton1.Location = new System.Drawing.Point(80, 547);
-            this.animaButton1.Name = "animaButton1";
-            this.animaButton1.Size = new System.Drawing.Size(209, 39);
-            this.animaButton1.TabIndex = 19;
-            this.animaButton1.Text = "Seçimlerini Kaydet";
-            this.animaButton1.UseVisualStyleBackColor = true;
+            this.FavKatsKaydet.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FavKatsKaydet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.FavKatsKaydet.ImageLocation = new System.Drawing.Point(30, 6);
+            this.FavKatsKaydet.ImageSize = new System.Drawing.Size(14, 14);
+            this.FavKatsKaydet.Location = new System.Drawing.Point(75, 531);
+            this.FavKatsKaydet.Name = "FavKatsKaydet";
+            this.FavKatsKaydet.Size = new System.Drawing.Size(209, 39);
+            this.FavKatsKaydet.TabIndex = 19;
+            this.FavKatsKaydet.Text = "Seçimlerini Kaydet";
+            this.FavKatsKaydet.UseVisualStyleBackColor = true;
+            this.FavKatsKaydet.Visible = false;
+            this.FavKatsKaydet.Click += new System.EventHandler(this.FavKatsKaydet_Click);
             // 
             // groupBox1
             // 
@@ -419,6 +438,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(166, 411);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // label13
@@ -444,6 +464,20 @@
             this.label12.Size = new System.Drawing.Size(318, 28);
             this.label12.TabIndex = 16;
             this.label12.Text = "Sana Tavsiye Verebilmemiz için Aşağıdan";
+            // 
+            // lblalanEksik
+            // 
+            this.lblalanEksik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblalanEksik.AutoSize = true;
+            this.lblalanEksik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblalanEksik.ForeColor = System.Drawing.Color.Crimson;
+            this.lblalanEksik.Location = new System.Drawing.Point(101, 513);
+            this.lblalanEksik.Name = "lblalanEksik";
+            this.lblalanEksik.Size = new System.Drawing.Size(187, 17);
+            this.lblalanEksik.TabIndex = 42;
+            this.lblalanEksik.Text = "Tüm Alanları Doldurunuz";
+            this.lblalanEksik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblalanEksik.Visible = false;
             // 
             // lblDogHata
             // 
@@ -716,28 +750,14 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
-            // lblalanEksik
-            // 
-            this.lblalanEksik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblalanEksik.AutoSize = true;
-            this.lblalanEksik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblalanEksik.ForeColor = System.Drawing.Color.Crimson;
-            this.lblalanEksik.Location = new System.Drawing.Point(101, 513);
-            this.lblalanEksik.Name = "lblalanEksik";
-            this.lblalanEksik.Size = new System.Drawing.Size(187, 17);
-            this.lblalanEksik.TabIndex = 42;
-            this.lblalanEksik.Text = "Tüm Alanları Doldurunuz";
-            this.lblalanEksik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblalanEksik.Visible = false;
-            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(384, 641);
-            this.Controls.Add(this.panelKayit);
             this.Controls.Add(this.panelGiris);
+            this.Controls.Add(this.panelKayit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Giris";
@@ -802,12 +822,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
-        private AnimaButton animaButton1;
+        private AnimaButton FavKatsKaydet;
         private System.Windows.Forms.Label lblSecimSayisi;
         private System.Windows.Forms.Label lblKayitliHatasi;
         private System.Windows.Forms.Label lblTekrarHatasi;
         private System.Windows.Forms.Label lblDogHata;
         private System.Windows.Forms.Label lblalanEksik;
+        private System.Windows.Forms.Label lblBasarili;
     }
 }
 

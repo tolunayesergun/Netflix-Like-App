@@ -2,7 +2,6 @@
 using StorkFlix.Forms;
 using StorkFlix.Model;
 using System;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace StorkFlix
@@ -139,13 +138,11 @@ namespace StorkFlix
         private void backgroundWorker3_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             StorkData Baglanti = new StorkData();
-            int?[] deneme = new int?[] { 1, 3, 5 };
-            Baglanti.OnerilenleriBul(deneme);
+            Baglanti.OnerilenleriBul();
         }
 
         private void backgroundWorker3_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            
             IslemVarmi = false;
             AltForumGetir(new AltFormAnaSayfa());
             pictureBox2.Enabled = false;

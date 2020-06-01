@@ -33,6 +33,8 @@ namespace StorkFlix
 
         [Column(TypeName = "Date")]
         public DateTime dogumTarihi { get; set; }
+        [StringLength(50)]
+        public string FavKats { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KullaniciProgram> KullaniciProgram { get; set; }

@@ -1,4 +1,5 @@
 ﻿using StorkFlix.Classes;
+using StorkFlix.Model;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -12,9 +13,19 @@ namespace StorkFlix.Forms
         {
             InitializeComponent();
         }
+
+        private readonly StorkData Baglanti = new StorkData();
+
         private void AltFormAnaSayfa_Load(object sender, EventArgs e)
         {
-            IcerikleriYerlestir();         
+            if (StorkData.tempList == null)
+            {
+                panel3.Visible = true;
+            }
+            else
+            {
+                IcerikleriYerlestir();
+            }
         }
 
         private void IcerikleriYerlestir()
@@ -44,6 +55,71 @@ namespace StorkFlix.Forms
             TextBox lbbl = sender as TextBox;
             Baglanti.ProgramSec(Convert.ToInt32((panel2.Controls["FilmAfis" + lbbl.Name.Substring(9)] as PictureBox).Tag));
             this.Close();
+        }
+
+        private void panel3_VisibleChanged(object sender, EventArgs e)
+        {
+            TurDataGridiniDoldur();
+        }
+
+        private void TurDataGridiniDoldur()
+        {
+            Baglanti.TurDoldur();
+            dataGridView1.DataSource = StorkData.TurListesi;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.ClearSelection();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 3)
+            {
+                dataGridView1.SelectedRows[0].Selected = false;
+            }
+            if (dataGridView1.SelectedRows.Count < 3)
+            {
+                lblSecimSayisi.Text = "Kalan Seçim Sayısı : " + (3 - dataGridView1.SelectedRows.Count);
+                lblSecimSayisi.Visible = true;
+                FavKatsKaydet.Visible = false;
+            }
+            else
+            {
+                lblSecimSayisi.Visible = false;
+                FavKatsKaydet.Visible = true;
+            }
+        }
+
+        private void FavKatsKaydet_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            string favkats = "";
+            for (int i = 0; i < 3; i++)
+            {
+                favkats += dataGridView1.SelectedRows[i].Index + 1;
+                if (i != 2) favkats += ",";
+            }
+            Baglanti.FavSec(favkats, AktifKullanici.kullaniciMail);
+            AktifKullanici aktif = new AktifKullanici();
+            aktif.favDegistir(favkats);
+            panel3.Visible = false;
+            Baglanti.OnerilenleriBul();
+            IcerikleriYerlestir();
+            panel4.Visible = false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
         }
     }
 }
