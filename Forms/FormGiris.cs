@@ -32,22 +32,35 @@ namespace StorkFlix
             lblKayitliHatasi.Visible = false;
             lblTekrarHatasi.Visible = false;
             lblDogHata.Visible = false;
-            string nme = textboxKayitAd.Text, maill = textboxKayitMail.Text, psw = textboxKayitSifre.Text;
-            int KullaniciKontrol = DataBaglan.MailKullaniciAra(maill, psw);
-            if (KullaniciKontrol == 0)
+            lblalanEksik.Visible = false;
+
+            if (textboxKayitAd.Text != "" && textboxKayitMail.Text != "" && textboxKayitSifre.Text != "" && textboxKayitSifreTekrar.Text != "" && textboxKayitDogumAyTarihi.Text != "" && textboxKayitDogumGunTarihi.Text != "" && textboxKayitDogumYilTarihi.Text != "")
             {
                 if (textboxKayitSifre.Text == textboxKayitSifreTekrar.Text)
                 {
                     if (Convert.ToInt32(textboxKayitDogumGunTarihi.Text) <= 31 && Convert.ToInt32(textboxKayitDogumGunTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) <= 12 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) <= 2020 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) > 1890)
                     {
-                        DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
-                        DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
+                        string nme = textboxKayitAd.Text, maill = textboxKayitMail.Text, psw = textboxKayitSifre.Text;
+                        int KullaniciKontrol = DataBaglan.MailKullaniciAra(maill, psw);
+                        if (KullaniciKontrol == 0)
+                        {
+                            try
+                            {
+                                DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
+                                DataBaglan.KullaniciEkle(nme, maill, psw, dgtrh);
+                            }
+                            catch (FormatException)
+                            {
+                                lblDogHata.Visible = true;
+                            }
+                        }
+                        else lblKayitliHatasi.Visible = true;
                     }
                     else lblDogHata.Visible = true;
                 }
                 else lblTekrarHatasi.Visible = true;
             }
-            else lblKayitliHatasi.Visible = true;
+            else lblalanEksik.Visible = true;
         }
 
         private void LabelKayitOl_Click(object sender, EventArgs e)

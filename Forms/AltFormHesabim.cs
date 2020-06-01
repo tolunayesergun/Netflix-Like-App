@@ -103,21 +103,49 @@ namespace StorkFlix
             textboxKayitDogumYilTarihi.Text = GunAyYil[0];
             textboxKayitDogumAyTarihi.Text = GunAyYil[1];
             textboxKayitDogumGunTarihi.Text = GunAyYil[2];
+            lblKayitliHatasi.Visible = false;
+            lblDogHata.Visible = false;
+            lblalanEksik.Visible = false;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
-            Baglanti.BilgiGuncelle(textboxKadi.Text, textboxMail.Text, dgtrh);
-            AktifKullanici.kullaniciAdi = textboxKadi.Text;
-            AktifKullanici.kullaniciMail = textboxMail.Text;
-            AktifKullanici.kullaniciDgn = dgtrh;
-            lblName.Text = AktifKullanici.kullaniciAdi;
-            lblMail.Text = AktifKullanici.kullaniciMail;
-            lblDate.Text = AktifKullanici.kullaniciDgn.ToString("dd-MM-yyyy");
-            panel6.Visible = false;
-            panel5.Visible = true;
-            panel7.Visible = false;
+            lblKayitliHatasi.Visible = false;
+            lblDogHata.Visible = false;
+            lblalanEksik.Visible = false;
+
+            if (textboxKadi.Text != "" && textboxMail.Text != "" && textboxKayitDogumAyTarihi.Text != "" && textboxKayitDogumGunTarihi.Text != "" && textboxKayitDogumYilTarihi.Text != "")
+            {
+                if (Convert.ToInt32(textboxKayitDogumGunTarihi.Text) <= 31 && Convert.ToInt32(textboxKayitDogumGunTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) <= 12 && Convert.ToInt32(textboxKayitDogumAyTarihi.Text) > 0 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) <= 2020 && Convert.ToInt32(textboxKayitDogumYilTarihi.Text) > 1890)
+                {
+                    string maill = textboxMail.Text;
+                    int KullaniciKontrol = Baglanti.MailKullaniciAra(maill, "1");
+                    if (maill == AktifKullanici.kullaniciMail || KullaniciKontrol == 0)
+                    {
+                        try
+                        {
+                            DateTime dgtrh = Convert.ToDateTime(textboxKayitDogumYilTarihi.Text + "-" + textboxKayitDogumAyTarihi.Text + "-" + textboxKayitDogumGunTarihi.Text);
+                            Baglanti.BilgiGuncelle(textboxKadi.Text, textboxMail.Text, dgtrh);
+                            AktifKullanici.kullaniciAdi = textboxKadi.Text;
+                            AktifKullanici.kullaniciMail = textboxMail.Text;
+                            AktifKullanici.kullaniciDgn = dgtrh;
+                            lblName.Text = AktifKullanici.kullaniciAdi;
+                            lblMail.Text = AktifKullanici.kullaniciMail;
+                            lblDate.Text = AktifKullanici.kullaniciDgn.ToString("dd-MM-yyyy");
+                            panel6.Visible = false;
+                            panel5.Visible = true;
+                            panel7.Visible = false;
+                        }
+                        catch (FormatException)
+                        {
+                            lblDogHata.Visible = true;
+                        }
+                    }
+                    else lblKayitliHatasi.Visible = true;
+                }
+                else lblDogHata.Visible = true;
+            }
+            else lblalanEksik.Visible = true;
         }
 
         private void lblSifreDegis_Click(object sender, EventArgs e)
@@ -154,7 +182,6 @@ namespace StorkFlix
             {
                 labelSifreHata.Visible = true;
             }
-
         }
 
         private void lblCikisYap_Click(object sender, EventArgs e)
